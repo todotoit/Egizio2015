@@ -1,0 +1,14 @@
+{
+  "en": {
+    "title"      : "Turin rediscovers archaeology",
+    "description": "With the Egizio 2015 Expedition, everyone had the chance to discover the treasures of the New Museo Egizio.",
+    "tw_image"   : "/imgs/social/twitter/egizio2015_la_strada_tra_menfi_e_tebe.jpg",
+    "fb_image"   : "/imgs/social/facebook/egizio2015_la_strada_tra_menfi_e_tebe.jpg"
+  },
+  "it": {
+    "title"      : "Torino riscopre l’archeologia",
+    "description": "Con la Spedizione di Egizio 2015 tutti hanno potuto scoprire i tesori del Nuovo Museo Egizio di Torino.",
+    "tw_image"   : "/imgs/social/twitter/egizio2015_la_strada_tra_menfi_e_tebe.jpg",
+    "fb_image"   : "/imgs/social/facebook/egizio2015_la_strada_tra_menfi_e_tebe.jpg"
+  }
+}

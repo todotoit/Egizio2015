@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it" ng-app="egizioTranslateApp" ng-controller="AppCtrl">
+	<head>
+		<meta charset="utf-8">
+		<!--<meta name="viewport" content="width=device-width"> -->
+		<title>Egizio 2015</title>
+		
+		<!-- Place this data between the <head> tags of your website -->
+		<meta name="description" content="È tempo di riscoprire i tesori dell'Egizio. #egizio2015" />
+
+		<!-- see /sharing.php -->
+		
+		 <!-- Twitter Card data -->
+	    <meta name="twitter:card"        content="summary_large_image">
+	    <meta name="twitter:creator"     content="@CSP_live">
+	    <meta name="twitter:title"       content="2015: Apre il Nuovo Museo Egizio di Torino">
+	    <meta name="twitter:description" content="È tempo di riscoprire i tesori dell'Egizio #egizio2015">
+	    <meta name="twitter:image:src"   content="http://compagnia.egizio2015.it/imgs/social/twitter/egizio2015.jpg">
+
+	    <!-- Open Graph data -->
+	    <meta property="og:title"       content="2015: Apre il Nuovo Museo Egizio di Torino" />
+	    <meta property="og:type"        content="website" />
+	    <meta property="og:url"         content="http://compagnia.egizio2015.it" />
+	    <meta property="og:image"       content="http://compagnia.egizio2015.it/imgs/social/facebook/egizio2015.jpg" />
+	    <meta property="og:description" content="È tempo di riscoprire i tesori dell'Egizio #egizio2015" /> 
+	    <meta property="og:site_name"   content="egizio2015.it" />
+	    
+		
+		
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="css/home-style.css" type="text/css">
+
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/scripts.js"></script>
+		<script src="js/jquery.countdown.min.js"></script>
+		<script src="js/home-scripts.js"></script>
+		<script>
+			$(window).load(function(){
+			  $( '#dvLoading' ).fadeOut( "slow" );
+			});
+		</script>
+		
+	</head>
+	<body id="home">
+		<div id="dvLoading"></div>
+		<div id="container">
+		<header>
+		<div id="hide-logo" style="width: 115px; height: 350px; background-color:transparent;position: absolute;z-index: 10000;"></div>
+		<img id="logo" src="imgs/element/compagnia-san-paolo-logo.png" />
+		<img class="logo-elements" id="logo-top" src="imgs/element/logo-1.png">
+		<img class="logo-elements" id="logo-bot" src="imgs/element/logo-4.png" style="top:0px;" ng-if="lang=='it'">
+		<img class="logo-elements" id="logo-bot" src="imgs/element/logo-4-en.png" style="top:0px;" ng-if="lang=='en'">
+
+	</header>
+		
+		<div id="welcome">
+			<h4>#egizio2015</h4>
+			<h1>
+				<span id="line-1" translate="{{ ::'WELCOME-TITLE-1' }}">è tempo di riscoprire</span><br/>
+				<span id="line-2" translate="{{ ::'WELCOME-TITLE-2' }}">i tesori dell'egizio</span>
+			</h1>	
+			<div class="enter-wrapper">
+				<a href="" ng-click="enterLanguage('it')"><div class="enter" id="ita">entra</div></a>
+				<a href="" ng-click="enterLanguage('en')"><div class="enter" id="eng">enter</div></a>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<!-- <div class="countdown">
+			<p translate="{{ 'COUNTDOWN-TEXT-1' }}">Il Nuovo Museo Egizio<br/>apre tra</p>
+			<span id="clock"></span>
+			<p translate="{{ 'COUNTDOWN-TEXT-2' }}">giorni, il 1° aprile 2015</p>
+		</div> -->
+		</div>
+
+		<!-- ** angular translation dependencies ** -->
+		<script src="angularjs/angular/angular.min.js"></script>
+		<script src="angularjs/angular-translate/angular-translate.min.js"></script>
+		<script src="angularjs/angular-sanitize/angular-sanitize.min.js"></script>
+		<script src="angularjs/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+		<script src="angularjs/angular-cookies/angular-cookies.min.js"></script>
+		<script src="angularjs/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+		<script src="angularjs/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+		<script src="angularjs/d3/d3.min.js"></script>
+		<!-- ** main translate app ** -->
+		<script src="angularapp/app.js"></script>
+		<!-- ************************************** -->
+
+		
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-7954920-7', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	</body>
+</html>

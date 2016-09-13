@@ -1,0 +1,14 @@
+{
+  "en": {
+    "title"      : "The interesting history of Turin's Museo Egizio",
+    "description": "The men and adventures that brought the second most important Egyptian collection in the world to Turin.",
+    "tw_image"   : "/imgs/social/twitter/egizio2015_la_strada_tra_menfi_e_tebe.jpg",
+    "fb_image"   : "/imgs/social/facebook/egizio2015_la_strada_tra_menfi_e_tebe.jpg"
+  },
+  "it": {
+    "title"      : "La strana storia del Museo Egizio di Torino",
+    "description": "Le avventure e i personaggi che hanno portato a Torino la seconda collezione egizia più importante al mondo.",
+    "tw_image"   : "/imgs/social/twitter/egizio2015_la_strada_tra_menfi_e_tebe.jpg",
+    "fb_image"   : "/imgs/social/facebook/egizio2015_la_strada_tra_menfi_e_tebe.jpg"
+  }
+}

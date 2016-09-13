@@ -1,0 +1,21 @@
+<div id="user-container" style="clear:both">
+	
+	<!-- {{ 'ULTIMI_SOFFI_A' | translate}}<br /> -->
+	<h2 ng-if="stats" class="white" style="text-align:center;" >
+	{{ 'ULTIMI_SOFFI_B' | translate:stats}}</h2>
+
+	<div class="wrapper-user"
+		ng-repeat="user in latestUsers">
+		<span>
+			<img width="48" height="48" ng-src="{{user.photo}}" />
+		</span>
+		<div class="user-info">
+			<b>{{user.displayName}}</b><br/>
+			{{user.username}}</br>
+			{{user.date}}
+		</div>
+	</div>
+	
+	
+	<div style="clear:both"></div>
+</div>

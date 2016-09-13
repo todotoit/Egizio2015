@@ -1,0 +1,63 @@
+<div class="modal-container" ng-controller="ModalCtrl">
+
+	<img class="modal-close" src="images/svg/close.svg" ng-click="closeModal()" ng-if="modal.closeable" />
+
+	<div ng-if="modal.content=='new_reperto'" ng-include="'partials/modals/reperto.html'"></div>
+
+	<div ng-if="modal.content=='prepare_video'">
+		<h2 translate="{{'ECCO_IL_SOFFIO'}}"></h2>
+		<div class="img-preview">
+			<img src="images/frame-preview.jpg" />
+		</div>
+		<p translate="{{'CONDIVITI_TEXT_BOTTOM'}}"></p>
+	</div>
+
+	<div ng-if="modal.content=='share_video'">
+		<h2 class="pb1" translate="{{'ECCO_IL_SOFFIO'}}"></h2>
+		<div class="img-preview">
+			<div class="share-btn" flex layout="row" layout-align="center center" >
+				<a class="btn over m0"  href="" ng-href="{{getSharedUrl()}}" target="_blank">
+					<div translate="{{'CONDIVIDI_SOFFIO'}}"></div>
+				</a>
+			</div>
+			<img src="images/frame-preview.jpg" />
+		</div>
+		<p class="pt1" translate="{{'CONDIVITI_TEXT_BOTTOM'}}"></p>
+	</div>
+
+	<div ng-if="modal.content=='share_blow'">
+		<h2 translate="{{'HAI_REGISTRATO_SOFF'}}"></h2>
+		<p class="pt1 pb1" translate="{{'ORA_DILLO_AMICI'}}"></p>
+		<a class="btn"  href="" ng-click="shareBlow()">
+			<div translate="{{'CONDIVIDI_SOFFIO_OLNY'}}"></div>
+		</a>
+	</div>
+
+	<div ng-if="modal.content=='state_night'">
+		<h2 translate="{{'ROBOT_RIPOSA'}}"></h2>
+		<img src="images/svg/robot_riposa.svg" />
+		<p class="big">{{'TRA_QUANTO_APRE' | translate:last}}</p>
+		<p class="pt1" translate="{{'TORNERA_TEXT1'}}"></p>
+	</div>
+
+	<div ng-if="modal.content=='state_maintenance'">
+		<h2 translate="{{'ROBOT_MANUTENZIONE'}}"></h2>
+		<img src="images/svg/robot_rotto.svg" />
+		<p translate="{{'TORNERA_TEXT2'}}"></p>
+	</div>
+
+	<div ng-if="modal.content=='state_refill'">
+		<h2 translate="{{'ROBOT_SCOPERTO'}}"></h2>
+		<p translate="{{'TORNERA_TEXT3'}}"></p>
+		<a href="/reperti/">
+			<img src="images/svg/robot_refill.svg" />
+		</a>
+	</div>
+
+	<div ng-if="modal.content=='is_tablet'">
+		<h2 translate="{{'TABLET_A_BIG_NO_NO'}}"></h2>
+		<p translate="{{'TABLET_A_BIG_NO_NO_TXT'}}"></p>
+	</div>
+
+
+</div>

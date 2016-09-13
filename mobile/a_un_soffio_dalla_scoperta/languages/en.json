@@ -1,0 +1,20 @@
+{
+	"MENU-1": "The Road to Memphis and Thebes",
+	"MENU-2": "Towards the New Egyptian Museum",
+	"MENU-3": "The Egizio 2015 Expedition",
+	"MENU-4": "One Breath Away from Rediscovery",
+	"PROJECT-LABEL": "The Project",
+	"BUTTON_LANG_IT": "ITA",
+	"BUTTON_LANG_EN": "ENG",
+	"C4-TITLE":"One Breath Away from Rediscovery",
+	"C4-INTRO":"This section will be active from March 2015",
+	"C4-CTA":"(eng) partecipa anche tu visitando compagnia.egizio2015.it dal tuo computer!",
+	"C4-NO-UTENTI":"(eng) finora <span id='numero_utenti'>xx</span> utenti hanno contribuito con i loro soffi allo svelamento dei reperti del museo",
+
+	"HOME_CLAIM_END_1_en": "The adventures of #egizio2015 have come to an end.",
+	"HOME_CLAIM_END_2_en": "By blowing the sand away ",
+	"HOME_CLAIM_END_3_en": " times",
+	"HOME_CLAIM_END_4_en": "people from the whole world have uncovered",
+	"HOME_CLAIM_END_5_en":"the treasures of the Egyptian Museum."
+
+}

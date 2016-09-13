@@ -1,0 +1,120 @@
+{
+	"ROTATE-DEVICE": "please rotate your device<br/>to landscape mode",
+	"RESIZE-BROWSER": "please expand your browser window<br/>to view the website correctly",
+	"BUTTON_LANG_IT": "ITA",
+	"BUTTON_LANG_EN": "ENG",
+	"MENU-1": "The Road to Memphis and Thebes",
+	"MENU-2": "The Value of Rediscovery",
+	"MENU-3": "The Egizio 2015 Expedition",
+	"MENU-4": "One Breath Away from Rediscovery",
+	"MENU-1-TEXT": "The adventures that brought the most important Egyptian Museum in Europe to Turin.",
+	"MENU-2-TEXT": "Behind the scenes: doubling space for the New Museum.",
+	"MENU-3-TEXT": "We’re on tour! Come with us and find out what’s under the sand.",
+	"MENU-3-UNACTIVE":"This section will be active from December 2014.",
+	"MENU-4-TEXT": "Join us, from anywhere in the world. What will you discover today?",
+	"MENU-4-UNACTIVE":"This section will be active from March 2015.",
+	"PROJECT-LABEL": "The Project",
+
+	"YOUR-TURN-LBL": "IS YOUR TURN",
+
+
+	"TORNA_STREAMING": "Back to live streaming",
+	"TORNA_LISTA": "Back to the list of finds",
+	"NO_SVELATO": "This find has not been unveiled yet",
+	"ECCO_GLI_UTENTI": "HERE ARE THE USERS WHO JOINED US AND REDISCOVERED",
+	"REPERTO": "Find",
+	"PERSONE_CONTRIBUITO":"Unveiled with the help of {{num}} people",
+
+	"stele_qen": {
+		"data": "April 1st 2015",
+		"name": "Stele of Qen",
+		"art": "The",
+
+		"body": "<p>In the central part of the architrave, the goddesses Isis and Neft kneel in worship of the rising sun on the horizon: behind them, the deceased Qen - sculptor &quot;in the Seat of Truth&quot; (the village of Deir el-Medina) - is prostrate in worship.</p><p>At the top of the stele the god Ra-Harakhte, who has the head of a hawk and a solar disk above him, is sitting in the solar boat, adorned with the sign symbolizing the followers of Horus, which combines a harpoon, a knife, and a human leg tied together with a rope. The bow of the boat is covered with a cloth made of pearls and leaves while the stern there are two oars-helms.</p><p>At the bottom, on the left there is a chapel with a pyramidal roof, typical of Deir el-Medina, next to which four standing mummies are arranged. Qen&rsquo;s son and brother celebrate funeral rites, while a woman shows her pain, kneeling.</p><p>At the bottom, on the left, there is a man with his right arm raised in adoration; another arm in the lower part of the jamb is only partially visible. Two eyes of Ra, symbol of prosperity, were engraved on the sides. </p>",
+		"subhead": "Ecco gli utenti che hanno partecipato</br> alla riscoperta della Stele di Pendua:"
+		
+	},
+
+	"stele_benbu": {
+		"data": "April 3rd 2015",
+		"name": "Stele for Djehutinefer and Benbu",
+		"art": "The",
+
+		"body": "<p>Djehutynefer &ndash; the &quot;scribe of the cattle in the house of Amon&quot; &ndash; and wife Benbu, &quot;lady of the house&quot;, are depicted with their daughter Nefertari in front of a table, laden with various food offerings.</p><p>Above it is a list with the list of their offerings, while the remaining hieroglyphics, colored in blue, make up a formula that the deceased could recite in order to achieve special privileges in the afterlife.</p><p>The dedication is directed in particular to Djehutynefer&rsquo;s ka, that is his &quot;vital spirit&quot;, the part of his soul destined to enjoy the funerary offerings.</p><p>The stele is carved in limestone and comes from Dra 'Abu el Naga, one of the most important and ancient Egyptian necropolises, not far from Thebes. It dates back to the New Kingdom, XVIII Dynasty, ca. 1550-1425 BC. </p>",
+		"subhead": ""
+	},
+
+	"stele_pamermesha": {
+		"data": "April 5th 2015",
+		"name": "Stele of Pamermesha",
+		"art": "The",
+
+		"body": "<p>This stele of unknown origin, dating back to the XIX-XX Dynasty (New Kingdom), has a rare cusp shape.</p><p>It is named after the man who had it made, Pamermesha, and portrays him with his wife as they worship Osiris and his wife Isis. In the bottom half, their family members &ndash; easy to identify thanks to the hieroglyphics above their heads &ndash; take part in their act of homage.</p><p>On the cusp two baboons are depicted on a boat, as they worship the sun disk.</p><p>Baboons were traditionally associated with Thoth, protector of scribes and god of wisdom. Ancient Egyptians believed that, at dawn, baboons faced eastward and waved their paws to celebrate sunrise.</p>",
+		"subhead": ""
+	},
+
+	"architrave": {
+		"data": "April 7th 2015",
+		"name": "A false-door lintel (broken)",
+		"art": "",
+
+		"body": "<p>Limestone stele for a priest of King Khufu, pharaoh of the IV Dynasty. The lintel is engraved with a funerary text made up of three lines of hieroglyphics, about the deceased&rsquo;s funeral events and titles.</p><p>The fragment contains a dedication by a &quot;priest-king&rsquo;s pure one&quot;, &quot;assigned to the cult of Khufu&quot; and &quot;above the Palace&rsquo;s secrets&quot;, of which, unfortunately, the name has been lost.</p><p>The hieroglyphic inscription also includes an &quot;offering formula&quot; that when recited, thanks to the intercession of the pharaon, allowed the deceased to take advantage of the offers &ndash; such as bread and beer &ndash; dedicated to the deities being prayed (usually Osiris or, as in this case, Anubis).</p><p>The artistic, not functional representation of a door, to symbolize the threshold between the living world and the Hereafter, was a typical architectural element in the tombs of ancient Egypt. </p>",
+		"subhead": ""
+	},
+
+	"stele_usertatet": {
+		"data": "April 10th 2015",
+		"name": "Stele of Usertatet",
+		"art": "The",
+
+		"body": "<p>Usertatet dedicates this particular stele to Nebethetep, the goddess &quot;who listens to prayers, lady of the sky.&quot;</p><p>The dedication is engraved in the center of the stele, between the two rows of carved human ears. The name Usertatet, instead, is shown in the lower part of the stele, along with other hieroglyphics.</p><p>Nebethetep, whose name means &quot;Lady of the Offers,&quot; was an important deity worshiped at Heliopolis, associated with Hathor and most importantly Atum, because she represented his female equivalent: creative force.</p><p>Stele like this one, from the workers' village of Deir el-Medina, are a clear testimony of how devout and religious the people in Ancient Egypt were. </p>",
+		"subhead": ""
+	},
+
+	"bes": {
+		"data": "April 12th 2015",
+		"name": "Tile of Bes",
+		"art": "The",
+
+		"body": "<p>Fragment of sandstone tablet with four figures in bas-relief. Perhaps it was a model, with a small repertoire of figures that sculptors could copy.</p><p>In the upper part, a human head is depicted next to the face of Bes &ndash; a minor deity but a very popular one, usually represented on everyday objects either grimacing or with his tongue out &ndash; who could keep misfortune at bay. The human face, seen from the front, also represents the hieroglyphic sign meaning &quot;head, head, face&quot;.</p><p>On the bottom part of the tile there are an owl and a chick.</p><p>Although here we see only a partial representation, Bes was usually depicted as a squat, bow-legged dwarf with ostrich feathers. He was the protector of dancers and women in labor, babies, weddings and much more. His aggressive attitude and animal-like look &ndash; his tongue out, a sword raised over his head &ndash; were able to keep evil spirits away from the home and family. </p>",
+		"subhead": ""
+	},
+
+	"due_piastrelle": {
+		"data": "April 15th 2015",
+		"name": "Two limestone tiles",
+		"art": "",
+
+		"body": "<p>Two small limestone tiles. The first has a high relief depicting a ram head seen from the side, with slightly etched details. The god with the head of a ram and twisted horns is Khnum, protector of the island of Elephantine in Aswan, and creator of all human beings, whom he had shaped on a potter's wheel. The god Amun of Thebes (Luxor) is often depicted in the form of the same animal as well. The second tile represents a hawk in high relief, with a strip at the base divided into ten squares. The hawk, being the bird that flew highest of all, was associated with Horus, Ra and other solar deities. As for the tile of Bes, these two tiles might have been carving models: the grid on the bottom of the second one could have been a reference for proportions used by artists. </p>",
+		"subhead": ""
+	},
+
+	"sfinge": {
+		"data": "April 16th 2015",
+		"name": "sphinx tile",
+		"art": "The",
+
+		"body": "<p>This rectangular fragment depicts a sphinx with a human head in relief. The sphinx wears a particular nemes - Egyptian kings&rsquo; headgear - with uraeus (cobra) on the forehead, horns with other uraei, solar disc, and feathers. Growing from its name, it has a ram's head. In front of the sphinx there is an offering table with round bread, a vase and a goose. On the top left corner, a Horus-falcon with his wings spread out is partially visible.</p><p>This type of hybrid deity was worshiped in Egypt especially in the Greek-Roman period, and perhaps comes from the region south of Egypt. When the sphinx associated with other deities, it made some of their features &ndash; such as a ram's head or the tail of a snake &ndash;its own. It enjoyed a very popular cult and was thought to protect its faithful during sleep.</p><p>Now a universal icon of Egyptian mythology, the most famous sphinx is probably the one with the body of a lion and the head of a man, but in antiquity it was common to see examples with the head of a hawk, a goat or a ram.</p><p>As a symbol of the sun, it was represented on graves to suggest rebirth after death, just like the sun returns in the sky after night. </p>",
+		"subhead": ""
+	},
+
+	"talatat": {
+		"data": "April 18th 2015",
+		"name": "Talatat with amarna queen profile",
+		"art": "The",
+
+		"body": "<p>This bas-relief fragment features a figure wearing an uraeus, the typical snake-like decoration seen on the heads of Egyptian kings. The woman is probably Nefertiti, a legendary queen from the 18th Dynasty, holding a sistrum (an instrument sacred to the goddess Isis) in the left hand and raising her right hand in reverence.</p><p>Bas-reliefs like this adorned the temples dedicated to the supreme god Aton, built by Pharaoh Akhenaten and subject to widespread destruction and alteration after his death.</p><p>Nefertiti is one of the most enigmatic figures in Egyptian culture. Neither her origins nor the circumstances of her death are clear, but amarna iconography points to the story of an extremely significant female figure, both politically and socially.</p><p>She was often depicted with her husband, Akhenaten &ndash; sometimes even in moments of intimacy &ndash; or accompanied by her daughters.</p>",
+		"subhead": ""
+	},
+
+	
+
+	"stele_pendua": {
+		"data": "April 19th 2015",
+		"name": "Stele of Pendua",
+		"art": "The",
+
+		"body": "<p>The Stele of Pendua is a limestone stele dedicated by Pendua - &ldquo;servant in the Seat of Truth&rdquo;, i.e. the workers&rsquo; village of Deir el-Medina - to the goddess Meretseger, represented here as a cobra, with a tiara with the solar disk between two feathers. In front of her is an altar with a jug and a lotus flower.</p><p>Two lines of hieroglyphics divide the scenes at the top and in the middle of the stele. The top one is the name of the goddess, right above her &ldquo;portrait&rdquo; as a snake.</p><p>At the bottom there are two men facing left, kneeling in adoration: Pendua and his son Shedsuani. They are wearing long wigs that fall on their shoulders, and long pleated robes that cover them from waist to ankles. </p>",
+		"subhead": ""
+	}
+}

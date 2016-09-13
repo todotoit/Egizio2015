@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Egizio 2015</title>
+    <meta property="og:url" content="http://video.egizio2015.it/video/<%= videoID %>">
+    <meta property="og:title" content="Guarda il video del mio soffio per #Egizio2015.">
+    <meta property="og:description" content="Ho appena riscoperto uno dei tesori del Museo Egizio! Partecipa
+anche tu: basta un soffio per animare il robot della teca interattiva all'interno del Museo Egizio.">
+    <meta property="og:site_name" content="Egizio2015">
+    <meta property="og:type" content="video">
+    <meta property="og:video:url" content="<%= videoURL %>">
+    <meta property="og:video:width" content="640">
+    <meta property="og:video:height" content="480">
+    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:image" content="<%= thumbURL %>"/>
+    <meta property="fb:app_id" content="343925132460658">
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/landscape-style.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <!--STYLES END-->
+
+    <script src="/js/video/jquery-1.9.1.min.js"></script>
+    <script src="/js/video/scripts.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+</head>
+
+<body>
+<%- body %>
+</body>
+</html>

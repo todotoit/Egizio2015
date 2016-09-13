@@ -1,0 +1,44 @@
+<div class="queue-container" ng-if="logged">
+
+	<ul layout="column" layout-align="end end">
+		<li layout="row" ng-repeat="user in queueUsers">
+			<p>{{user.user.displayName}} <br />{{'WAIT' | translate}}</p>
+			<img ng-src="{{user.user.photo}}" />
+		</li>
+	</ul>
+
+	<div class="others" ng-show="queueLength-queueLimit>0">
+		Altri {{queueLength-queueLimit}} utenti in coda
+	</div>
+
+	<div class="itsme" ng-show="appUser && !isYourTurn()">
+		<img class="logout" ng-click="logout()" src="images/svg/logout.svg" />
+		<img ng-src="{{appUser.user.photo}}" />
+		<div ng-show="timer > 0">{{ timer | millSecondsToTimeString}}</div>
+		<div ng-show="timer == 0">{{'WAIT' | translate}}</div>
+	</div>
+
+</div>
+
+<!-- mock
+<div class="queue-container">
+
+	<ul layout="column" layout-align="end end">
+		<li layout="row" ng-repeat="user in queueUsers">
+			<p>{{user.user.displayName}} <br />{{'WAIT' | translate}}</p>
+			<img ng-src="{{user.user.photo}}" />
+		</li>
+	</ul>
+
+	<div class="others" ng-show="queueLength-queueLimit>0">
+		Altri {{queueLength-queueLimit}} utenti in coda
+	</div>
+
+	<div class="itsme">
+		<img class="logout" ng-click="logout()" src="images/svg/logout.svg" />
+		<img ng-src="me.jpeg" />
+		<div>dasdsa dsadsdas</div>
+	</div>
+
+</div>
+-->

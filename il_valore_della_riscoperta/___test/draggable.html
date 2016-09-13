@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery UI Resizable - Visual feedback</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+<style>
+
+#container{
+	width:1280px;
+	margin:auto;
+	position:relative;
+}
+
+.background-lmnt{
+	height: 750px;
+	overflow: hidden;
+	width: 1280px;
+	position: relative;
+	
+}
+
+#img-back{
+	position: relative;
+    right: 32px;
+
+}
+
+.elementResizable {
+    height: 750px;
+    right: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    width: 640px;
+    -webkit-animation: open2 3s backwards; /* Chrome, Safari, Opera */
+    animation: open2 3s backwards;   
+}
+
+@-moz-keyframes open2 {
+    0%   {width:0px;}
+    100% {width:640px;}
+}
+
+@-webkit-keyframes open2 {
+    0%   {width:0px;}
+    100% {width:640px;}
+}
+
+@keyframes open2 {
+    0%   {width:0px;}
+    100% {width:640px;}
+}
+
+
+#img-front{
+    position: absolute;
+    right: -45px;
+    top: 0;
+}	
+
+	
+
+#wgrip {
+	
+    background-color: transparent;
+    height: 750px;
+    position: relative;
+    width: 10px;
+    z-index: 3000;
+}
+
+#egrip {
+	
+    background-color:red;
+    height: 750px;
+    position: relative;
+    width: 10px;
+    z-index: 3000;
+}
+
+#wgrip:hover {
+    border-left:2px solid white;
+}
+
+#wgrip{
+     left:0px;
+}
+
+
+
+
+</style>
+
+<script>
+
+
+$(function() {
+	$('.elementResizable').resizable({
+    	handles: {
+        	'w': '#wgrip',
+        	'e': '#egrip'
+        	
+    	},
+    	containment: "#container"
+	});
+});
+</script>
+
+</head>
+<body>
+<div id="container" class="ui-widget-content">
+
+		 <div class="background-lmnt">
+			 <img id="img-back" src="old.jpg" />
+		 </div>
+
+		 <div class='elementResizable'>
+			 <img id="img-front" src="new.jpg" />
+			 <div class="ui-resizable-handle ui-resizable-w" id="wgrip"></div>
+			 <div class="ui-resizable-handle ui-resizable-e" id="egrip"></div>
+		 </div>
+
+</div>
+</body>
+</html>

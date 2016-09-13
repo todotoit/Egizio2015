@@ -1,0 +1,185 @@
+<!-- translate="{{ 'KEY' }}" -> attribute to perform translation based on languages/*.json -->
+<!--<h1 translate="{{ 'HOME_TITLE' }}">CASA DOLCE CASA!!!</h1>-->
+
+
+<script>
+	
+	$('#play-the-video').on('click', function() {
+
+        
+            $('iframe')[1].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+            
+        
+        
+        	$( "#video-cover h2" ).stop().animate({
+				opacity: 0
+				}, "slow", function() {
+				// Animation complete.
+			});
+			$( "#video-cover p" ).stop().animate({
+				opacity: 0
+				}, "slow", function() {
+				// Animation complete.
+			});
+			$( "" ).stop().animate({
+				opacity: 0
+				}, "slow", function() {
+				// Animation complete.
+			});
+			$( "#video-cover" ).fadeOut( "slow", function() {
+			// Animation complete.
+			});
+        
+});
+
+
+
+$('#backstage').on('click', function(event) {
+			 event.preventDefault();
+        
+           
+            $('iframe')[2].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+        
+        
+        	
+			$( "#lb-backstage" ).fadeIn( "slow", function() {
+			// Animation complete.
+			});
+        
+});
+
+$('#lb-backstage').on('click', function(event) {
+			 event.preventDefault();
+        
+           
+            $('iframe')[2].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+        
+        
+        	
+			$( "#lb-backstage" ).fadeOut( "slow", function() {
+			// Animation complete.
+			});
+        
+});
+
+
+
+</script>
+<div id="lb-backstage">
+	<iframe id="youtube-player-2" width="1008" height="567"  src="http://www.youtube.com/embed/Uk0PaShqxJA?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0" frameborder="0" allowfullscreen="true" allowscriptaccess="always"></iframe>
+</div>
+<div id="wrapper"  class="endtour-wrapper" style="max-width: 1010px;">
+
+	<div id="end-video">
+	
+		<iframe ng-if="lang=='it'" id="youtube-player" width="1008" height="567"  src="https://www.youtube.com/embed/xsIrJvyW4fA?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0" frameborder="0" allowfullscreen="true" allowscriptaccess="always"></iframe>
+
+		<iframe ng-if="lang=='en'" id="youtube-player" width="1008" height="567"  src="https://www.youtube.com/embed/t3RVi0z0taI?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0" frameborder="0" allowfullscreen="true" allowscriptaccess="always"></iframe>
+		
+		<div id="video-cover">
+			<h2 translate="{{ 'HOME-END-VIDEO-TITOLO' }}">
+			</h2>
+			<p translate="{{ 'HOME-END-VIDEO-INTRO-1' }}">
+			</p>
+			<p translate="{{ 'HOME-END-VIDEO-INTRO-2' }}">
+			</p>
+			<span id="play-the-video" translate="{{ 'HOME-END-VIDEO-PLAY' }}">
+			</span>
+			
+		</div>
+	</div>
+
+	<div id="backstage">
+		<a href="https://www.youtube.com/watch?v=Uk0PaShqxJA" target="blank">
+			<img src="img/element/braccio-meccanico.png" />
+			<p  translate="{{ 'HOME-END-VIDEO-BACKSTAGE' }}"></p>
+		</a>
+	</div>	
+	
+	<div id="endtour-footer" class="intour">
+		<h4 translate="{{ 'HOME-END-VIDEO-FOOTER' }}">
+		</h4>
+		<div class="wrapper">
+			<div class="col col-endtour">
+				<a href="#/tappa1" translate="{{ 'MENU-TAPPA1-NOME' }}">
+				</a>
+				<div class="img-box">
+					<img src="img/tappa_1.png" id="img1"/>
+				</div>
+			</div>
+	
+			<div class="col col-endtour">
+				<a href="#/tappa2" translate="{{ 'MENU-TAPPA2-NOME' }}">
+				</a>
+				<div class="img-box">
+					<img src="img/tappa_2.png" id="img1"/>
+				</div>
+			</div>
+	
+			<div class="col col-endtour">
+				<a href="#/tappa3" translate="{{ 'MENU-TAPPA3-NOME' }}">
+				</a>
+				<div class="img-box">
+					<img src="img/tappa_3.png" id="img1"/>
+				</div>
+			</div>
+	
+			<div class="col col-endtour">
+				<a href="#/tappa4" translate="{{ 'MENU-TAPPA4-NOME' }}">
+				</a>
+				<div class="img-box">
+					<img src="img/tappa_4.png" id="img1"/>
+				</div>
+			</div>
+			
+			<div class="col col-endtour">
+				<a href="#/tappa5" translate="{{ 'MENU-TAPPA5-NOME' }}">
+				</a>
+				<div class="img-box">
+					<img src="img/tappa_5.png" id="img1"/>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+</div>
+
+
+
+
+<a href="../newcredits.html">
+	<div id="il-progetto" class="iron">
+		<h3 translate="{{ 'PROJECT-LABEL' }}">Il Progetto</h3>
+		<img src="../imgs/element/il-progetto-line-black.jpg" />
+	</div>
+</a>
+
+<!-- translator test -->
+<!--  ng-click="changeLanguage('it')" -> call to change language function -->
+
+<div id="lang" class="iron">
+	<a ng-href="{{changeLanguage('it')}}" translate="{{ 'BUTTON_LANG_IT' }}" ng-class="{'lan-sel': lang== 'it' }">italiano</a> |
+	<a ng-href="{{changeLanguage('en')}}" translate="{{ 'BUTTON_LANG_EN' }}" ng-class="{'lan-sel': lang== 'en' }">inglese</a>
+</div>
+<!--
+<div id="share" class="iron">
+    <p>Share on:<p>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-hashtags="Egizio2015">Tweet</a><br/>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	<div class="fb-share-button" data-href="http://compagnia.egizio2015.it/la_spedizione_di_egizio_2015/#/" data-layout="button"></div>  
+</div>
+-->
+
+<div id="share" class="iron">
+  <p>Share on:</p>
+  <div ng-if="lang=='it'">
+    <a twitter  data-lang="it" data-count='none' data-size="medium" data-text="Guarda i selfie di #egizio2015 @CSP_live @MuseoEgizio" data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+  </div>
+  <div ng-if="lang=='en'">
+    <a twitter  data-lang="en" data-count='none' data-size="medium" data-text="Check out the selfies from #egizio2015 @CSP_live @MuseoEgizio" data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+  </div>
+  <br>
+  <div style="float:right;">
+    <iframe width="56" height="20" src="//www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fcompagnia.egizio2015.it%2Fla_spedizione_di_egizio_2015&amp;layout=button&locale=en_GB" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+  </div>
+</div>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>il valore della riscoperta</title>
+<style>
+
+	body{
+		margin:0px;
+	}
+
+	#outer {
+		height: 750px;
+		overflow: hidden;
+		width: 1280px;
+		position: relative;
+		margin-left: 50%;
+		left: -640px;
+			}
+			
+	#inner {
+		 height: 535px;
+		 left: -440px;
+		 margin-left: 50%;
+		 overflow: hidden;
+		 position: absolute;
+		 top: 90px;
+		 transition: all 0.2s ease 0s;
+		 width: 880px;
+    	 z-index: 200;
+		 -webkit-transition: .8s; /* For Safari 3.1 to 6.0 */
+    	 -moz-transition: .8s; /* For Safari 3.1 to 6.0 */
+    	 transition: .8s;
+	}
+	
+	#inner:hover {
+		-ms-transform: scale(.97,.97);
+    	-webkit-transform: scale(.97,.97); 
+    	transform: scale(.97,.97);
+	}
+	
+	#img-front{
+		position: absolute;
+		margin-left: 50%;
+		left: -682px;
+		top: -129px;
+		-webkit-transition: .8s; /* For Safari 3.1 to 6.0 */
+    	 -moz-transition: .8s; /* For Safari 3.1 to 6.0 */
+    	 transition: .8s;
+	}		
+	
+	#img-front:hover{
+		-ms-transform: scale(1.1,1.1);
+    	-webkit-transform: scale(1.1,1.1); 
+    	transform: scale(1.1,1.1);
+	}	
+	
+	#img-back{
+		left: -40px;
+		top: -40px;
+		position: relative;
+	}
+	
+	.cursore{
+		height: 750px;
+		position: absolute;
+		top: 0;
+		width: 60px;
+		z-index:1;
+	}
+
+	#right{
+		/*border-left:1px dotted white;*/
+		right:0px;
+		cursor:e-resize;
+	}
+
+	
+	#left{
+		/*border-right:1px dotted white;*/
+		left:0px;
+		cursor:w-resize;
+	}
+	
+	#img-back-after{
+		position: absolute;
+		top: -40px;
+		left: 1280px;
+	}
+	
+	#img-front-after{
+		left: -1615px;
+		position: absolute;
+		top: -129px;
+	}
+	
+
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+</head>
+<body>
+
+<div id="outer">
+	<img id="img-back" src="old.jpg" />
+	<div class="cursore" id="right"></div>
+	<div class="cursore" id="left"></div>
+	<div id="inner">
+		<img id="img-front" src="new.jpg" />
+		<img id="img-front-after" src="old.jpg" />
+	</div>
+	<img id="img-back-after" src="new.jpg" />	
+</div>
+
+
+
+<script>
+$( "#right" ).mouseenter(function() {
+	$( "#img-back" ).animate({ "left": "-=40px" }, "slow" );
+	$( "#img-front" ).animate({ "left": "+=40px" }, "slow" );
+	$( "#img-back-after" ).animate({ "left": "-=40px" }, "slow" );
+	$( "#img-front-after" ).animate({ "left": "+=40px" }, "slow" );
+});
+
+$( "#right" ).mouseleave(function() {
+	$( "#img-back" ).animate({ "left": "+=40px" }, "slow" );
+	$( "#img-front" ).animate({ "left": "-=40px" }, "slow" );
+	$( "#img-back-after" ).animate({ "left": "+=40px" }, "slow" );
+	$( "#img-front-after" ).animate({ "left": "-=40px" }, "slow" );
+
+});
+
+
+$( "#right" ).click(function() {
+	$( "#img-back" ).animate({ "left": "-1400px" }, "slow" );
+	$( "#img-front" ).animate({ "left": "680px" }, "slow" );
+	$( "#img-back-after" ).animate({ "left": "-80px" }, "slow" );
+	$( "#img-front-after" ).animate({ "left": "-210px" }, "slow" );
+});
+
+$( "#left" ).mouseenter(function() {
+	$( "#img-back" ).animate({ "left": "+=40px" }, "slow" );
+	$( "#img-front" ).animate({ "left": "-=40px" }, "slow" );
+	$( "#img-back-after" ).animate({ "left": "+=40px" }, "slow" );
+	$( "#img-front-after" ).animate({ "left": "-=40px" }, "slow" );
+
+
+});
+
+$( "#left" ).mouseleave(function() {
+	$( "#img-back" ).animate({ "left": "-=40px" }, "slow" );
+	$( "#img-front" ).animate({ "left": "+=40px" }, "slow" );
+	$( "#img-back-after" ).animate({ "left": "-=40px" }, "slow" );
+	$( "#img-front-after" ).animate({ "left": "+=40px" }, "slow" );
+
+
+});
+
+
+</script>
+
+</body>
+</html>

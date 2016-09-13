@@ -1,0 +1,14 @@
+{
+  "en": {
+    "title"      : "The amazing transformation of Turin's Museo Egizio",
+    "description": "See what the rooms of the New Museo Egizio looked like during the  renovation, and what they look like now after the grand reopening.",
+    "tw_image"   : "/imgs/social/twitter/egizio2015_il_valore_della_riscoperta.jpg",
+    "fb_image"   : "/imgs/social/facebook/egizio2015_il_valore_della_riscoperta.jpg"
+  },
+  "it": {
+    "title"      : "L'incredibile trasformazione del Museo Egizio",
+    "description": "Dal cantiere al nuovo allestimento: esplora gli ambienti rinnovati del Nuovo Museo Egizio di Torino.",
+    "tw_image"   : "/imgs/social/twitter/egizio2015_il_valore_della_riscoperta.jpg",
+    "fb_image"   : "/imgs/social/facebook/egizio2015_il_valore_della_riscoperta.jpg"
+  }
+}

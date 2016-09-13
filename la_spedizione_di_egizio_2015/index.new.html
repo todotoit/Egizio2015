@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="c3app">
+  <head>
+    <title>Styling the Base Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="../css/landscape-style.css" type="text/css">
+	<link rel="stylesheet" href="../css/portrait-style.css" type="text/css">
+	<link rel="stylesheet" href="../css/lores-style.css" type="text/css">
+    <link href="css/screen.css" rel="stylesheet">
+     <link href="css/style.css" rel="stylesheet">
+    <style>
+      html, body, #map_canvas {
+        margin: 0;
+        padding: 0;
+        height: 560px;
+      }
+      #legend {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        padding: 3px 10px 10px 10px;
+        margin: 10px;
+        border: 3px solid #000;
+      }
+      #legend h3 {
+        margin-top: 0;
+      }
+      #legend img {
+        vertical-align: middle;
+        margin-top: 10px;
+      }
+    </style>
+
+
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+	<script src="../js/jquery-1.9.1.min.js"></script>
+	<script src="../js/scripts.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/masonry.pkgd.js"></script>
+
+	<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+	<script>
+		$(window).load(function(){
+		  $( '#dvLoading' ).animate({
+				 opacity: .5,
+				 top:"-100%"
+				 }, "slow", function() {
+				 // Animation complete.
+			 });
+			$( '.cover' ).fadeIn( "slow" );
+			
+			var container = document.querySelector('#wall');
+			var msnry = new Masonry( container, {
+			  // options
+			  	columnWidth: 194,
+			  	"isFitWidth": true,
+			  	itemSelector: '.item',
+				"gutter": 10			  
+			});
+		
+		});
+		
+		
+	</script>
+
+    <script>
+      var map;
+
+      $( "#tappa-1" ).mouseover(function() {
+		 console.log("tappa-1");
+	  });
+
+	  $( "#tappa-2" ).mouseover(function() {
+		 console.log("tappa-2");
+	  });
+
+	  $( "#tappa-3" ).mouseover(function() {
+		 console.log("tappa-3");
+	  });
+
+	  $( "#tappa-4" ).mouseover(function() {
+		 console.log("tappa-4");
+	  });
+
+	  $( "#tappa-5" ).mouseover(function() {
+		 console.log("tappa-5");
+	  });
+
+      function initialize() {
+        map = new google.maps.Map(document.getElementById('map_canvas'), {
+          zoom: 13,
+          center: new google.maps.LatLng(45.05412, 7.67820),
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          panControl: false,
+		  zoomControl: true,
+		  zoomControlOptions: {
+			position: google.maps.ControlPosition.RIGHT_CENTER
+		  },
+		  mapTypeControl: false,
+		  scaleControl: false,
+		  streetViewControl: false,
+		  overviewMapControl: false,
+		  scrollwheel: false,
+          styles: [
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [
+                { color: '#a98664' },
+                { weight: 1 }
+              ]
+            }, {
+              featureType: 'road',
+              elementType: 'labels',
+              stylers: [
+
+//                 { saturation: -100 },
+//                 { invert_lightness: true }
+              ]
+            }, {
+              featureType: 'landscape',
+              elementType: 'geometry',
+              stylers: [
+                { hue: '#0000ff' },
+                { gamma: 1.4 },
+                { saturation: 82 },
+                { lightness: 96 }
+              ]
+            }, {
+              featureType: 'poi.school',
+              elementType: 'geometry',
+              stylers: [
+                { hue: '#00ff00' },
+                { lightness: -15 },
+                { saturation: 99 }
+              ]
+            }, {
+              featureType: 'poi',
+              elementType: 'geometry',
+              stylers: [
+                { visibility: 'off' }
+              ]
+            }, {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [
+                { visibility: 'on' },
+                { color: '#85c5e8' }
+              ]
+            }, {
+              featureType: 'landscape',
+              elementType: 'geometry',
+              stylers: [
+                { visibility: 'on' },
+                { color: '#fffbf8' }
+              ]
+            }
+          ]
+        });
+
+        var iconBase = 'img/element/';
+        var icons = {
+          passata: {
+            name: 'Passato',
+            icon: iconBase + 'tappa_passata.png'
+          },
+          corrente: {
+            name: 'Corrente',
+            icon: iconBase + 'tappa_corrente.png'
+          },
+          futura: {
+            name: 'Futuro',
+            icon: iconBase + 'tappa_futura.png'
+          }
+        };
+
+        function addMarker(feature) {
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            map: map
+          });
+        }
+
+        var features = [
+          /* Casa del Quartiere di San Salvario, via Morgari 14 - 10125 Torino */
+          {
+            position: new google.maps.LatLng(45.05412, 7.67820),
+            type: 'futura'
+          },
+          /* Ospedale Infantile Regina Margherita, piazza Polonia 94 - 10126 Torino */
+          {
+            position: new google.maps.LatLng(45.03603, 7.67513),
+            type: 'futura'
+          },
+          /* Shopville Le Gru, via Crea 10 - 10095 Grugliasco (TO) */
+          {
+            position: new google.maps.LatLng(45.05586, 7.61191),
+            type: 'futura'
+          },
+          /* Campus Luigi Einaudi, Lungo Dora Siena 100 - 10153 Torino */
+          {
+            position: new google.maps.LatLng(45.07367, 7.69973),
+            type: 'futura'
+          },
+          /* Galleria San Federico - 10121 Torino */
+          {
+            position: new google.maps.LatLng(45.06655, 7.67639),
+            type: 'futura'
+          }
+        ];
+
+        for (var i = 0, feature; feature = features[i]; i++) {
+          addMarker(feature);
+        }
+
+        var legend = document.getElementById('legend');
+        for (var key in icons) {
+          var type = icons[key];
+          var name = type.name;
+          var icon = type.icon;
+          var div = document.createElement('div');
+          div.innerHTML = '<img src="' + icon + '"> ' + name;
+          legend.appendChild(div);
+        }
+
+        map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body ng-controller="AppCtrl" id="c3">
+  	<div id="dvLoading"></div>
+  	<div id="rotate-device" class="white">
+		<div>
+			<img src="../imgs/element/rotate-device.png">
+			<h3 translate="{{ 'ROTATE-DEVICE' }}">per favore ruota il tuo dispositivo<br/>per una visualizzazione corretta</h3>
+		</div>
+	</div>
+	<div id="resize-browser" class="white">
+		<div>
+			<img src="../imgs/element/resize-browser.png">
+			<h3 translate="{{ 'RESIZE-BROWSER' }}">allarga la finestra del browser<br/>per visualizzare correttamente questo sito</h3></div>
+		</div>
+	</div>
+	<header>
+
+		<a ng-href="{{getL10NLink('../')}}"><img id="logo" src="../imgs/element/compagnia-san-paolo-logo.png" /></a>
+
+		<div class="menu-container" id="menu-vis">
+			<div class="menu-wrapper">
+				<!--<div class="menu-element-wrapper white menu-sel">-->
+				<a ng-href="{{getL10NLink('../la_strada_per_menfi_e_tebe/')}}">
+					<div class="menu-element-wrapper menu-element-wrapper-top iron menu-1 ">
+						<div>
+							<h3 translate="{{ 'MENU-1' }}" ng-class="eng('menu-e')">La strada per menfi e tebe</h3>
+						</div>
+					</div>
+				</a>
+				<a ng-href="{{getL10NLink('../il_valore_della_riscoperta/')}}">
+					<div class="menu-element-wrapper menu-element-wrapper-top iron menu-2">
+						<div>
+							<h3 translate="{{ 'MENU-2' }}" ng-class="eng('menu-e')">Il valore della riscoperta</h3>
+						</div>
+					</div>
+				</a>
+				<div class="menu-element-wrapper menu-element-wrapper-top white menu-3 menu-sel">
+					<div>
+						<h3 translate="{{ 'MENU-3' }}" ng-class="eng('menu-e')">La spedizione di Egizio 2015</h3>
+					</div>
+				</div>
+				<div class="menu-element-wrapper menu-element-wrapper-top white  menu-4 unactive">
+					<div>
+						<h3 translate="{{ 'MENU-4' }}" ng-class="eng('menu-e')">A un soffio dalla scoperta</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-container" id="menu-hid">
+
+			<div class="menu-wrapper">
+				<!--<div class="menu-element-wrapper menu-sel white" >-->
+				<a ng-href="{{getL10NLink('../la_strada_per_menfi_e_tebe/')}}">
+					 <div class="menu-element-wrapper menu-element-wrapper-bot iron menu-1" >
+						 <div>
+							 <p translate="{{ 'MENU-1-TEXT' }}">Il Museo Egizio più importante d'Europa nasce a Torino, tra storia e avventure.</p>
+							 <img class="img-back" src="../imgs/menu/c1w.png" />
+							 <img class="img-over" src="../imgs/menu/c1.png" />
+						 </div>
+					 </div>
+				</a>
+				<a ng-href="{{getL10NLink('../il_valore_della_riscoperta/')}}">
+					 <div class="menu-element-wrapper menu-element-wrapper-bot iron menu-2" >
+						 <div>
+							 <p translate="{{ 'MENU-2-TEXT' }}">Dietro le quinte: il raddoppio degli spazi espositivi per il Nuovo Museo.</p>
+							 <img class="img-back" src="../imgs/menu/c2w.png" />
+							 <img class="img-over" src="../imgs/menu/c2.png" />
+						 </div>
+					 </div>
+				</a>
+				<div class="menu-element-wrapper menu-element-wrapper-bot menu-3 menu-sel" >
+					<div>
+						<p translate="{{ 'MENU-3-TEXT' }}">Siamo in tour! Vieni a trovarci e scopri cosa si nasconde sotto la sabbia.</p>
+						<img class="img-back" src="../imgs/menu/c3w.png" />
+						<img class="img-over" src="../imgs/menu/c3.png" />
+						<img class="img-unactive" src="../imgs/menu/c3g.png" />
+						<p class="un-over" translate="{{ 'MENU-3-UNACTIVE' }}">Questa sezione si attiverà a dicembre 2014.</p>
+					</div>
+				</div>
+				<div class="menu-element-wrapper menu-element-wrapper-bot menu-4 white unactive">
+					<div>
+						<p translate="{{ 'MENU-4-TEXT' }}">Partecipa anche tu,<br/>ovunque nel mondo tu sia.<br/>Che cosa scoprirai oggi?</p>
+						<img class="img-back" src="../imgs/menu/c4w.png" />
+						<img class="img-over" src="../imgs/menu/c4.png" />
+						<img class="img-unactive" src="../imgs/menu/c4g.png" />
+						<p class="un-over" translate="{{ 'MENU-4-UNACTIVE' }}">Questa sezione si attiverà a marzo 2015.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a ng-href="{{getL10NLink('../')}}">
+			<img class="logo-elements" id="logo-top" src="../imgs/element/logo-1.png">
+			<img class="logo-elements" id="logo-bot" src="../imgs/element/logo-4.png" ng-if="lang=='it'">
+			<img class="logo-elements" id="logo-bot" src="../imgs/element/logo-4-en.png" ng-if="lang=='en'">
+		</a>
+
+
+	</header>
+
+
+    <div class="shadow top"></div>
+    <div class="container">
+
+		<div id="cover">
+			<div id="map_canvas"></div>
+			<div id="legend"><!-- <h3>Legend</h3> --></div>
+			<div id="veil"></div>
+			<h1>
+				la spedizione di egizio 2015
+			</h1>
+			<p class="intro" id="quote">
+				Siamo in tour! Vieni a trovarci<br/>e scopri cosa si nasconde sotto la sabbia.
+			</p>
+
+			<!--<h1 ng-class="eng('title-e')" translate="{{ 'C3-TITLE' }}">
+				la spedizione di egizio 2015
+			</h1>
+			<p class="intro gold" id="quote" ng-class="eng('intro-e')" translate="{{ 'HISTORY-INTRO-QUOTE' }}">
+				Siamo in tour! Vieni a trovarci e scopri cosa si nasconde sotto la sabbia.
+			</p>-->
+			<a href="../il_progetto">
+				<div id="il-progetto" class="white">
+					<h3 translate="{{ 'PROJECT-LABEL' }}">Il Progetto</h3>
+					<img src="../imgs/element/il-progetto-line.jpg" />
+				</div>
+			</a>
+	
+			<!-- translator test -->
+			<div id="lang">
+				<a href="" ng-click="changeLanguage('it')" translate="{{ 'BUTTON_LANG_IT' }}" ng-class="{'lan-sel': lang== 'it' }">italiano</a> | 
+				<a href="" ng-click="changeLanguage('en')" translate="{{ 'BUTTON_LANG_EN' }}" ng-class="{'lan-sel': lang== 'en' }">inglese</a>
+			</div>
+		</div>
+
+    	<!-- main menu -->
+			<div class="menu">
+				<!-- ui-sref-active -> add active class based on active route -->
+				<!-- ui-sref -> navigate to route state -->
+				<ul>
+					<!--<li ui-sref-active="active"><a ui-sref="home">home</a></li>-->
+					<li ui-sref-active="active">
+						<a ui-sref="tappa1" class="prima-tappa" id="tappa-1">
+							<span class="data-tappa">11-14 DIC</span>
+							<span class="nome-tappa">Casa del Quartiere<br/>di San Salvario</span>
+						</a>
+					</li>
+					<li ui-sref-active="active">
+						<a ui-sref="tappa2" id="tappa-2">
+							<span class="data-tappa">12-14 GEN</span>
+							<span class="nome-tappa">Ospedale Infantile Regina Margherita</span>
+						</a>
+					</li>
+					<li ui-sref-active="active">
+						<a ui-sref="tappa3" id="tappa-3">
+							<span class="data-tappa">23-25 GEN</span>
+							<span class="nome-tappa">Shopville Le Gru</span>
+						</a>
+					</li>
+					<li ui-sref-active="active">
+						<a ui-sref="tappa4" id="tappa-4">
+							<span class="data-tappa">2-6 FEB</span>
+							<span class="nome-tappa">Campus Luigi Einaudi</span>
+						</a>
+					</li>
+					<li ui-sref-active="active">
+						<a ui-sref="tappa5" class="last" id="tappa-5">
+							<span class="data-tappa">13-15 FEB</span>
+							<span class="nome-tappa">Galleria San Federico</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- main tag to include partials views -->
+			<div ui-view></div>
+    </div>
+
+
+    <!-- ** angular app dependencies ** -->
+	<script src="../angularjs/angular/angular.min.js"></script>
+	<script src="../angularjs/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="../angularjs/angular-translate/angular-translate.min.js"></script>
+	<script src="../angularjs/angular-sanitize/angular-sanitize.min.js"></script>
+	<script src="../angularjs/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+	<script src="../angularjs/angular-cookies/angular-cookies.min.js"></script>
+	<script src="../angularjs/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+	<script src="../angularjs/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+
+	<!-- ** main app ** -->
+	<script src="angularapp/app.js"></script>
+	<script src="angularapp/config.js"></script>
+	<script src="angularapp/routes.js"></script>
+
+
+  </body>
+</html>

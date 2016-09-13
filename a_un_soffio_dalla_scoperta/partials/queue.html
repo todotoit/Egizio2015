@@ -1,0 +1,53 @@
+<div class="container scrl" id="stp1" flex layout="column" layout-align="start center" 
+	scroll-y
+	flex-content=preserve>
+
+	<div style="width:570px; padding-top:15px;" class="center" ng-controller="QueueCtrl">
+
+		<img src="images/svg/dots_01.svg" />
+
+		<div class="a">{{ 'STEP1_HEAD' | translate:user }}</div>
+
+		<div class="fr1" ng-if="!isMyTurn()">
+			<div class="b">
+				<span translate="{{'STEP1_NOTE_PRE'}}"></span>
+				{{getNumber()}}
+				<span translate="{{'STEP1_NOTE_POST'}}"></span>
+			</div>
+			<div class="c" >{{ timer | millSecondsToTimeString }}</div>
+			<div class="d" translate="{{'STEP1_CODA'}}"></div>
+
+			<a class="btn" href="" ng-click="queue(true)">
+				<div  translate="{{'STEP1_GO'}}"></div>
+			</a>
+
+			<!-- <div class="f" translate="{{'STEP1_INFO'}}"></div>
+		
+			<a class="btn"  href="" ng-click="queue(false)">
+				<div translate="{{'STEP1_NO'}}"></div>
+			</a> -->
+
+		</div>
+
+		<div class="fr2" ng-if="isMyTurn()">
+
+			<div class="itsme" layout="row" layout-align="center center">
+				<div>
+					<img class="logout" ng-click="logout()" src="images/svg/logout.svg" />
+					<img ng-src="{{user.photo}}" />
+				</div>
+			</div>
+
+			<div class="g" translate="{{'STEP1_TOCCA_A_TE'}}"></div>
+
+			<a class="btn"  href="" ng-click="queue(true)">
+				<div translate="{{'STEP1_SONO_PRONTO'}}"></div>
+			</a>
+		</div>
+
+	</div>
+
+
+	<div ng-include="'partials/users.html'" style="width:615px;"></div>
+
+</div>

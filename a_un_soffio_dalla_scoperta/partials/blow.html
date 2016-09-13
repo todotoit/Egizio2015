@@ -1,0 +1,50 @@
+<div class="container" id="stp5"
+	ng-controller="BlowCtrl">
+	
+	<img src="images/svg/dots_04.svg" />
+	
+	<div id="flashContent">
+			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="512" height="250" id="Mic" align="middle">
+				<param name="movie" value="mic/Mic.swf?t=1" />
+				<param name="quality" value="high" />
+				<param name="bgcolor" value="#EDE4DB" />
+				<param name="play" value="true" />
+				<param name="loop" value="true" />
+				<param name="wmode" value="window" />
+				<param name="scale" value="showall" />
+				<param name="menu" value="true" />
+				<param name="devicefont" value="false" />
+				<param name="salign" value="" />
+				<param name="allowScriptAccess" value="always" />
+				<param name="allowNetworking" value="all" />
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="mic/Mic.swf" width="512" height="250">
+					<param name="movie" value="mic/Mic.swf?t=1" />
+					<param name="quality" value="high" />
+					<param name="bgcolor" value="#EDE4DB" />
+					<param name="play" value="true" />
+					<param name="loop" value="true" />
+					<param name="wmode" value="window" />
+					<param name="scale" value="showall" />
+					<param name="menu" value="true" />
+					<param name="devicefont" value="false" />
+					<param name="salign" value="" />
+					<param name="allowScriptAccess" value="always" />
+					<param name="allowNetworking" value="all" />
+				<!--<![endif]-->
+					<a href="http://www.adobe.com/go/getflash">
+						<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+					</a>
+				<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+			</object>
+	</div>
+
+	<div class="a" ng-if="label1" translate="{{'ORA_SOFFIA'}}"></div>
+	<div class="a" ng-if="label2" translate="{{'NON_HO_SENTITO'}}"></div>
+	<div class="a" ng-if="label3" translate="{{'UN_PROBLEMA'}}" ng-click="performBlow();"></div>
+
+
+
+</div>

@@ -1,0 +1,161 @@
+<!doctype html>
+
+<html lang="it" ng-app="egizioTranslateApp">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width"> 
+  <title>Egizio2015 - Il progetto</title>
+  <link rel="stylesheet" href="../css/mobile-style.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  <script src="../js/mobile-script.js"></script>
+  <script>
+  	
+  	$( window ).load(function() {
+		$(".bg-green").height($("#gallery-01").height());
+	});
+  	
+  	
+  </script>
+  <script>
+	  $(window).load(function(){
+		$( '#dvLoading' ).fadeOut( "slow" );
+	  });
+  </script>
+
+
+	<!-- ** angular translation dependencies ** -->
+	<script src="../angularjs/angular/angular.js"></script>
+	<script src="../angularjs/angular-translate/angular-translate.js"></script>
+	<script src="../angularjs/angular-sanitize/angular-sanitize.js"></script>
+	<script src="../angularjs/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+	<script src="../angularjs/angular-cookies/angular-cookies.js"></script>
+	<script src="../angularjs/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+	<script src="../angularjs/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+	<!-- ** main translate app ** -->
+	<script src="../angularapp/app.js"></script>
+	<script src="../angularapp/config.js"></script>
+	<!-- ************************************** -->
+</head>
+
+<body id="progetto" ng-controller="AppCtrl">
+	<div id="dvLoading"></div>  
+	<header>
+		<div id="menu-but-wrapper">
+			<div id="menu-but"><img class="left" src="../imgs/element/mobile-logo.png" /><img class="right" src="../imgs/element/menu.png" /></div>
+		</div>
+		<nav>
+			
+			<div><a href="../la_strada_per_menfi_e_tebe/" translate="{{ 'MENU-1' }}">la strada per menfi e tebe</a></div>
+			<div><a href="../il_valore_della_riscoperta/index.html" translate="{{ 'MENU-2' }}">verso il nuovo museo egizio</a></div>
+			<div><a href="../la_spedizione_di_egizio_2015/" translate="{{ 'MENU-3' }}">la spedizione di egizio 2015</a></div>
+			<div class="menu-unactive"><a href="../ile/a_un_soffio_dalla_scoperta/" translate="{{ 'MENU-4' }}">a un soffio dalla scoperta</a></div>
+			<div id="il-progetto-but" class="pro-sel"><a href="../il_progetto/index.html" translate="{{ 'PROJECT-LABEL' }}">il progetto</a></div>
+			<div id="lang">
+				<a href="" ng-click="changeLanguage('it')" ng-class="{'lan-sel': lang== 'it' }" translate="{{ 'BUTTON_LANG_IT' }}">italiano</a>
+				<a href="" ng-click="changeLanguage('en')" ng-class="{'lan-sel': lang== 'en' }" translate="{{ 'BUTTON_LANG_EN' }}">inglese</a>
+			</div>			
+		</nav>
+		
+	</header>
+  
+	<div id="container">
+		<p class="intro" translate="{{ 'WELCOME-INTRO-1' }}"><strong>Anche grazie al sostegno di Compagnia di San Paolo, ad aprile 2015 nasce un Nuovo Museo Egizio a Torino.</strong></p> 
+		
+		<p translate="{{ 'WELCOME-INTRO-2' }}">Si rinnova uno dei musei più importanti al mondo: raddoppia lo spazio espositivo, con nuovi allestimenti e una straordinaria ristrutturazione degli ambienti di Palazzo Accademia delle Scienze.</p>
+	</div>
+		
+	<div class="gallery-item" id="gallery-01">
+		<img src="imgs/ambienti/new_2662.jpg" />
+		<div class="dida">
+			<h1 translate="{{ 'GALLERY-1-NUM' }}">1.820m2</h1>
+			<p translate="{{ 'GALLERY-1-DIDA' }}">di pittura muraria</p>
+		</div>
+	</div> 
+	<div class="gallery-item">
+		<img src="imgs/ambienti/new_2695.jpg" />		
+		<div class="dida">
+			<h1 translate="{{ 'GALLERY-2-NUM' }}">6.992m3</h1>
+			<p translate="{{ 'GALLERY-2-DIDA' }}">di terra rimossa</p>
+		</div>
+	</div>
+	<div class="gallery-item">
+		<img src="imgs/ambienti/new_2739.jpg" />
+		<div class="dida">
+			<h1 translate="{{ 'GALLERY-3-NUM' }}">254.027kg</h1>
+			<p translate="{{ 'GALLERY-3-DIDA' }}">di armature di ferro</p>
+		</div>
+	</div>
+	<div class="gallery-item">
+		<img src="imgs/ambienti/new_2720.jpg" />
+		<div class="dida">
+			<h1 translate="{{ 'GALLERY-4-NUM' }}">2.182m3</h1>
+			<p translate="{{ 'GALLERY-4-DIDA' }}">di calcestruzzo</p>
+		</div>
+	</div>
+	<div class="gallery-item">
+		<img src="imgs/ambienti/new_2705.jpg" />
+		<div class="dida">
+			<h1 translate="{{ 'GALLERY-5-NUM' }}">160.000m</h1>
+			<p translate="{{ 'GALLERY-5-DIDA' }}">di cavi elettrici</p>
+		</div>
+	</div>
+	<div class="gallery-item" >
+		<img src="imgs/ambienti/new_2784.jpg" />
+		<div class="dida">
+			<h1 translate="{{ 'GALLERY-6-NUM' }}">1.080</h1>
+			<p translate="{{ 'GALLERY-6-DIDA' }}">giorni di lavoro</p>
+		</div>
+	</div>
+	<div class="gallery-item">
+		<img src="imgs/ambienti/new_2774.jpg" />
+		<div class="dida">
+		   <h1 translate="{{ 'GALLERY-7-NUM' }}">110</h1>
+		   <p translate="{{ 'GALLERY-7-DIDA' }}">maestranze operanti in cantiere</p>
+		</div>
+	</div>
+	<div id="credits">	
+		<h2 translate="{{ 'COMMUNICATION-TITLE' }}">La campagna di comunicazione</h2>
+
+		<p translate="{{ 'COMMUNICATION-TEXT' }}">La campagna di comunicazione "Egizio 2015", ideata e realizzata dallo studio TODO, è stata voluta da <span class="green">Compagnia di San Paolo</span> per comunicare il progetto che ha fortemente sostenuto e rendere i visitatori – di Torino e di tutto il mondo – consapevoli e partecipi del grande rinnovo del Museo Egizio. Attraverso affissioni e stampa, eventi istituzionali ma anche interazione con il pubblico e una grande installazione in piazza, <span class="green">Compagnia di San Paolo</span> valorizza uno dei tesori del nostro Paese, che oggi rinasce più grande e moderno che mai.</p>
+		
+		<h2 translate="{{ 'COMPANY-TITLE' }}">Chi è Compagnia di San Paolo</h2>
+		<p translate="{{ 'COMPANY-TEXT' }}">La <span class="green">Compagnia di San Paolo</span> è oggi una delle maggiori fondazioni private d’Europa. La sua missione è favorire lo sviluppo civile, culturale ed economico delle comunità in cui opera.</p>
+		<a class="green" href="http://www.compagniadisanpaolo.it" target="blank" translate="{{ 'COMPANY-LINK' }}">www.compagniadisanpaolo.it</a>
+		
+		
+		<h2 translate="{{ 'CREDITS-WEB-TITLE' }}">WEBSITE CREDITS</h2>
+		<p translate="{{ 'CREDITS-WEB-TEXT' }}">compagnia.egizio2015.it è un sito di Compagnia di San Paolo (corso Vittorio Emanuele II, 75 – 10128 Torino).<br/>
+Concept, art direction, ricerca, editing, traduzione e sviluppo: <a href="http://www.todo.to.it/">TODO</a><br/>
+Visual design, web design: <a href="http://www.todo.to.it/">TODO</a> & <a href="http://parcodiyellowstone.it">parcodiyellowstone</a><p>
+
+		<h2 translate="{{ 'CREDITS-PHOTO-TITLE' }}">ICONOGRAFIA</h2>
+		<p translate="{{ 'CREDITS-PHOTO-TEXT-1' }}">La foto in homepage è di Achille Filipponi.</p>
+		<p translate="{{ 'CREDITS-PHOTO-TEXT-2' }}">Si ringrazia il Museo Egizio di Torino per le foto della Mensa Isiaca e degli scavi Schiaparelli inserite nella sezione “La strada per Menfi e Tebe”, e per tutte le foto all’interno degli approfondimenti della sezione “Il valore della riscoperta”, salvo i render degli allestimenti futuri, gentilmente concessi dallo studio Isolarchitetti.</p>
+
+		<p translate="{{ 'CREDITS-PHOTO-TEXT-3' }}">Sono di PEPE fotografia: la foto della firma di Drovetti in "La strada per Menfi e Tebe”, e tutte le foto del cantiere in “Il valore della riscoperta” e nella gallery della pagina “Il progetto”.</p>
+
+		<p translate="{{ 'CREDITS-PHOTO-TEXT-4' }}">Lo sfondo dell’introduzione alla sezione “Il valore della riscoperta” è una rielaborazione dell’immagine “ASTo, Corte, Carte Topografiche e disegni, Palazzi Reali e altre fabbriche regie, Torino, Collegio dei Nobili, cartella 1, foglio 11”, gentilmente concessa dal Ministero per i Beni e le Attività Culturali e del Turismo, Archivio di Stato di Torino.</p>
+
+		<p translate="{{ 'CREDITS-PHOTO-TEXT-5' }}">La foto dell’ambiente 1 in “Il valore della riscoperta” è di Pino dell’Aquila.<br/>
+Le foto degli ambienti 2 e 3 sono di Giacomo Lovera.<br/>
+Per la foto dell'ambiente 4 si ringrazia l'editore Umberto Allemandi & C.</p>
+
+		<h2 translate="{{ 'CREDITS-THANKS-TITLE' }}">RINGRAZIAMENTI</h2>
+
+		<p translate="{{ 'CREDITS-THANKS-TEXT-1' }}">Enrico Ferraris, Caterina Ciccopiedi, Andrea Conci, Alessia Fassone, Beppe Moiso (Museo Egizio di Torino)</p>
+
+		
+	</div>  
+  <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-7954920-8', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>

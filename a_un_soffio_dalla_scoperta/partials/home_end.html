@@ -1,0 +1,27 @@
+<div class="container" id="c4home" flex layout="column" layout-align="center center">
+
+	<div>
+		<h1 class="home-title" translate="{{ 'TITLE_SOFFIO' }}">A UN SOFFIO DALLA SCOPERTA</h1>
+	</div>
+
+	<div>
+		<p class="ultima_menata white decima" ng-if="lang=='it'">
+			{{ 'HOME_CLAIM_END_1_it' | translate }} <br />
+
+			{{ stats.blows_total }} {{ 'HOME_CLAIM_END_2_it' | translate }} <br />
+
+			{{ 'HOME_CLAIM_END_3_it' | translate }}
+		</p>
+		<p class="ultima_menata white decima" ng-if="lang=='en'">
+			{{ 'HOME_CLAIM_END_1_en' | translate }} <br />
+
+			{{ 'HOME_CLAIM_END_2_en' | translate }} {{ stats.blows_total }} {{ 'HOME_CLAIM_END_3_en' | translate }}<br />
+
+			{{ 'HOME_CLAIM_END_4_en' | translate }}<br />
+
+			{{ 'HOME_CLAIM_END_5_en' | translate }}
+		</p>
+	</div>
+
+</div>
+

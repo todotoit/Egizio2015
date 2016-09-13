@@ -1,0 +1,222 @@
+<script>
+	$( document ).ready(function() {
+		
+		var altezzaRimanente = $( window ).height() - 275;
+	
+		if ($( window ).height() >430){
+			 $( ".arrow" ).fadeIn( "fast" );
+			 $( ".arrow" ).css({
+			   "top": (altezzaRimanente/2)+230,
+			 });
+		}else{
+			$( ".arrow" ).fadeOut( "fast" );
+		}	
+		
+		if ($(window).scrollTop()>436){
+				$( ".menu" ).css({
+				  "position": "fixed",
+				  "top": "124px"
+				});
+				$( ".tappa-aperta" ).css({
+				  "position": "fixed",
+				  "top": "186px"
+				});
+				$( "#cover" ).css({
+				  "position": "fixed",
+				  "top": "-436px"
+				});
+				$( ".body-tappa" ).css({
+				  "top": "710px"
+				});
+			}
+			else{
+				$( ".menu" ).css({
+				  "position": "relative",
+				  "top": "auto"
+				});
+				$( ".tappa-aperta" ).css({
+				  "position": "relative",
+				  "top": "auto"
+				});
+				$( "#cover" ).css({
+				  "position": "relative",
+				  "top": "auto"
+				});
+				$( ".body-tappa" ).css({
+				  "top": "auto"
+				});
+			}
+	});
+</script>
+<script>
+      var map2;
+
+      function initialize() {
+        map2 = new google.maps.Map(document.getElementById('map_canvas_pretour'), {
+          zoom: 15,
+          center: new google.maps.LatLng(45.117221, 7.711770),
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          panControl: false,
+		  zoomControl: true,
+		  zoomControlOptions: {
+			position: google.maps.ControlPosition.RIGHT_CENTER
+		  },
+		  mapTypeControl: false,
+		  scaleControl: false,
+		  streetViewControl: false,
+		  overviewMapControl: false,
+		  scrollwheel: false,
+          styles: [
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [
+                { color: '#D1AC88' },
+                { weight: 1 }
+              ]
+            }, {
+              featureType: 'road',
+              elementType: 'labels',
+              stylers: [
+
+//                 { saturation: -100 },
+//                 { invert_lightness: true }
+              ]
+            }, {
+              featureType: 'landscape',
+              elementType: 'geometry',
+              stylers: [
+                { hue: '#0000ff' },
+                { gamma: 1.4 },
+                { saturation: 82 },
+                { lightness: 96 }
+              ]
+            }, {
+              featureType: 'poi.school',
+              elementType: 'geometry',
+              stylers: [
+                { hue: '#00ff00' },
+                { lightness: -15 },
+                { saturation: 99 }
+              ]
+            }, {
+              featureType: 'poi',
+              elementType: 'geometry',
+              stylers: [
+                { visibility: 'off' }
+              ]
+            }, {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [
+                { visibility: 'on' },
+                { color: '#85c5e8' }
+              ]
+            }, {
+              featureType: 'landscape',
+              elementType: 'geometry',
+              stylers: [
+                { visibility: 'on' },
+                { color: '#fffbf8' }
+              ]
+            }
+          ]
+        });
+
+        var iconBase = 'img/element/';
+        var icons = {
+          futura: {
+            name: 'Futuro',
+            icon: iconBase + 'tappa_futura.png'
+          }
+        };
+
+        function addMarker(feature) {
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            map: map2
+          });
+        }
+
+        var features = [
+          /* Casa del Quartiere di San Salvario, via Morgari 14 - 10125 Torino */
+          
+          /* Shopville Le Gru, via Crea 10 - 10095 Grugliasco (TO) */
+          {
+            position: new google.maps.LatLng(45.117221, 7.711770),
+            type: 'futura'
+          }
+        ];
+
+        for (var i = 0, feature; feature = features[i]; i++) {
+          addMarker(feature);
+        }
+
+      }
+
+      // this has to be call in angular controller
+      // google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+    <!-- call initialize() on state controller init  -->
+    {{initializeGMap()}}
+
+<div class="tappa-aperta pretour">
+	<div class="header-tappa ">
+		<div class="inner-header">
+			<p class="data" translate="{{ 'TAPPA-3-DATA' }}"></p>	
+			<h1 translate="{{ 'TAPPA-3-TITOLO' }}"></h1>
+		</div>
+	</div>
+</div>
+<div class="body-tappa">
+	
+	<div class="inner-body">
+		
+		<div class="inner-body-left">
+			 <p translate="{{ 'TAPPA-3-PRE-TEXT-1' }}"></p> 
+			 <p translate="{{ 'TAPPA-3-PRE-TEXT-2' }}"></p>
+		</div>
+		<div class="inner-body-right">
+			 <div class="wrapper-img">
+			 	<div id="map_canvas_pretour"></div>
+			 	
+			 	
+			 	
+			 </div>
+		</div>	
+		
+	</div>
+	<!--<a ui-sref="tappa2" id="tappa-2" class="arrow left"></a>
+	<a ui-sref="tappa4" id="tappa-4" class="arrow right"></a>-->
+
+</div>
+
+<a href="../il_progetto">
+	<div id="il-progetto" class="white">
+		<h3 translate="{{ 'PROJECT-LABEL' }}">Il Progetto</h3>
+		<img src="../imgs/element/il-progetto-line.jpg" />
+	</div>
+</a>
+
+<!-- translator test -->
+<!--  ng-click="changeLanguage('it')" -> call to change language function -->
+
+<div id="lang" class="white">
+	<a ng-href="{{changeLanguage('it')}}" translate="{{ 'BUTTON_LANG_IT' }}" ng-class="{'lan-sel': lang== 'it' }">italiano</a> |
+	<a ng-href="{{changeLanguage('en')}}" translate="{{ 'BUTTON_LANG_EN' }}" ng-class="{'lan-sel': lang== 'en' }">inglese</a>
+</div>
+<div id="share">
+  <p>Share on:</p>
+  <div ng-if="lang=='it'">
+    <a twitter  data-lang="it" data-count='none' data-size="medium" data-text='Parte la Spedizione di Egizio 2015! @CSP_live @MuseoEgizio' data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+  </div>
+  <div ng-if="lang=='en'">
+    <a twitter  data-lang="en" data-count='none' data-size="medium" data-text='The Egizio 2015 Expedition has begun! @CSP_live @MuseoEgizio' data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+  </div>
+  <br>
+  <div style="float:right;">
+    <iframe width="56" height="20" src="//www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fcompagnia.egizio2015.it%2Fla_spedizione_di_egizio_2015%2F%23%2Ftappa3&amp;layout=button&locale=en_GB" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+angular.module('C4SailsModule', []);

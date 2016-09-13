@@ -1,0 +1,129 @@
+{
+	"ROTATE-DEVICE": "please rotate your device<br/>to landscape mode",
+	"RESIZE-BROWSER": "please expand your browser window<br/>to view the website correctly",
+	"BUTTON_LANG_IT": "ITA",
+	"BUTTON_LANG_EN": "ENG",
+	"MENU-1": "The Road to Memphis and Thebes",
+	"MENU-2": "The Value of Rediscovery",
+	"MENU-3": "The Egizio 2015 Expedition",
+	"MENU-4": "One Breath Away from Rediscovery",
+	"MENU-1-TEXT": "The adventures that brought the most important Egyptian Museum in Europe to Turin.",
+	"MENU-2-TEXT": "Behind the scenes: doubling space for the New Museum.",
+	"MENU-3-TEXT": "Explore the tour's full log:<br/>stop after stop, we discovered history!",
+	"MENU-3-UNACTIVE":"This section will be active from January 2015.",
+	"MENU-4-TEXT": "Join us, from anywhere in the world. What will you discover today?",
+	"MENU-4-UNACTIVE":"This section will be active from March 2015.",
+	"HOME_TITLE": "Home",
+	"PROJECT-LABEL": "The project",
+
+	"INIZIA_RISCOPERTA": "INIZIA LA RISCOPERTA TRA",
+	"ORE": "ore",
+	"E": "e",
+	"MINUTI": "minuti",
+
+	"TITLE_SOFFIO": "ONE BREATH AWAY <br />FROM REDISCOVERY",
+	"REPERTI_SVELATI": "See the finds",
+	"LOGIN_JOIN": "Join the fun",
+	"HOME_CLAIM": "An interactive display case<br />inside Turin's Museo Egizio,<br /> and a range of finds just one breath away from being unveiled...<br />right on your computer.",
+	"LOGIN_ISTRUCTION": "All you have to do is blow in your microphone or simply click with your mouse, to bring to life the robot in the display case. Get ready for your moment in the spotlight, then share this unique experience with your friends",
+	"ACCEDI_SOCIAL_TITLE": "LOG IN WITH FACEBOOK OR TWITTER!",
+
+	"IL_SOFFIO_DI": "you're watching",
+	"PREPARA_SOFFIO_1": "getting",
+	"PREPARA_SOFFIO_2": "ready:",
+
+	"STEP1_HEAD": "Hello {{displayName}}",
+	"STEP1_NOTE_PRE": "There are",
+	"STEP1_NOTE_POST": "users in line at the moment. <br />You can expect to wait approximately",
+	"STEP1_TIME": "04<i>min</i> 45<i>sec</i>",
+	"STEP1_CODA": "Get in line and we will alert you when your turn comes up. You can surf the whole website without loosing sight of your waiting time.",
+	"STEP1_GO": "I want to take part now",
+	"STEP1_INFO": "If you cannot wait, leave your blow now: our system will record and replicate it in a random spot as soon as possibile. Your blow will not be streamed online.",
+	"STEP1_NO": "leave a blow",
+
+	"STEP1_TOCCA_A_TE": "Ready to control the robot inside Turin's Museo Egizio? <br>Users connected from the whole world and visitors inside the museum will see the find you are helping unveil.",
+	"STEP1_SONO_PRONTO": "YES, I AM READY",
+
+	"MANCANO_ANCORA": "You still have",
+	"HEADSET": "HEADSET",
+	"AURIC": "EARPHONES",
+	"MICR": "MICROFONO",
+	"NEL_FRATTEMPO": "In the meantime, please choose: which one of these will you use to blow?",
+	"SCEGLI_TRA_QUESTE": "Choose one of these two options to blow:",
+	"SE_NON_VUOI": "If you don't have a microphone or don't want to use it, you can trigger a standard blow by clicking",
+
+	"HAI_SELEZIONATO": "You have chosen",
+	"ASSICURATI": "Make sure everything is plugged into your computer correctly.",
+	"RITORNA": "Back",
+	"SOFFIA": "NOW BLOW IN THE MICROPHONE",
+	"CLICCA_SOFFIA": "Click on the icon <br>to record your blow for later",
+
+	"ACCEDI": "LOG IN",
+	"SOFFIA": "BLOW",
+	"SCOPRI": "DISCOVER",
+	"CONDIVIDI": "SHARE",
+	"ORA_SOFFIA": "NOW BLOW IN THE MICROPHONE",
+	"CLICCA_SOFFIA": "Click on the icon <br>to record your blow for later",
+
+	"TRA_SOLI": "Countdown!",
+	"TUO_TURNO": "",
+	"POI_AVRAI": "Don't worry: you will have",
+	"MINUTI_PER_SELEZ": "minute to select the area and blow.",
+	"WAIT": "WAIT",
+	"YOUR-TURN-LBL": "IS YOUR TURN",
+
+	"SELEZ_AREA":"SELECT AREA",
+	"AREA_ESPLORATA":"Here are the areas other users have already explored.<br> Where do you want to venture?<br> Choose where, with a click of the mouse.",
+
+	"ECCO_IL_SOFFIO": "Here is the video of your blow <br />for Turin's New Museo Egizio!",
+	"CONDIVIDI_SOFFIO":"Share the video",
+	"CONDIVITI_TEXT_BOTTOM":"Share it and challenge your friends to figure out what is hiding under the sand.",
+
+	"HAI_REGISTRATO_SOFF":"Hai registrato un soffio <br />per il Nuovo Museo Egizio di Torino!",
+	"ORA_DILLO_AMICI":"Ora dillo ai tuoi amici e invitali <br />a scoprire il prossimo reperto sotto la sabbia.",
+	"CONDIVIDI_SOFFIO_OLNY":"condividi la tua esperienza",
+
+	"ROBOT_RIPOSA":"The robot is resting",
+	"TRA_QUANTO_APRE":"In {{h}} hours and {{m}} minutes",
+	"TORNERA_TEXT1":"It will be back, ready to blow away the sand thanks to users from the whole world.",
+
+	"ROBOT_MANUTENZIONE":"The robot is under maintenance",
+	"TORNERA_TEXT2":"It will be back shortly, and will come to life thanks to users from the whole world.",
+
+	"ROBOT_SCOPERTO":"A new find has just been unveiled!",
+	"TORNERA_TEXT3":"You'll soon be able to take part in this unique experience.",
+
+	"r1": {
+		"data": "",
+		"name": "Stele of Qen",
+		"art": "The",
+		"contrib": "",
+
+		"head": "Tra il 10 Marzo ed il 15 Marzo 2015, 54 persone hanno contribuito a svelare la Stele di Pendua!",
+		"body": "<p>In the central part of the architrave, the goddesses Isis and Neft kneel in worship of the rising sun on the horizon: behind them, the deceased Qen - sculptor &quot;in the Seat of Truth&quot; (the village of Deir el-Medina) - is prostrate in worship.</p><p>At the top of the stele the god Ra-Harakhte, who has the head of a hawk and a solar disk above him, is sitting in the solar boat, adorned with the sign symbolizing the followers of Horus, which combines a harpoon, a knife, and a human leg tied together with a rope. The bow of the boat is covered with a cloth made of pearls and leaves while the stern there are two oars-helms.</p><p>At the bottom, on the left there is a chapel with a pyramidal roof, typical of Deir el-Medina, next to which four standing mummies are arranged. Qen&rsquo;s son and brother celebrate funeral rites, while a woman shows her pain, kneeling.</p><p>At the bottom, on the left, there is a man with his right arm raised in adoration; another arm in the lower part of the jamb is only partially visible. Two eyes of Ra, symbol of prosperity, were engraved on the sides. </p>",
+		"subhead": "Ecco gli utenti che hanno partecipato</br> alla riscoperta della Stele di Pendua:"
+		
+	},
+	
+	"TABLET_A_BIG_NO_NO": "ONE BREATH AWAY <br />FROM REDISCOVERY",
+	"TABLET_A_BIG_NO_NO_TXT": "partecipa anche tu visitando <br />compagnia.egizio2015.it dal tuo computer!",
+	
+	"LIVE_ON":"Broadcast from <br /> Turin's Museo Egizio",
+
+	"ULTIMI_SOFFI_A":"WHO IS DISCOVERING THIS FIND?",
+	"ULTIMI_SOFFI_B":"Here are the latest 40 participants over {{users_count}} total!",
+
+	"BROWSER": "Please use Chrome or Explorer <br />to best enjoy the experience.",
+	"UN_PROBLEMA":"There seems to be a problem. <br />You can try the experience with a click.",
+
+	"HOME_CLAIM_END_1_en": "The adventures of #egizio2015 have come to an end.",
+	"HOME_CLAIM_END_2_en": "By blowing the sand away ",
+	"HOME_CLAIM_END_3_en": " times",
+	"HOME_CLAIM_END_4_en": "people from the whole world have uncovered",
+	"HOME_CLAIM_END_5_en":"the treasures of the Egyptian Museum.",
+	"ULTIMI_SOFFI_END_1": "HERE ARE ALL THE PEOPLE",
+	"ULTIMI_SOFFI_END_2": "WHO TOOK PART IN THE REDISCOVERY",
+
+
+	"DUMM":""
+}

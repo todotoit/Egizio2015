@@ -1,0 +1,371 @@
+<!doctype html>
+
+<html lang="it" ng-app="egizioTranslateApp">
+
+<head>
+  	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width"> 
+  	<title>Egizio2015 - Il valore della riscoperta</title>
+  	<meta name="author" content="parcodiyellowstone.it">
+
+  	<link rel="stylesheet" href="../css/mobile-style.css">
+    <link rel="stylesheet" href="css/mobile-style.css">
+    
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	
+	<script src="js/idangerous.swiper-2.0.min.js"></script>
+	<script src="js/gallery-app.js"></script>
+    
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="../js/jquery.animate-shadow-min.js"></script>
+	<script src="js/mobile-script.js"></script>
+	<script src="../js/mobile-script.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+	  $(window).load(function(){
+		$( '#dvLoading' ).fadeOut( "slow" );
+	  });
+  </script>
+
+	<!-- ** angular translation dependencies ** -->
+	<script src="../angularjs/angular/angular.js"></script>
+	<script src="../angularjs/angular-translate/angular-translate.js"></script>
+	<script src="../angularjs/angular-sanitize/angular-sanitize.js"></script>
+	<script src="../angularjs/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+	<script src="../angularjs/angular-cookies/angular-cookies.js"></script>
+	<script src="../angularjs/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+	<script src="../angularjs/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+	<!-- ** main translate app ** -->
+	<script src="../angularapp/app.js"></script>
+	
+	<!-- ************************************** -->
+	
+  <script src="https://maps.googleapis.com/maps/api/js"></script>	
+    <style>
+      html, body, #map_canvas {
+        margin: 0;
+        padding: 0;
+        height:100%;
+      }
+      #legend {
+		  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+		  border: 1px solid #000;
+		  color: #262626;
+		  font-family: "din";
+		  letter-spacing: 0.5px;
+		  margin: 10px;
+		  padding: 3px 10px 10px;
+		  text-align: left;
+		  text-transform: uppercase;
+	  }
+      #legend h3 {
+        margin-top: 0;
+      }
+      #legend img {
+		  margin-right: 5px;
+		  margin-top: 10px;
+		  vertical-align: middle;
+		  width: 25px;
+	  }
+	  
+	  /* Swipe Styles */
+
+	  .swiper-container {
+		height: 250px;
+		color: #fff;
+		text-align: center;
+	  }
+	  .swiper-slide {
+		height: 100%;
+	  }
+	  
+    </style>
+	<script>
+	
+
+      var map;
+
+      function initialize() {
+        map = new google.maps.Map(document.getElementById('map_canvas'), {
+          zoom: 12,
+          center: new google.maps.LatLng(45.05412, 7.67820),
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          panControl: false,
+		  zoomControl: true,
+		  zoomControlOptions: {
+			position: google.maps.ControlPosition.RIGHT_CENTER
+		  },
+		  mapTypeControl: false,
+		  scaleControl: false,
+		  streetViewControl: false,
+		  overviewMapControl: false,
+		  scrollwheel: false,
+          styles: [
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [
+                { color: '#D1AC88' },
+                { weight: 1 }
+              ]
+            }, {
+              featureType: 'road',
+              elementType: 'labels',
+              stylers: [
+
+//                 { saturation: -100 },
+//                 { invert_lightness: true }
+              ]
+            }, {
+              featureType: 'landscape',
+              elementType: 'geometry',
+              stylers: [
+                { hue: '#0000ff' },
+                { gamma: 1.4 },
+                { saturation: 82 },
+                { lightness: 96 }
+              ]
+            }, {
+              featureType: 'poi.school',
+              elementType: 'geometry',
+              stylers: [
+                { hue: '#00ff00' },
+                { lightness: -15 },
+                { saturation: 99 }
+              ]
+            }, {
+              featureType: 'poi',
+              elementType: 'geometry',
+              stylers: [
+                { visibility: 'off' }
+              ]
+            }, {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [
+                { visibility: 'on' },
+                { color: '#85c5e8' }
+              ]
+            }, {
+              featureType: 'landscape',
+              elementType: 'geometry',
+              stylers: [
+                { visibility: 'on' },
+                { color: '#fffbf8' }
+              ]
+            }
+          ]
+        });
+
+        var iconBase = 'imgs/element/';
+        var icons = {
+          passata: {
+            name: 'Passato',
+            icon: iconBase + 'tappa_passata.png'
+          },
+          corrente: {
+            name: 'Corrente',
+            icon: iconBase + 'tappa_corrente.png'
+          },
+          futura: {
+            name: 'Futuro',
+            icon: iconBase + 'tappa_futura.png'
+          }
+        };
+
+        function addMarker(feature) {
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            map: map
+          });
+        }
+
+        var features = [
+          /* Casa del Quartiere di San Salvario, via Morgari 14 - 10125 Torino */
+          {
+            position: new google.maps.LatLng(45.05412, 7.67820),
+            type: 'futura'
+          },
+          /* Ospedale Infantile Regina Margherita, piazza Polonia 94 - 10126 Torino */
+          {
+            position: new google.maps.LatLng(45.03603, 7.67513),
+            type: 'futura'
+          },
+          /* Shopville Le Gru, via Crea 10 - 10095 Grugliasco (TO) */
+          {
+            position: new google.maps.LatLng(45.05586, 7.61191),
+            type: 'futura'
+          },
+          /* Campus Luigi Einaudi, Lungo Dora Siena 100 - 10153 Torino */
+          {
+            position: new google.maps.LatLng(45.07367, 7.69973),
+            type: 'futura'
+          },
+          /* Galleria San Federico - 10121 Torino */
+          {
+            position: new google.maps.LatLng(45.06655, 7.67639),
+            type: 'futura'
+          }
+        ];
+
+        for (var i = 0, feature; feature = features[i]; i++) {
+          addMarker(feature);
+        }
+
+        var legend = document.getElementById('legend');
+        for (var key in icons) {
+          var type = icons[key];
+          var name = type.name;
+          var icon = type.icon;
+          var div = document.createElement('div');
+          div.innerHTML = '<img src="' + icon + '"> ' + name;
+          legend.appendChild(div);
+        }
+
+        map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+      
+      
+      
+      
+    </script>	
+
+
+  </head>
+<body id="c3" ng-controller="AppCtrl">
+	<div id="dvLoading"></div>
+	<header>
+		<div id="menu-but-wrapper">
+			<div id="menu-but"><img class="left" src="../imgs/element/mobile-logo.png" /><img class="right" src="../imgs/element/menu.png" /></div>
+		</div>
+		<nav>
+			<div><a href="../la_strada_per_menfi_e_tebe/" translate="{{ 'MENU-1' }}">la strada per menfi e tebe</a></div>
+			<div><a href="../il_valore_della_riscoperta/" translate="{{ 'MENU-2' }}">verso il nuovo museo egizio</a></div>
+			<div class="menu-selected"><a href="../la_spedizione_di_egizio_2015/" translate="{{ 'MENU-3' }}">la spedizione di egizio 2015</a></div>
+			<div class="menu-unactive"><a href="../a_un_soffio_dalla_scoperta/" translate="{{ 'MENU-4' }}">a un soffio dalla scoperta</a></div>
+			<div id="il-progetto-but"><a href="../il_progetto/index.html" translate="{{ 'PROJECT-LABEL' }}">il progetto</a></div>
+			
+			<div id="lang">
+				<a href="" ng-click="changeLanguage('it')" translate="{{ 'BUTTON_LANG_IT' }}" ng-class="{'lan-sel': lang== 'it' }">italiano</a>
+				<a href="" ng-click="changeLanguage('en')" translate="{{ 'BUTTON_LANG_EN' }}" ng-class="{'lan-sel': lang== 'en' }">inglese</a>
+			</div>
+		</nav>
+	</header>
+<div id="cover-c3">
+			<div id="map_canvas"></div>
+			<div id="legend"><!-- <h3>Legend</h3> --></div>
+			<div id="veil"></div>
+			
+			<h1 translate="{{ 'C3-TITLE' }}"></h1>
+			<p translate="{{ 'C3-INTRO' }}" class="intro" id="quote"></p>
+			
+		</div>
+
+		<div id="align-box-1"></div>
+		<div class="title-box endtour" id="title-box-1">
+			<h3 translate="{{ 'TAPPA-1-DATA' }}" class="menu-t1"></h3>
+			<h3 translate="{{ 'TAPPA-1-TITOLO' }}" class="titolo-tappa menu-t1"></h3>
+			<div id="tappa1" class="tappe">
+				<p translate="{{ 'TAPPA-1-END-TEXT' }}" ></p>
+				<div class="swiper-container" id="swipe1">
+					<div class="pagination"></div>
+					
+					<div class="swiper-wrapper" style="width:2424px;">
+					
+						<div class="swiper-slide">
+							<div class="inner">
+								<img src="imgs/img-gallery/gallery-1.jpg" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="inner">
+								<img src="imgs/img-gallery/gallery-2.jpg" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="inner">
+								<img src="imgs/img-gallery/gallery-5.jpg" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="inner">
+								<img src="imgs/img-gallery/gallery-6.jpg" alt="">
+							</div>
+						</div>
+					
+					</div>
+				</div>
+
+			</div>	
+						
+		</div>	
+		
+		<div class="title-box endtour" id="title-box-2">
+			<h3 translate="{{ 'TAPPA-2-DATA' }}" class="menu-t2"></h3>
+			<h3 translate="{{ 'TAPPA-2-TITOLO' }}" class="titolo-tappa menu-t2"></h3>
+			<div id="tappa2" class="tappe">
+				<p translate="{{ 'TAPPA-2-JUST-END-TEXT1' }}"></p>
+				<p translate="{{ 'TAPPA-2-JUST-END-TEXT2' }}"></p>
+				<p translate="{{ 'TAPPA-2-JUST-END-TEXT3' }}"></p>
+				<p>
+					<a href="https://www.facebook.com/CompagniaDiSanPaolo" target="blank"><img src="imgs/social/facebook-df.png" /></a>
+					<a href="https://twitter.com/CSP_live" target="blank"><img src="imgs/social/twitter-df.png" /></a>
+					<a href="https://www.youtube.com/user/compagniadisanpaolo" target="blank"><img src="imgs/social/youtube-df.png" /></a>
+				</p>
+			</div>
+		</div>
+		<div class="title-box intour" id="title-box-3">
+			<h3 translate="{{ 'TAPPA-3-DATA' }}" class="menu-t3"></h3>
+			<h3  translate="{{ 'TAPPA-3-TITOLO' }}" class="titolo-tappa menu-t3"></h3>
+			<div id="tappa3" class="tappe">
+			
+				 <p translate="{{ 'TAPPA-3-CURRENT-TEXT1' }}"></p>
+				 <p translate="{{ 'TAPPA-3-CURRENT-TEXT2' }}"></p>
+				 <p translate="{{ 'TAPPA-3-CURRENT-TEXT3' }}"></p>
+			
+				 <p>
+					 <a href="https://www.facebook.com/CompagniaDiSanPaolo" target="blank"><img src="imgs/social/facebook-df.png" /></a>
+					 <a href="https://twitter.com/CSP_live" target="blank"><img src="imgs/social/twitter-df.png" /></a>
+					 <a href="https://www.youtube.com/user/compagniadisanpaolo" target="blank"><img src="imgs/social/youtube-df.png" /></a>
+				 </p>
+			</div>
+		</div>
+		<div class="title-box pretour" id="title-box-4">
+			<h3 translate="{{ 'TAPPA-4-DATA' }}" class="menu-t4"></h3>
+			<h3  translate="{{ 'TAPPA-4-TITOLO' }}" class="titolo-tappa menu-t4"></h3>
+			<div id="tappa4" class="tappe">
+				
+				<p translate="{{ 'TAPPA-4-PRE-TEXT1' }}"></p>
+				<p translate="{{ 'TAPPA-4-PRE-TEXT2' }}"></p>
+				
+			</div>
+		</div>
+		<div class="title-box pretour" id="title-box-5">
+			<h3 translate="{{ 'TAPPA-5-DATA' }}" class="menu-t5"></h3>
+			<h3 translate="{{ 'TAPPA-5-TITOLO' }}" class="titolo-tappa menu-t5"></h3>
+			<div id="tappa5" class="tappe">
+				<p translate="{{ 'TAPPA-5-PRE-TEXT1' }}"></p>
+				<p translate="{{ 'TAPPA-5-PRE-TEXT2' }}"></p>
+			</div>
+		</div>
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-7954920-8', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+
+</html>

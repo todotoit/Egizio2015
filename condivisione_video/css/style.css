@@ -1,0 +1,254 @@
+/*----------------------------------------  fonts */
+
+@font-face {
+  font-family: 'decima-nova';
+  font-style:italic;
+  font-weight:300;
+  src: url('2C43BC_0_0.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('2C43BC_0_0.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+  font-family: 'din';
+  font-style:normal;
+  font-weight:300;
+  src: url('2C43BC_3_0.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('2C43BC_3_0.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+  font-family: 'din';
+  font-style:italic;
+  font-weight:300;
+  src: url('2C43BC_2_0.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('2C43BC_2_0.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+  font-family: 'din';
+  font-style:normal;
+  font-weight:700;
+  src: url('2C43BC_1_0.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('2C43BC_1_0.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+  font-family: 'din';
+  font-style:italic;
+  font-weight:700;
+  src: url('2C43BC_4_0.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('2C43BC_4_0.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+/*----------------------------------------------- */
+
+body {
+  font-family: din;
+  text-align:center;
+  margin:0px;
+  background-color: #eae0d6;
+  color:#434343;
+}
+
+.white {
+  color: #fff;
+}
+
+#menu-vis {
+  z-index: 9000;
+}
+
+.menu-container {
+  position: fixed;
+  width: 100%;
+  z-index: 5000;
+  top: 0px;
+}
+
+.menu-container p {
+  font-family: "decima-nova", "Arial", sans-serif;
+}
+
+h1{
+  margin-top: 120px;
+  font-size:46px;
+  margin-bottom:0px;
+  color:#434343;
+}
+
+video{
+	margin-bottom: 50px;
+}
+
+.menu-container p {
+  margin-top: 130px;
+  font-style: italic;
+  background-color: #262626;
+  z-index: 4000;
+  position: relative;
+}
+
+#menu-hid {
+  z-index: 8000;
+  box-shadow: 0px 0px 20px rgba(0,0,0,.75);
+  background-color: #262626;
+  height: 360px;
+  position: fixed;
+  top: -380px;
+  /* top: 0px; */
+  opacity: 1;
+}
+
+#menu-hid .menu-element-wrapper div img {
+  left: -100px;
+  margin-left: 50%;
+  position: absolute;
+  top: 62px;
+}
+
+.menu-sel .img-back {
+  opacity: 0;
+}
+
+.menu-sel .img-over {
+  opacity: 1;
+}
+
+.img-over{
+	 opacity: 0;
+}
+
+#logo {
+  position: fixed;
+  top: 31px;
+  left: 32px;
+  z-index: 9000;
+}
+
+.menu-wrapper {
+  max-width: 1055px;
+  margin: auto;
+}
+
+.menu-sel {
+  color: #b08d64!important;
+  margin-top: -4px;
+}
+
+.menu-sel div {
+  margin-top: 15px;
+}
+
+.menu-sel div p {
+  margin-top: 134px;
+}
+
+.menu-element-wrapper {
+  float: left;
+  width: 25%;
+  position: relative;
+  height: 45px;
+  cursor: pointer;
+}
+
+.menu-element-wrapper div {
+  margin: 15px;
+  padding-top: 10px;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top:0px;
+}
+
+.logo-elements {
+  opacity: 0;
+}
+
+.logo-elements {
+  left: 8px;
+  position: fixed;
+  top: 2px;
+  z-index: 8500;
+  margin-top: 14px;
+}
+
+#logo-bot {
+  top: -20px;
+}
+
+#il-progetto {
+  position: fixed;
+  bottom: -35px;
+  margin-top: 9px;
+  cursor: pointer;
+  z-index: 9000;
+  left: 10px;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  transition: .2s;
+}
+
+#il-progetto:hover{
+	bottom: -15px;
+}
+
+#il-progetto h3 {
+  margin: 0;
+  border: 1px solid;
+  padding: 4px 3px 1px 5px;
+}
+
+#lang {
+  color: white;
+  border: 1px solid;
+  position: fixed;
+  bottom: 21px;
+  right: 10px;
+  font-size: 12px;
+  padding-bottom: 1px;
+  padding-top: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  z-index: 10000;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+#share {
+  position: fixed;
+  color: #FFF;
+  bottom: 65px;
+  right: 9px;
+}
+
+#share p {
+  font-style: normal;
+  font-family: 'din';
+  margin-bottom: 2px;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.intro{
+  font-size: 16px;
+  font-weight: 300;
+  width: 540px;
+  margin: auto;
+  letter-spacing: 1px;
+  font-style:italic;
+  margin-bottom:50px
+}
+
+#shadow-top{
+	background-color:#eae0d6;
+	width:100%;
+	height:70px;
+	position:fixed;
+	top:0px;
+	box-shadow: 0px 0px 18px 10px #eae0d6;
+}

@@ -1,0 +1,16 @@
+<div ng-controller="WidgetController" class="c4Widget">
+	<div class="loggedUser" ng-show="appUser">
+		<div class="thumb">
+			<img src="{{appUser.user.photo}}">
+		</div>
+		<div class="counter" ng-show="timer > 0">
+			{{ timer | millSecondsToTimeString }}
+		</div>
+		<div class="counter" ng-show="timer == 0">
+			{{'YOUR-TURN-LBL' | translate}}
+		</div>
+		<div class="info">
+			<a href="/a_un_soffio_dalla_scoperta/">torna ></a>
+		</div>
+	</div>
+</div>

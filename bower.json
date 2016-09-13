@@ -1,0 +1,31 @@
+{
+  "name": "egizioTranslateApp",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "~=1.3.4",
+    "angular-translate": "~2.4.2",
+    "angular-translate-storage-local": "~2.4.2",
+    "angular-translate-storage-cookie": "~2.4.2",
+    "angular-translate-loader-static-files": "~2.4.2",
+    "angular-cookies": "~1.3.3",
+    "angular-sanitize": "~1.3.3",
+    "angular-ui-router": "~0.2.13",
+    "angular-socialshare": "~0.0.6",
+    "angular-underscore-module": "~1.0.1",
+    "underscore": "~1.8.2",
+    "angular-sails": "~1.1.1",
+    "momentjs": "~2.9.0",
+    "mobile-detect": "hgoebl/mobile-detect.js#~1.0.0",
+    "gsap": "~1.16.1",
+    "jquery.transit": "~0.9.12",
+    "d3": "~3.5.5",
+    "polyglot": "https://github.com/airbnb/polyglot.js.git#~0.4.2",
+    "jsurl": "*",
+    "it-cookie-law": "git@github.com:endorama/it-cookie-law.git#~0.2.0",
+    "anijs": "~0.9.3",
+    "animate.css": "~3.3.0",
+    "scrollReveal.js": "~2.3.2",
+    "bowser": "~0.7.3",
+    "fastclick": "~1.0.6"
+  }
+}

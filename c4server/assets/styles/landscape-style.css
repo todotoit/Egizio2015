@@ -1,0 +1,55 @@
+@media only screen and (min-width: 768px) and (max-width: 1260px) and (orientation : landscape){
+
+
+	 .menu-1{
+		 margin-left:100px;
+	 }
+
+	 .menu-element-wrapper {
+		 width: 22%;
+	 }
+
+	 .menu-sel h3 {
+		 display: inline;
+	 }
+	 
+	 #welcome-inner, #credits div {
+		  left: -350px;
+          max-width: 700px;
+	 }
+	 
+	 #credits div {
+
+		  font-size: 14px;
+	 }
+	 
+	 #welcome-inner h4, #credits h4 {
+		 font-size: 14px;
+	 }
+	 
+	 #welcome-inner .intro {
+		 font-size: 20px;
+	 }
+	 
+	 #welcome-inner p {
+	 font-size: 14px;
+	 }
+	 
+	 
+	 /* C3 */
+	 
+	 .data-tappa {
+		  font-size: 12px;
+		  margin-left: 12px;
+	  }
+	  
+	  .nome-tappa {
+		  font-size: 12px;
+		  margin-left: 3px;
+	  }
+	  
+	  .inner-header, .inner-body {
+		  max-width: 937px;
+	  }
+	 
+}

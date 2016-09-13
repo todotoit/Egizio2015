@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8"> 
+	<title>La strada per Menfi e Tebe</title>
+	
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.lettering-0.6.1.min.js"></script>
+	<script src="js/jquery.scrollorama.js"></script>
+	
+	<style>
+		
+		p{
+			float:left;
+		}
+		
+		img{
+			float:left;
+		}
+	</style>
+	
+</head>
+<body>
+	
+	<header>
+	</header>	
+	<div id="container">
+		<div class="scrollblock odd">
+			<p>Sappiamo per certo che è proprio la MensaIsiaca a destare l’interesse di Carlo Emanuele III di Savoia che chiede al botanico Vitaliano Donati</p><img src="http://www.sanremostory.it/wp-content/uploads/Emanuele-Filiberto-01.jpg" style="width: 61px; margin-left: 10px; margin-right: 10px;"/><p>di portare dalla sua spedizione in oriente alcuni manufatti in grado di accompagnare i contenuti nella tavola.Sappiamo per certo che è proprio la MensaIsiaca a destare l’interesse di Carlo Emanuele III di Savoia che chiede al botanico Vitaliano Donati</p><img src="http://www.sanremostory.it/wp-content/uploads/Emanuele-Filiberto-01.jpg" style="width: 61px; margin-left: 10px; margin-right: 10px;"/><p>di portare dalla sua spedizione in oriente alcuni manufatti in grado di accompagnare i contenuti nella tavola.
+
+
+			</p>		
+		</div>
+
+		<div class="scrollblock even">
+		</div>
+	
+		<div class="scrollblock odd">
+		</div>
+	
+		<div class="scrollblock even" id="examples-parallax">
+			<h2 id="parallax1">Parallax</h2>
+			<h3 id="parallax2">Parallax</h3>
+			<h3 id="parallax3">Parallax</h3>
+		</div>
+	
+		<div class="scrollblock odd">
+		</div>
+	
+		<div class="scrollblock even">
+		
+		</div>
+
+		<div class="scrollblock odd">
+		
+		</div>
+	</div>
+	
+	<script>
+		$(document).ready(function() {
+			
+			// initialize the plugin, pass in the class selector for the sections of content (blocks)
+			var scrollorama = $.scrollorama({ blocks:'.scrollblock' });
+			
+			// assign function to add behavior for onBlockChange event
+			
+			
+			
+			// animate the parallaxing
+			scrollorama
+				.animate('#parallax2',{ delay: 400, duration: 600, property:'top', start:800, end:-800 })
+				.animate('#parallax3',{ delay: 200, duration: 1200, property:'top', start:500, end:-500 });
+			
+			
+		});
+	</script>
+
+
+</body>
+</html>

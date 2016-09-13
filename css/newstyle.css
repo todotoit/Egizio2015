@@ -1,0 +1,834 @@
+@font-face {
+    font-family: 'Decima';
+    src: url('../newasset/font/decimanovapro-webfont.eot');
+    src: url('../newasset/font/decimanovapro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../newasset/font/decimanovapro-webfont.woff2') format('woff2'),
+         url('../newasset/font/decimanovapro-webfont.woff') format('woff'),
+         url('../newasset/font/decimanovapro-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Decima';
+    src: url('../newasset/font/decimanovaproital-webfont.eot');
+    src: url('../newasset/font/decimanovaproital-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../newasset/font/decimanovaproital-webfont.woff2') format('woff2'),
+         url('../newasset/font/decimanovaproital-webfont.woff') format('woff'),
+         url('../newasset/font/decimanovaproital-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Din';
+    src: url('../newasset/font/din_ligh-webfont.eot');
+    src: url('../newasset/font/din_ligh-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../newasset/font/din_ligh-webfont.woff2') format('woff2'),
+         url('../newasset/font/din_ligh-webfont.woff') format('woff'),
+         url('../newasset/font/din_ligh-webfont.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Din';
+    src: url('../newasset/font/din_regu-webfont.eot');
+    src: url('../newasset/font/din_regu-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../newasset/font/din_regu-webfont.woff2') format('woff2'),
+         url('../newasset/font/din_regu-webfont.woff') format('woff'),
+         url('../newasset/font/din_regu-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Din';
+    src: url('../newasset/font/din_medi-webfont.eot');
+    src: url('../newasset/font/din_medi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../newasset/font/din_medi-webfont.woff2') format('woff2'),
+         url('../newasset/font/din_medi-webfont.woff') format('woff'),
+         url('../newasset/font/din_medi-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Din';
+    src: url('../newasset/font/din_bold-webfont.eot');
+    src: url('../newasset/font/din_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../newasset/font/din_bold-webfont.woff2') format('woff2'),
+         url('../newasset/font/din_bold-webfont.woff') format('woff'),
+         url('../newasset/font/din_bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+#dvLoading{
+   background: #262626 url('data:image/gif;base64,R0lGODlhOwBGAIABAP///////yH/C05FVFNDQVBFMi4wAwEAAAAh/wtYTVAgRGF0YVhNUDw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGMjAxMzRCODY3MzExMUU0QTZCN0MzNDkzRjM2MkVGRCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCNTRCN0MyNDY3MzQxMUU0QTZCN0MzNDkzRjM2MkVGRCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkYyMDEzNEI2NjczMTExRTRBNkI3QzM0OTNGMzYyRUZEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkYyMDEzNEI3NjczMTExRTRBNkI3QzM0OTNGMzYyRUZEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEBRQAAQAsAAAAADsARgAAAkWMj6nL7Q+jnLTai7PevPsPhuJIluaJpurKtu4Lx/JM1/aN5/rO9/4PDAqHxKLxiEwql8ym8wmNSqfUqvWKzWq33K73VAAAIfkEBRQAAQAsCAAzAA0ADQAAAguEj6nL7Q+jnLTSAgAh+QQFFAABACwmADMADQANAAACC4SPqcvtD6OctNICACH5BAUUAAEALBcAJAANAA0AAAILhI+py+0Po5y00gIAIfkEBRQAAQAsCAAVAA0ADQAAAguEj6nL7Q+jnLTSAgAh+QQFFAABACwmABUADQANAAACC4SPqcvtD6OctNICACH5BAkUAAEALAgABgAcADoAAAJEjI8Jy80JkZsrWjptxE5D3ngKWIkHWZoBCqgG665oDLu1esf6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yuswAAIfkECRQAAQAsAAAAADsARgAAAoOMj6nL7Q+jnLTai7PevHsPhOIofheJhqaVomvVki8Vj/NUl3eUqzvUA/yAveEjaHQgk4wlU+F8SqegIvUQpWanW2n3+WWGk2NjeXj+pXfrW/sKj7ut8PfLvsKb9B9+NSfn1yHIQbhhqIGYoSjX6PgIGSk5SVlpeYmZqbnJ2en5CapZAAAh+QQJFAABACwAAAAAOwBGAAACnYyPqcvtD6OctNqLs968ew+E4ih+F4mGppWia9WSLxWP81SXd5SrO9QD/IC94SNodCCTjCVT4XxKp6AizSqJ8rDbHIxL9F7FWXC4NkanY+vWl9xV48xKeh1+ZrdTe1dfNoeX5xYoVyZIlah4aEilNfUoFfk0yVSZdGmUObT507nzeRM6M7poeoqaqrrK2ur6ChsrO0tba3uLm6vbUQAAIfkECRQAAQAsAAAAADsARgAAAo2Mj6nL7Q+jnLTai7PevHsPhOIofheJhqaVomvVki8Vj/NUl3eUqzvUA/yAveEjaHQgk4wlU+F8SqegIs0qifKw2xyMS/RexVlwuDZGp2Pr1pfcVePMSnodfma3U3tXXzaHl+cWKFcmSJWouMjY6PgIGSk5SVlpeYmZqbnJ2en5CRoqOkpaanqKmqq6WQAAIfkECRQAAQAsAAAAADsARgAAAnSMj6nL7Q+jnLTai7PevHsPhOIofheJhqaVomvVki8Vj/NUl3eUqzvUA/yAveEjaHQgk4wlU+F8SqdUSZR6nWal22eX+U2GjeNh+XfepW/rWbsKj8vn9Lr9js/r9/y+/w8YKDhIWGh4iJiouMjY6PgIGUlRAAAh+QQFFAABACwAAAAAOwBGAAACY4yPqcvtD6OctNqLs968ew+E4ih+F4mGppWia9WSLxWP81SXd5SrO9QD/IC94SNodCCTjCVT4XxKp9Sq9YrNarfcrvcLDovH5LL5jE6r1+y2+w2Py+f0uv2Oz+v3/L7/D7hSAAA7') no-repeat center center;
+   height: 800px;
+   width: 100%;
+   position: fixed;
+   z-index: 99999;
+   top:0px;
+   margin: 0px;
+}
+
+#logo {
+	cursor: pointer;
+}
+
+#svgstore{
+	display: none;
+}
+
+.icon_wrap svg{
+	width: 50px;
+	height: 50px;
+	margin: 15px 0px;
+}
+
+/* -----------------------------------------------------------------------------
+	Media Query breakpoint for JavaScript detection
+----------------------------------------------------------------------------- */
+body:after {
+	content: 'desktop';
+	display: none;
+}
+@media screen and (max-device-width: 768px) {
+	body:after {
+		content: 'smartphone';
+	}
+}
+
+/* -----------------------------------------------------------------------------
+	Styles
+----------------------------------------------------------------------------- */
+html, body{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	box-sizing: border-box;
+	color: #3C3C3C;
+}
+
+body:before { 
+  content: "";
+  position: fixed;
+  top: -6px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 100;
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+img{
+	height: auto;
+	display: block;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5{
+	text-align: center;
+	letter-spacing: 0.1rem;
+}
+
+p{
+	font-family: 'Din', sans-serif; 
+	font-size: 1.2rem;	
+	line-height: 1.5rem;
+	letter-spacing: 0.05rem;
+	text-align: center;
+    max-width: 33rem;
+	padding: 1.2rem 2rem;
+	font-weight: normal;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+a:visited{
+	color: inherit;
+}
+
+span{
+	font-family: 'Din', sans-serif; 
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+	letter-spacing: 0.1rem;
+	text-align: center;
+}
+
+h1{
+	font-family: 'Decima', sans-serif; 
+	font-size: 2.2rem;
+	text-align: center;
+	font-style: italic;
+	letter-spacing: 0.3rem;
+	max-width: 22rem;
+}
+
+h2, .border_title{
+	border-style: solid;  
+	border-width: 0.25rem;
+	display: block;
+	font-family: 'Din', sans-serif; 
+	font-size: 1.5rem;
+	font-weight: bold;
+	letter-spacing: 0.15rem;
+	margin: 1rem 3rem;
+	max-width: 33rem;
+	padding: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+	min-width: 300px;
+}
+
+#utenti h2,
+#credits h2,
+#backstage h2{
+	border-width: 0rem;
+}
+
+h3{
+	font-family: 'Decima', sans-serif; 
+	font-size: 2.2rem;
+	color: white;
+	text-align: center;
+	font-style: italic;
+	letter-spacing: 0.15rem;
+	text-transform: uppercase;
+	max-width: 33rem;
+	margin: 0rem 2rem;
+	min-width: 300px;
+}
+
+.text_decima_link{
+	font-family: 'Decima', sans-serif; 
+	font-size: 1.4rem;
+	font-style: italic;
+	letter-spacing: 0.15rem;
+	max-width: 16rem;
+	text-align: none;
+}
+
+.section_wrapper{
+	background-color: #EAE0D6;
+	width: 100%;
+	overflow: hidden;
+}
+
+.vertical_line{
+	display: block;
+	height: 3rem;
+	width: 0.228em;
+	margin: 0.3rem 0rem;
+	background-color: #3C3C3C;
+}
+
+.icon_start_sections{
+  max-height: 6rem;
+  height: auto;
+  width: 100%;
+  margin: 3rem 0rem 1rem 0rem;
+}
+
+.center_wrap{
+	position: relative;
+	min-width: 100%;
+	min-height: 30rem;
+	padding: 3rem 0;
+}
+
+.center_wrap h1{
+	margin: 0;
+	color: white;
+	padding: 3rem 0rem 0rem 0rem;
+}
+
+.center_wrap p{
+	margin: 2rem 3rem;
+	color: white;
+	/*padding: 0rem 3rem;*/
+	max-width: 39rem;
+}
+
+.center_wrap span{
+	color: white;
+}
+
+.icon_wrap {
+	width: 100%;
+	padding: 2rem 1rem 2rem 1rem;
+	list-style: none;
+	flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
+	display: inline-block;
+	  background-color: rgb(157, 142, 131);
+}
+
+.icon_wrap ul li{
+	min-width: 1rem;
+	text-align: center;
+}
+
+.icon_wrap ul li a img{
+	width: 1rem;
+	margin: 4rem 1rem 1rem 1rem;
+}
+
+.icon_illustration{
+	height: 4rem;
+	width: auto;
+	margin: 1rem 2rem;
+}
+
+.icon_number_value{
+	padding: 0;
+	margin: 0;
+	color: white;
+}
+
+.icon_text_value{
+	padding: 0;
+	margin: 0;
+	font-size: 0.9rem;
+	max-width: 10rem;
+	min-width: 8rem;
+	font-weight: bolder;
+}
+
+.claim{
+	max-width: 32rem;
+	width: 100%;
+	padding: 0rem 2rem;
+}
+
+
+.bgd_video_over{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	background-color: rgba(0,0,0,.5);
+}
+
+.vidnodisp{
+	 display:none;
+}
+
+.video_wrap{
+	width: 100%;
+	height: 100%;
+	position:fixed;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 40000;
+	top:0;
+	left:0;
+}
+.video_wrap .video_close {
+  color: white;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.video_wrap .video_close svg {
+	width: 1.5rem;
+	height: 1.5rem;
+	opacity: 0.8;
+}
+
+.video_box{
+	background-color: rgba(0,0,0,0.3);
+	max-width: 32rem;
+	width: 100%;
+	height: auto;
+	padding: 1rem 2rem;
+	text-decoration: underline;
+	color: white;
+}
+
+.video_box svg{
+	width: 3rem;
+	height: 3rem;
+	margin-right: 1rem;
+}
+
+.multivideo_container{
+	margin-top: 3rem;
+	width: 100%;
+	flex-direction: row;
+	-ms-flex-direction: row;
+	-webkit-flex-direction: row;
+}
+
+.link_wrapper{
+  height: 17rem;
+  max-width: 25rem;
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+
+.link_bg_illustration{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.text_decima_link_wrap{
+	width: 100%;
+	height: 100%;
+	color: #3C3C3C;
+}
+
+.link_wrapper .text_decima_link{
+	color: inherit;
+}
+
+.ambiente, .ambiente_mobile{
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	/*min-height: 43rem;*/
+	width: 100%;
+	z-index: 1;
+	margin-top: 3rem;
+}
+
+/* -----------------------------------------------------------------------------
+	Sections
+----------------------------------------------------------------------------- */
+
+#footer .footer_decima_link{ 
+	color: white; 
+	font-family: 'Decima', sans-serif; 
+	font-size: 1rem;
+	font-style: italic;
+	letter-spacing: 0.15rem;
+	text-align: none;
+	text-decoration: underline;
+}
+
+#compagnia .text_decima_link{ 
+	color: #016836; 
+	margin-bottom: 5px; 
+	font-size: 1.2rem; 
+	text-decoration: underline;
+	}
+
+#footer .text_decima_link:hover{ 
+	text-decoration: underline;
+}
+
+#footer{
+	padding: 5rem 0rem 2rem 0rem;
+	background-color: #3C3C3C;
+}
+
+#concept{
+	width: 100%;
+	/*background-color: #C4B5A4;*/
+}
+
+#compagnia{
+	padding-bottom:3rem;
+	background-color: #D7CEC3;
+}
+
+#backstage{
+	padding-top: 3rem;
+	background-color: #D7CEC3;
+}
+
+#head .vertical_line,
+#clessidra .center_wrap .vertical_line,
+#teca .center_wrap .vertical_line,
+#newcredits .vertical_line{background-color: white;}
+
+
+#nuovo_museo .ambiente .years{
+	position: relative;
+	color: white;
+	padding: 0.5rem 0.5rem 0.4rem 0.5rem;
+	font-size: 0.7rem;
+	border-width: 0.16rem;
+	margin: 1.2rem 1rem;
+	font-family: 'Din', sans-serif; 
+	text-align: center;
+	font-weight: bold;
+	display: block;
+	border-style: solid;  
+	text-transform: uppercase;
+	max-width: 13rem;
+	letter-spacing: 0.15rem;
+	border-width: 2px;
+	min-width: 30px;
+}
+
+#footer .icon_wrap{
+	width: 40%;
+	background-color: #3C3C3C;
+}
+
+#footer .icon_wrap svg{
+	fill: white;
+	transition: fill 0.5s ease, background-color 0.5s ease;
+}
+
+#footer .icon_wrap svg:hover{
+	fill: #026937;
+	background-color: white;
+}
+
+#head { 
+	position: relative;
+	overflow: hidden;
+}
+
+#head .claim svg{
+	width: 100%;
+	max-width: 32rem;
+  	height: 100%;
+  	fill: white;
+}
+
+#concept .claim svg{
+	width: 100%;
+	max-width: 32rem;
+  	height: 100%;
+  	fill: #3C3C3C;
+}
+
+#bgvid { 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+/*	z-index: -100;
+*/	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	background: url('/newasset/teca.jpg') no-repeat;
+	background-size: cover;
+}
+
+.head-content{ 
+	background-color: rgba(0,0,0,.6);
+}
+
+#section1{
+	background-color: #000;
+}
+#soffio_video{
+	width: 100%;
+}
+.center_wrap_soffio{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.backstage {
+	background-size: cover;
+	background-position: center;
+	min-height: 22rem;
+	min-width: 0;
+	width: 50%;
+	color: white;
+}
+.backstage.backstage_1 {
+	background-image: url("../../newasset/backstage_braccio.jpg");
+}
+.backstage.backstage_2 {
+	background-image: url("../../newasset/backstage_reperti.jpg");
+}
+
+#teca .ambiente{background-image: url("../../newasset/teca.jpg");}
+#concept .ambiente{background-image: url("../../newasset/claim_wrap.jpg"); padding: 10rem 0rem;}
+#clessidra .ambiente{background-image: url("../../newasset/clessidra.jpg");}
+#nuovo_museo .ambiente{background-image: url("../../newasset/nuovo.jpg");}
+#soffio .ambiente{background-image: url("../../newasset/soffio.png");}
+
+
+#documentario .ambiente{background-image: url("../../newasset/cover_credits.jpg"); margin-top: 0rem;}
+
+#concept .ambiente {
+	color: white;
+}
+
+#concept .ambiente:before ,
+#documentario .ambiente:before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+#concept .ambiente svg{
+	fill: white;
+}
+
+#concept .ambiente p{
+	color: white;
+}
+
+#nuovo_museo .link_wrapper .text_decima_link,
+#soffio .link_wrapper .text_decima_link,
+#nuovo_museo .link_wrapper,
+#soffio .link_wrapper{
+	color: white;
+}
+
+#museo .link_wrapper{
+	margin: 1rem 0rem 2rem 0rem;
+}
+
+#teca .link_wrapper{
+	margin: 4rem 0rem;
+}
+
+.hide-desktop {
+	display: none;
+}
+
+#utenti{
+	width: 100%;
+}
+
+#utenti .inner{
+	width: 65%;
+	flex-wrap: wrap;
+}
+
+#utenti .wrapper-user{
+	width: 25%;
+	height: 80px;
+	text-align: center;
+}
+
+#utenti .wrapper-user .user-info{
+	font-family: 'Din', sans-serif; 
+	font-size:.7rem;
+	float: left;
+	padding-top: 3px;
+	padding-left: 5px;
+	width: 60px;
+	text-align: left;
+	line-height: 0.9rem;
+}
+
+#utenti .wrapper-user span{
+	display: block;
+	float: left;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+}
+
+#utenti .inner .header_users{
+	min-width: 100%;
+	width:100%;
+}
+
+#utenti .wrapper-user img{
+	width: 170%;
+	height: auto;
+	transform: translate(-20px, 0);
+}
+
+
+#cookie-law{
+	font-family: 'Din', sans-serif; 
+	background-color: rgba(0,0,0,.75)!important;
+}
+#cookie-law p{
+	font-size: 0.8rem;
+	line-height: 1rem;
+	width: 95%!important;
+}
+#cookie-law a{
+	font-size: 0.8rem;
+}
+
+#soffio .ambiente_mobile{
+	display: none;
+}
+
+#soffio .ambiente{
+	display: block;
+}
+
+#credits p.txt{
+	padding: 4rem 0rem;
+  max-width: 60rem;
+}
+
+
+
+#documentario h3{
+	margin-bottom: 20px; 
+}
+
+#credits .tit{
+	font-weight: bold;
+}
+
+#credits .sub{
+	font-size: 1rem;
+	margin: 0rem;
+}
+
+#credits .sub_credits_sito{
+	font-size: 1rem;
+	margin: 2rem 0rem;
+}
+
+#credits .sub_credits_sito a{
+	text-decoration: underline;
+}
+
+#credits .sub_credits_sito a:hover{
+	color: rgb(2, 105, 55);
+}
+
+#credits{
+	padding-bottom: 7rem;
+}
+
+#credits .main{
+	max-width: 60rem;
+}
+/*
+	http://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints
+	http://cssmediaqueries.com/
+ */
+/*
+	NB: we are using max-DEVICE-width, so you will never see this on desktop-like
+	screens ( because device-with will always be way bigger than browser window )
+ */
+@media screen and (max-device-width: 768px) {
+
+	
+
+	.hide-desktop {
+		display: block;
+	}
+	.hide-smartphone {
+		display: none;
+	}
+	.multivideo_container{
+		/*width: 100%;*/
+		flex-direction: column;
+		-ms-flex-direction: column;
+		-webkit-flex-direction: column;
+	}
+	.backstage {
+		width: 100%;
+		min-height: 14rem;
+	}
+	#utenti{
+		display: none;
+	}
+	#soffio .ambiente{
+		display: none;
+	}
+	#soffio .ambiente_mobile{
+		display: block;
+	}
+	.head-content{ 
+		background: url('/newasset/head_dark.jpg') no-repeat;
+		background-size: cover;
+	}
+	.icon_wrap{
+		padding: 0rem 1rem 2rem 1rem;
+	}
+	#footer .icon_wrap{
+	padding: 1rem 2rem;
+	width: 100%;
+	}
+	.icon_text_value {
+	  padding: 0;
+	  margin: 0;
+	  font-size: 0.7rem;
+	  max-width: 6rem;
+	  min-width: 5rem;
+	  font-weight: bolder;
+	  line-height: 0.9rem;
+	}
+	.text_decima_link {
+	  font-size: 1.2rem;
+	}
+	.icon_wrap svg {
+	  width: 35px;
+	  height: 35px;
+  	  margin: 2rem 0px 0.4rem 0px;
+  	}
+
+	.head-content.center_wrap{
+		padding: 0!important;
+	}
+	.head-content p{
+		margin-top:0;
+		font-size:1rem;
+	}
+
+}
+
+.msie .ie_video_box{
+	width: 100%;
+	max-width: 32rem;
+}
+.msie .video_box span{
+	display: inline-block;
+}
+
+/* hide the sidebar menu if the window size is too low */
+@media screen and (max-width: 768px) {
+	#nav{
+		display: none;
+	}
+}
+
+
+
+#ie_alert{
+	display: none;
+	padding: 20px;
+	position: fixed;
+	bottom: 0;
+	z-index: 99999;
+	background-color: rgba(240,225,0,1);
+	width: 100%;
+	font-family: sans-serif;
+	text-align: center;
+}
+#ie_alert a{
+	font-weight: bold;
+	text-decoration: underline;
+}

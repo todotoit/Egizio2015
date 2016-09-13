@@ -1,0 +1,19 @@
+<!-- Default home page -->
+<div class="default-page">
+    <div class="main container clearfix">
+        <% Object.keys(output).forEach(function (type) { %>
+        <h1><%=type %></h1>
+        <table>
+            <thead>
+                <tr><td>Date</td><td><%=type %></td></tr>
+            </thead>
+            <tbody>
+            <% output[type].forEach(function (row) { %>
+                <tr><td><%=row.date %></td><td><%=row.number %></td></tr>
+            <% }); %>
+            </tbody>
+        </table>
+        <% }); %>
+    </div>
+
+</div>

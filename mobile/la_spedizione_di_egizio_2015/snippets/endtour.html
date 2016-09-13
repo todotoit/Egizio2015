@@ -1,0 +1,31 @@
+<!-- replace all the XX in the following code with the stage number and replace 
+the URL in the src attribute within swiper-slide > inner > img  to load 
+the different images -->
+
+<!-- sostituire tutti gli XX nel codice seguente con il numero della tappa in questione
+e sostituire l'URL contenuti nell'attributo src di swiper-slide > inner > img per caricare
+le diverse immagini selezionate -->
+
+<div class="title-box endtour" id="title-box-{{tappaNum}}">
+	<h3 translate="{{ 'TAPPA-'+tappaNum+'-DATA' }}" class="menu-t{{tappaNum}}"></h3>
+	<h3 translate="{{ 'TAPPA-'+tappaNum+'-TITOLO' }}" class="titolo-tappa menu-t{{tappaNum}}"></h3>
+	<div id="tappa{{tappaNum}}" class="tappe">
+		<p translate="{{ 'TAPPA-'+tappaNum+'-END-TEXT' }}" ></p>
+		<div class="swiper-container" id="swipe{{tappaNum}}">
+			<div class="pagination"></div>
+			
+			<div class="swiper-wrapper" style="width:2424px;">
+			
+				<!-- json test -->
+				<div class="swiper-slide" ng-repeat="img in imgs[tappaNum]">
+					<div class="inner">
+						<a href="{{img.link}}" target="_new">
+							<img src="{{img.url}}" alt="">
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

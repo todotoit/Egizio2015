@@ -1,0 +1,14 @@
+{
+  "en" : {
+    "title"      : "Discover #egizio2015",
+    "description": "The project and campaign leading to Turin's New Museo Egizio.",
+    "tw_image"   : "/imgs/social/twitter/egizio2015.jpg",
+    "fb_image"   : "/imgs/social/facebook/egizio2015.jpg"
+  },
+  "it" : {
+    "title"      : "Scopri #egizio2015",
+    "description": "Il progetto e la campagna che hanno portato al Nuovo Museo Egizio di Torino.",
+    "fb_image"   : "/imgs/social/facebook/egizio2015.jpg",
+    "tw_image"   : "/imgs/social/twitter/egizio2015.jpg"
+  }  
+}

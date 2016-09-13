@@ -1,0 +1,77 @@
+<!-- <video class="video-stream" ng-src={{videoSource}} autoplay  poster="images/Teca_view_up.jpg" id="bgvid" loop>
+</video> -->
+
+<!-- test luca - 'rtmp://192.168.1.230:1935/live/myStream' -->
+<!-- test wowza - 'rtmp://wowza6.top-ix.org:1935/todotest/streaming' -->
+<div class="video-stream">
+	<div id='playerCvfFpDaKBdWl'></div>
+</div>
+<script type='text/javascript'>
+var w = $(window).width();
+var h = $(window).height();
+	jwplayer('playerCvfFpDaKBdWl').setup({
+		file: 'rtmp://wowza6.top-ix.org:1935/todotest/streaming',
+		image: '//www.longtailvideo.com/content/images/jw-player/lWMJeVvV-876.jpg',
+		width: '100%',
+		height: '100%',
+		//aspectratio: '1:1',
+		stretching: "exactfit",
+		autostart: 'true',
+	});
+	// setTimeout(function(){
+	// 	$('#playerCvfFpDaKBdWl').height(h);	
+	// }, 2000)
+
+</script>
+
+<div class="container" id="c4home" flex layout="column" layout-align="center center" ng-if="!logged"
+	ng-controller="HomeCtrl">
+
+	<div>
+		<h1 class="home-title" translate="{{ 'TITLE_SOFFIO' }}">A UN SOFFIO DALLA SCOPERTA</h1>
+	</div>
+
+	<div style="margin-bottom:20px;">
+		<button class="white" translate="{{ 'LOGIN_JOIN' }}" ng-click="mover.goDown()"></button>
+	</div>
+
+	<div>
+		<p class="white decima" translate="{{ 'HOME_CLAIM' }}"></p>
+	</div>
+
+</div>
+
+
+<div id="theRec" class="rec" layout="row" layout-align="center center">
+	<svg width="40" height="50">
+		<circle cx="25" cy="25" r="6" fill="#3c3c3c">
+			<animate  fill="remove" values="2; 6" accumulate="none" additive="replace" restart="always" calcMode="spline" keyTimes="0; 1" keySplines="0.165, 0.84, 0.44, 1" repeatCount="indefinite" attributeName="r" begin="0s" dur="1.6s">
+				</animate>
+		</circle>
+		<circle cx="25" cy="25" r="10" fill="none" stroke="#3c3c3c" stroke-width="2"></circle>
+	</svg>
+	<div class="decima" translate="{{'LIVE_ON'}}"></div>
+</div>
+
+
+
+<div class="firstUser" ng-show="firstUser">
+	<div class="user" layout="row">
+		<div class="info">
+			<div class="liv" ng-show="firstUser.status == 'done' || firstUser.status == 'move'">LIVE</div>
+			<div class="sof" translate="{{'IL_SOFFIO_DI'}}" 
+			ng-show="firstUser.status == 'done' || firstUser.status == 'move'"></div>
+			<div class="sof" translate="{{'PREPARA_SOFFIO_1'}}" 
+			ng-hide="firstUser.status == 'done' || firstUser.status == 'move'"></div>
+			<div class="sof" translate="{{'PREPARA_SOFFIO_2'}}" 
+			ng-hide="firstUser.status == 'done' || firstUser.status == 'move'"></div>
+			<div class="usr">{{firstUser.user.displayName}}</div>
+		</div>
+		<div class="thumb">
+			<img ng-src="{{firstUser.user.photo}}">
+		</div>
+	</div>
+</div>
+
+
+

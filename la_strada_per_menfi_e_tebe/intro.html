@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>la strada per menfi e tebe</title>
+<style>
+
+	body{
+		margin:0px;
+		background-color:#262626;
+		text-align:center;
+	}
+
+	#outer{
+		width:100%;
+		height:1080px;
+		position:relative;
+		max-width:1722;
+		
+	}
+
+	.statue{
+		width:100%;
+		position:absolute;
+		top:0;
+		left:0;
+	}
+	
+
+	#light-on {
+		opacity:0;
+		-moz-transition: 1s; 
+		-webkit-transition: 1s; 
+    	transition: 1s;
+    	
+	}
+	
+	#light-on:hover{
+		opacity:.8;
+		
+	}
+	
+	@-webkit-keyframes mymove {
+		 0%   {opacity:.8;}
+    	50%  {opacity:1;}
+    	100% {opacity:.8;}
+	}
+
+	@-moz-keyframes mymove {
+		0%   {opacity:.8;}
+    	50%  {opacity:1;}
+    	100% {opacity:.8;}
+	}
+
+	@keyframes mymove {
+		 0%   {opacity:.8;}
+    	50%  {opacity:1;}
+    	100% {opacity:.8;}
+	}
+			
+	
+	
+	
+	
+	
+	
+
+</style>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+</head>
+<body>
+
+<div id="outer">
+	
+	<img id="light-off" class="statue" src="imgs/statue_1920_bn2.jpg" />
+	<img id="light-on" class="statue" src="imgs/statue_1920.jpg" />
+</div>
+
+
+
+<script>
+$( "#right" ).mouseenter(function() {
+	$( "#img-back" ).animate({ "left": "-=40px" }, "slow" );
+	$( "#img-front" ).animate({ "left": "+=40px" }, "slow" );
+	$( "#img-back-after" ).animate({ "left": "-=40px" }, "slow" );
+	$( "#img-front-after" ).animate({ "left": "+=40px" }, "slow" );
+});
+
+$( "#right" ).mouseleave(function() {
+	$( "#img-back" ).animate({ "left": "+=40px" }, "slow" );
+	$( "#img-front" ).animate({ "left": "-=40px" }, "slow" );
+	$( "#img-back-after" ).animate({ "left": "+=40px" }, "slow" );
+	$( "#img-front-after" ).animate({ "left": "-=40px" }, "slow" );
+
+});
+
+
+$( "#right" ).click(function() {
+	$( "#img-back" ).animate({ "left": "-1400px" }, "slow" );
+	$( "#img-front" ).animate({ "left": "680px" }, "slow" );
+	$( "#img-back-after" ).animate({ "left": "-80px" }, "slow" );
+	$( "#img-front-after" ).animate({ "left": "-210px" }, "slow" );
+});
+
+$( "#left" ).mouseenter(function() {
+	$( "#img-back" ).animate({ "left": "+=40px" }, "slow" );
+	$( "#img-front" ).animate({ "left": "-=40px" }, "slow" );
+	$( "#img-back-after" ).animate({ "left": "+=40px" }, "slow" );
+	$( "#img-front-after" ).animate({ "left": "-=40px" }, "slow" );
+
+
+});
+
+$( "#left" ).mouseleave(function() {
+	$( "#img-back" ).animate({ "left": "-=40px" }, "slow" );
+	$( "#img-front" ).animate({ "left": "+=40px" }, "slow" );
+	$( "#img-back-after" ).animate({ "left": "-=40px" }, "slow" );
+	$( "#img-front-after" ).animate({ "left": "+=40px" }, "slow" );
+
+
+});
+
+
+</script>
+
+</body>
+</html>

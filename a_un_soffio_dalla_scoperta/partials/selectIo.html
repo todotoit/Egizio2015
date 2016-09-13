@@ -1,0 +1,56 @@
+<div class="container" id="stp2" flex layout="column" layout-align="start center" 
+	scroll-y
+	flex-content=preserve>
+
+	<div style="width:570px; padding-top:5px;" class="center" ng-controller="SelectIoCtrl">
+	
+		<img src="images/svg/dots_02.svg" />
+
+		<div ng-if="!isMyTurn()">
+			<div class="a" translate="{{'MANCANO_ANCORA'}}"></div>
+			<div class="b" >{{ timer | millSecondsToTimeString }}</div>
+			<div class="c" translate="{{'NEL_FRATTEMPO'}}"></div>
+		</div>
+
+		<div ng-if="isMyTurn()">
+			<div class="n">{{ 'STEP1_HEAD' | translate:user }}</div>
+			<div style="margin-bottom:10px;" class="a" translate="{{'SCEGLI_TRA_QUESTE'}}"></div>
+		</div>
+
+		<div layout="column" layout-align="center center">
+	<!-- 		<img src="images/svg/toolset.svg" ng-click="input(true)" />
+	 -->
+			<div layout="row" style="width:380px;">
+				<div>
+					<div>
+						<img  class="buttonScale" src="images/svg/headset.svg" ng-click="input(true)"/>
+					</div>
+					<div class="bold"  flex translate="{{'HEADSET'}}"></div>
+				</div>
+				<div>
+					<div>
+						<img  class="buttonScale" src="images/svg/auric.svg" ng-click="input(true)"/>
+					</div>
+					<div class="bold"  flex translate="{{'AURIC'}}"></div>
+				</div>
+				<!-- <div>
+					<div>
+						<img  class="buttonScale" src="images/svg/mic.svg" ng-click="input(true)"/>
+					</div>
+					<div flex translate="{{'MICR'}}"></div>
+				</div> -->
+			</div>
+		</div>
+
+		<div style="font-size:11px; margin-bottom:10px; margin-top:10;" class="d pt1" translate="{{'BROWSER'}}"></div>
+
+		<div style="margin-bottom:10px; margin-top:10;" class="d pt1" translate="{{'SE_NON_VUOI'}}"></div>
+
+		<div>
+			<img  class="buttonScale" src="images/svg/mouse.svg" ng-click="input(false)"/>
+		</div>
+		<div style="margin:0" class="bold" flex translate="{{'MOUSE'}}"></div>
+
+	</div>
+
+</div>

@@ -1,0 +1,14 @@
+{
+  "en": {
+    "title"      : "Join us in the rediscovery of the New Museo Egizio",
+    "description": "An interactive display case inside Turin's Museo Egizio and a range of finds just one breath away from being unveiled... right from your computer.",
+    "tw_image"   : "/imgs/social/twitter/egizio2015_la_strada_tra_menfi_e_tebe.jpg",
+    "fb_image"   : "/imgs/social/facebook/egizio2015_la_strada_tra_menfi_e_tebe.jpg"
+  },
+  "it": {
+    "title"      : "Partecipa alla riscoperta del nuovo Museo Egizio",
+    "description": "Una teca interattiva all'interno del Museo Egizio di Torino e una serie di reperti da svelare con un soffio, direttamente dal tuo computer.",
+    "tw_image"   : "/imgs/social/twitter/egizio2015_la_strada_tra_menfi_e_tebe.jpg",
+    "fb_image"   : "/imgs/social/facebook/egizio2015_la_strada_tra_menfi_e_tebe.jpg"
+  }
+}

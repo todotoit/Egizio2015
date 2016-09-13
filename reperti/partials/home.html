@@ -1,0 +1,20 @@
+<div id="container2">
+	<div class="reperto" ng-repeat="rep in reperti" ng-class="(rep.active)?'':'none'">
+		<div ng-class="(rep.active)?'img':'img-none'">
+			<a ng-href="{{(rep.active)?getL10NLink('#/'+rep.id):''}}">
+				<img ng-src="{{(rep.active)?rep.thumb:'imgs/r-none.png'}}" width="106"/>
+			</a>
+		</div>
+		<a ng-href="{{(rep.active)?getL10NLink('#/'+rep.id):''}}">
+		<div class="info" ng-if="rep.active">
+			<p class="date" translate="{{ rep.id+'.data' }}"></p>
+			<h2 translate="{{ rep.id+'.name' }}"></h2>
+			<p>{{'PERSONE_CONTRIBUITO' | translate:rep}}</p>
+		</div>
+		<div class="info" ng-if="!rep.active">
+			<h2>{{ 'REPERTO' | translate}} {{$index+1}}</h2>
+			<p translate="{{ 'NO_SVELATO' }}"></p>
+		</div>
+		</a>
+	</div>
+</div>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" ng-app="c4app" ng-controller="AppCtrl">
+<head>
+<meta charset="utf-8">
+<title>Egizio2015 - Partecipa alla riscoperta del nuovo Museo Egizio!</title>
+
+<meta name="title" content="Partecipa alla riscoperta del nuovo Museo Egizio!" />
+<meta name="description" content="Una teca interattiva all'interno del Museo Egizio di Torino, una
+serie di reperti da svelare con un soffio, direttamente dal tuo computer." />
+<!-- see /sharing.php -->
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+<!-- Twitter Card data -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:creator"     content="@CSP_live">
+<meta name="twitter:title"       content="Partecipa alla riscoperta del nuovo Museo Egizio">
+<meta name="twitter:description" content="Una teca interattiva all'interno del Museo Egizio di Torino e una serie di reperti da svelare con un soffio, direttamente dal tuo computer.">
+<meta name="twitter:image:src"   content="http://compagnia.egizio2015.it/imgs/social/twitter/egizio2015_la_strada_tra_menfi_e_tebe.jpg">
+
+<!-- Open Graph data -->
+<meta property="og:title"       content="Partecipa alla riscoperta del nuovo Museo Egizio" />
+<meta property="og:type"        content="website" />
+<meta property="og:url"         content="http://compagnia.egizio2015.it" />
+<meta property="og:image"       content="http://compagnia.egizio2015.it/imgs/social/facebook/egizio2015_la_strada_tra_menfi_e_tebe.jpg" />
+<meta property="og:description" content="Una teca interattiva all'interno del Museo Egizio di Torino e una serie di reperti da svelare con un soffio, direttamente dal tuo computer." /> 
+<meta property="og:site_name"   content="egizio2015.it" />
+
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/landscape-style.css" type="text/css">
+<link rel="stylesheet" href="../css/portrait-style.css" type="text/css">
+<link rel="stylesheet" href="../css/lores-style.css" type="text/css">
+<!-- <script src="../js/scripts.js"></script>
+<script src="js/script.js"></script> -->
+
+
+</head>
+<body id="c4-reperti">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+	<div ng-include="'main_menu.html'" menu-main></div>
+
+
+
+	<div class="container">
+		<!-- <a class="torna" ng-href="{{getL10NLink('../a_un_soffio_dalla_scoperta/')}}"><img src="imgs/element/arrow.png"/><p translate="{{ 'TORNA_STREAMING' }}">torna allo streaming</p></a> -->
+
+			<div ui-view></div>
+
+	</div>
+	
+	<div id="lang">
+		<a ng-href="{{changeLanguage('it')}}" translate="{{ 'BUTTON_LANG_IT' }}" ng-class="{'lan-sel': lang== 'it' }">ita</a> |
+		<a ng-href="{{changeLanguage('en')}}" translate="{{ 'BUTTON_LANG_EN' }}" ng-class="{'lan-sel': lang== 'en' }">eng</a>
+	</div>
+
+	<div id="share" class="iron">
+	   <p>Share on:</p>
+	   <div ng-if="lang=='it'">
+	    <a twitter  data-lang="it" data-count='none' data-size="medium" data-text='Partecipa alla riscoperta del nuovo Museo Egizio su compagnia.egizio2015.it  #egizio2015 @MuseoEgizio @CSP_live' data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+	  </div>
+	  <div ng-if="lang=='en'">
+	    <a twitter  data-lang="en" data-count='none' data-size="medium" data-text='Join us in the rediscovery of the New Museo Egizio compagnia.egizio2015.it  #egizio2015 @MuseoEgizio @CSP_live' data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+	  </div>
+		<br>
+		<div style="float:right;">
+			<iframe width="56" height="20" src="//www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fcompagnia.egizio2015.it%2Freperti%2F&amp;layout=button&locale=en_GB" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+		</div>
+	<!-- 	<a facebook class="fb-share-button" data-url='http://compagnia.egizio2015.it/la_spedizione_di_egizio_2015/' data-layout="button" data-shares='shares'></a> -->
+
+
+	</div>
+
+	<script src="../js/jquery-1.9.1.min.js"></script>
+	<script src="../angularjs/jquery.transit/jquery.transit.js"></script>
+
+	
+
+	<!-- ** angular translation dependencies ** -->
+	<script src="../angularjs/angular/angular.min.js"></script>
+	<script src="../angularjs/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="../angularjs/angular-translate/angular-translate.min.js"></script>
+	<script src="../angularjs/angular-sanitize/angular-sanitize.min.js"></script>
+	<script src="../angularjs/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+	<script src="../angularjs/angular-cookies/angular-cookies.min.js"></script>
+	<script src="../angularjs/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+	<script src="../angularjs/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+
+	<!-- social -->
+	<style rel='stylesheet' type='text/css' href="../angularjs/angular-socialshare/angular-socialshare.min.css"></style>
+	<script src="../angularjs/angular-socialshare/angular-socialshare.js"></script>
+	<script src="http://platform.twitter.com/widgets.js"></script>
+
+	<!-- c4 widget -->
+	<!-- underscore -->
+	<script src="../angularjs/underscore/underscore.js"></script>
+	<script src="../angularjs/angular-underscore-module/angular-underscore-module.js"></script>
+	<!-- sails socket -->
+	<script src="../angularjs/sails.io.js/dist/sails.io.js"></script>
+   <script src="../angularjs/angular-sails/dist/angular-sails.js"></script>
+   <!-- ** main widget app ** -->
+	<script src="../c4widget/user.widget.js"></script>
+	<c4-user-widget></c4-user-widget>
+
+	<!-- ** main translate app ** -->
+	<script src="angularapp/app.js"></script>
+	<script src="angularapp/config.js"></script>
+	<script src="angularapp/routes.js"></script>
+	<!-- ************************************** -->
+	<script src="js/c4-menu.js"></script>
+
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-7954920-7', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="c4app">
+	<head>
+		<title>Egizio2015 - A un soffio dalla scoperta</title>
+
+		<meta name="description" content="La storia che spiega perchè il museo egizio più importante d'europa è a Torino." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta charset="utf-8">
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="../css/style.css" type="text/css">
+		<link rel="stylesheet" href="../css/landscape-style.css" type="text/css">
+		<link rel="stylesheet" href="../css/portrait-style.css" type="text/css">
+		<link rel="stylesheet" href="../css/lores-style.css" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="css/layout.css" type="text/css">
+
+		<script src="../js/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+		<script src="js/c4-menu.js"></script>
+
+		<script>
+			$(window).load(function(){
+				$( '#dvLoading' ).animate({
+					opacity: .5,
+					top:"-100%"
+				}, "slow", function() {
+					// Animation complete.
+				});
+				$( '.cover' ).fadeIn( "slow" );
+			});
+		</script>
+
+	</head>
+	<body ng-controller="AppCtrl" id="prec4">
+
+		<div id="dvLoading"></div>
+		<div id="rotate-device" class="white">
+			<div>
+				<img src="../imgs/element/rotate-device.png">
+				<h3 translate="{{ 'ROTATE-DEVICE' }}">per favore ruota il tuo dispositivo<br/>per una visualizzazione corretta</h3>
+			</div>
+		</div>
+		<div id="resize-browser" class="white">
+			<div>
+				<img src="../imgs/element/resize-browser.png">
+				<h3 translate="{{ 'RESIZE-BROWSER' }}">allarga la finestra del browser<br/>per visualizzare correttamente questo sito</h3>
+			</div>
+		</div>
+
+		<header>
+
+			<a id="wrapper-logo" ng-href="{{getL10NLink('../')}}">
+				<img id="logo" src="../imgs/element/compagnia-san-paolo-logo.png" />
+				<!-- <img id="logo-black" src="../imgs/element/compagnia-san-paolo-logo-black.png" /> -->
+			</a>
+
+			<div class="menu-container" id="menu-vis">
+				<div class="menu-wrapper">
+					<a ng-href="{{getL10NLink('../la_strada_per_menfi_e_tebe/')}}">
+						<div class="menu-element-wrapper menu-element-wrapper-top white menu-1 ">
+							<div>
+								<h3 translate="{{ 'MENU-1' }}" ng-class="eng('menu-e')">La strada per menfi e tebe</h3>
+							</div>
+						</div>
+					</a>
+					<a ng-href="{{getL10NLink('../il_valore_della_riscoperta/')}}">
+						<div class="menu-element-wrapper menu-element-wrapper-top white menu-2">
+							<div>
+								<h3 translate="{{ 'MENU-2' }}" ng-class="eng('menu-e')">Il valore della riscoperta</h3>
+							</div>
+						</div>
+					</a>
+					<a ng-href="{{getL10NLink('../la_spedizione_di_egizio_2015/')}}">
+						 <div class="menu-element-wrapper menu-element-wrapper-top white menu-3">
+							 <div>
+								 <h3 translate="{{ 'MENU-3' }}" ng-class="eng('menu-e')">La spedizione di Egizio 2015</h3>
+							 </div>
+						 </div>
+					</a>
+					<a ng-href="{{getL10NLink('../a_un_soffio_dalla_scoperta/')}}">
+						<div class="menu-element-wrapper menu-element-wrapper-top menu-4 menu-sel">
+							<div>
+								<h3 translate="{{ 'MENU-4' }}" ng-class="eng('menu-e')">A un soffio dalla scoperta</h3>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="menu-container" id="menu-hid">
+				<div class="menu-wrapper">
+					<a ng-href="{{getL10NLink('../la_strada_per_menfi_e_tebe/')}}">
+						<div class="menu-element-wrapper menu-element-wrapper-bot white menu-1" >
+							<div>
+								<p translate="{{ 'MENU-1-TEXT' }}">Il Museo Egizio più importante d'Europa nasce a Torino, tra storia e avventure.</p>
+								<img class="img-back" src="../imgs/menu/c1w.png" />
+								<img class="img-over" src="../imgs/menu/c1.png" />
+							</div>
+						</div>
+					</a>
+					<a ng-href="{{getL10NLink('../il_valore_della_riscoperta/')}}">
+						<div class="menu-element-wrapper menu-element-wrapper-bot white menu-2" >
+							<div>
+								<p translate="{{ 'MENU-2-TEXT' }}">Dietro le quinte: il raddoppio degli spazi espositivi per il Nuovo Museo.</p>
+								<img class="img-back" src="../imgs/menu/c2w.png" />
+								<img class="img-over" src="../imgs/menu/c2.png" />
+							</div>
+						</div>
+					</a>
+					<a ng-href="{{getL10NLink('../la_spedizione_di_egizio_2015/')}}">
+						<div class="menu-element-wrapper menu-element-wrapper-bot white menu-3" >				
+							<div>
+								<p translate="{{ 'MENU-3-TEXT' }}">Siamo in tour! Vieni a trovarci e scopri cosa si nasconde sotto la sabbia.</p>
+								<img class="img-back" src="../imgs/menu/c3w.png" />
+								<img class="img-over" src="../imgs/menu/c3.png" />
+							</div>
+						</div>
+					</a>
+					<a ng-href="{{getL10NLink('../a_un_soffio_dalla_scoperta/')}}">
+						<div class="menu-element-wrapper menu-element-wrapper-bot menu-4 menu-sel">
+							<div>
+								<p translate="{{ 'MENU-4-TEXT' }}">Partecipa anche tu,<br/>ovunque nel mondo tu sia.<br/>Che cosa scoprirai oggi?</p>
+								<img class="img-back" src="../imgs/menu/c4w.png" />
+								<img class="img-over" src="../imgs/menu/c4.png" />
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<a ng-href="{{getL10NLink('../')}}">
+				<img class="logo-elements" id="logo-top" src="../imgs/element/logo-1.png">
+				<img class="logo-elements" id="logo-bot" src="../imgs/element/logo-4.png" ng-if="lang=='it'">
+				<img class="logo-elements" id="logo-bot-2" src="../imgs/element/logo-4.png" ng-if="lang=='it'">
+				<img class="logo-elements" id="logo-bot" src="../imgs/element/logo-4-en.png" ng-if="lang=='en'">
+				<img class="logo-elements" id="logo-bot-2" src="../imgs/element/logo-4-en.png" ng-if="lang=='en'">
+			</a>
+
+		</header>
+		<div class="shadow top"></div>
+		<div class="shadow bottom"></div>
+
+		<div class="prewrap">
+
+			<iframe ng-if="lang=='it'" id="youtube-player" width="900" height="500" src="https://www.youtube.com/embed/eJjDbJClHa0?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0" frameborder="0" allowfullscreen allowscriptaccess="always"></iframe>
+
+
+			<iframe ng-if="lang=='en'" id="youtube-player" width="900" height="500" src="https://www.youtube.com/embed/0Squ3Ncob8s?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0" frameborder="0" allowfullscreen allowscriptaccess="always"></iframe>
+
+			<img src="images/Immagine_Teaser_img.jpg" ng-click="vid()" />
+
+			<div class="claim" translate="{{'INIZIA_RISCOPERTA'}}"></div>
+			<div class="time">{{hours}}<span>{{'ORE' | translate}} {{'E' | translate}} </span>{{minutes}}<span>{{'MINUTI' | translate}}</span></div>
+		</div>
+		
+		
+
+
+		<!-- ** angular app dependencies ** -->
+		<script src="../angularjs/angular/angular.min.js"></script>
+
+		
+
+
+		<div id="lang">
+			<a ng-href="{{changeLanguage('it')}}" translate="{{ 'BUTTON_LANG_IT' }}" ng-class="{'lan-sel': lang== 'it' }">italiano</a> |
+			<a ng-href="{{changeLanguage('en')}}" translate="{{ 'BUTTON_LANG_EN' }}" ng-class="{'lan-sel': lang== 'en' }">inglese</a>
+		</div>
+
+
+
+		<!-- translate -->
+		<script src="../angularjs/angular-translate/angular-translate.min.js"></script>
+		<script src="../angularjs/angular-sanitize/angular-sanitize.min.js"></script>
+		<script src="../angularjs/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+		<script src="../angularjs/angular-cookies/angular-cookies.min.js"></script>
+		<script src="../angularjs/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+		<script src="../angularjs/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+		<script src="../angularjs/momentjs/min/moment.min.js"></script>
+
+		
+		<script type="text/javascript">
+'use strict';
+
+var app = angular.module('c4app', [
+	'ngCookies',
+	'pascalprecht.translate',
+	'ngSanitize'
+]);
+
+app.config(['$translateProvider', function ($translateProvider) {
+	// configures staticFilesLoader
+	// use languages/il_progetto-en.json, il_progetto-it.json
+	$translateProvider.useStaticFilesLoader({
+		prefix: 'languages/',
+		suffix: '.json'
+	});
+	// load 'it' table on startup
+	$translateProvider.preferredLanguage('it');
+	// Enable escaping of HTML
+	$translateProvider.useSanitizeValueStrategy('escape');
+	// remember language using localStorage
+	// localStorage will fallback to cookieStorage if the browser doesn't support localStorage.
+	$translateProvider.useLocalStorage();
+}]);
+
+// Parse Query String params into object
+var parseQueryString = function() {
+	var str = window.location.search;
+	var objURL = {};
+
+	str.replace(
+		new RegExp( "([^?=&]+)(=([^&]*))?", "g" ),
+		function( $0, $1, $2, $3 ){
+			objURL[ $1 ] = $3;
+		}
+	);
+	return objURL;
+};
+
+app.controller('AppCtrl', ['$scope', '$translate', '$interval', function ($scope, $translate, $interval) {
+	$scope.init = function(){
+		// detect preferred language
+		var preferred = 'it';
+		var params = parseQueryString();
+		if (params.lang) {
+			preferred = params.lang;
+		}
+		$scope.lang = preferred;
+		$translate.use(preferred);
+	};
+
+	$scope.changeLanguage = function (langKey) {
+		// "sadly", this requires a page reload
+		var lang = '';
+		if (langKey !== 'it') {
+			lang = '?lang=' + langKey;
+		}
+
+		return "" + window.location.origin + window.location.pathname + lang;
+	};
+
+	$scope.getL10NLink = function(url) {
+		if ($scope.lang !== 'it')
+			return url + '?lang=' + $scope.lang;
+
+		return url;
+	};
+
+	$scope.eng = function(classname){
+		return ($scope.lang === 'en') ? classname : '';
+	}
+	$scope.ita = function(classname){
+		return ($scope.lang === 'it') ? classname : '';
+	}
+
+	$scope.vid = function(){
+		console.log($('iframe')[0])
+		$('iframe')[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+		$('.prewrap img').fadeOut( "slow");
+	}
+
+	$scope.init();
+
+
+	$interval(function(){
+		tik();
+	}, 1000*10)
+	
+	function tik(){
+		var now = moment();
+		var end = moment('2015-03-30T18:00:00+02:00');
+
+		$scope.hours = end.diff(now, 'hours');
+
+		var next = moment().add($scope.hours, 'hours');
+		$scope.minutes = Math.round(end.diff(next, 'minutes', true));
+	}
+	tik();
+
+}]);
+
+
+		</script>
+	</body>
+</html>

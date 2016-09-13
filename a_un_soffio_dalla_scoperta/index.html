@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="c4app">
+	<head>
+		<title>Egizio2015 - A un soffio dalla scoperta</title>
+
+		<meta name="description" content="La storia che spiega perchè il museo egizio più importante d'europa è a Torino." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta charset="utf-8">
+
+		<!-- Twitter Card data -->
+	    <meta name="twitter:card"        content="summary_large_image">
+	    <meta name="twitter:creator"     content="@CSP_live">
+	    <meta name="twitter:title"       content="Partecipa alla riscoperta del nuovo Museo Egizio">
+	    <meta name="twitter:description" content="Una teca interattiva all'interno del Museo Egizio di Torino e una serie di reperti da svelare con un soffio, direttamente dal tuo computer.">
+	    <meta name="twitter:image:src"   content="http://compagnia.egizio2015.it/imgs/social/twitter/egizio2015_la_strada_tra_menfi_e_tebe.jpg">
+
+	    <!-- Open Graph data -->
+	    <meta property="og:title"       content="Partecipa alla riscoperta del nuovo Museo Egizio" />
+	    <meta property="og:type"        content="website" />
+	    <meta property="og:url"         content="http://compagnia.egizio2015.it" />
+	    <meta property="og:image"       content="http://compagnia.egizio2015.it/imgs/social/facebook/egizio2015_la_strada_tra_menfi_e_tebe.jpg" />
+	    <meta property="og:description" content="Una teca interattiva all'interno del Museo Egizio di Torino e una serie di reperti da svelare con un soffio, direttamente dal tuo computer." /> 
+	    <meta property="og:site_name"   content="egizio2015.it" />
+
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="../css/style.css" type="text/css">
+		<link rel="stylesheet" href="../css/landscape-style.css" type="text/css">
+		<link rel="stylesheet" href="../css/portrait-style.css" type="text/css">
+		<link rel="stylesheet" href="../css/lores-style.css" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="css/layout.css" type="text/css">
+
+		
+
+	</head>
+	<body ng-controller="AppCtrl" id="c4">
+
+		<div id="main_menu" ng-include="'partials/main_menu.html'" menu-main></div>
+
+		<div ng-if="!c4Ended" flex layout="column" layout-align="center center" id="divModal" class="modal" style="opacity:0">
+			<div class="sub" ng-include="'partials/modal.html'"></div>
+		</div>
+
+		
+		<!-- video container -->
+		<div ng-if="!c4Ended" id="divTop" ng-include="'partials/home.html'" class="wrapper"></div>
+		<div ng-if="c4Ended" id="divTop" ng-include="'partials/home_end.html'" class="wrapper img_bgd"></div>
+		
+		<!-- partial container -->
+		<div ng-if="!c4Ended" id="divBottom" class="wrapper partials">
+			<div ng-include="'partials/queueSidebar.html'"></div>
+			<div id="timer_counter" ng-if="performInter"><!--  ng-if="performTimer<60" -->
+				<div class="c">
+					<span>{{performTimer}}</span>
+					<img src="images/svg/cerchio.svg" />
+				</div>
+			</div>
+			<div ng-include="partial.url" class="partial"></div>
+		</div>
+		
+
+		<div ng-if="c4Ended" id="divBottom" class="wrapper partials">
+			<div ng-include="'partials/users_end.html'" class="partial"></div>
+		</div>
+
+		<div id="reperti-svelati" class="white">
+			<a ng-href="{{getL10NLink('../reperti')}}">
+				<div class="white">
+					<h3 class="svg">
+						<img src="images/svg/reperti-icon.svg" />
+					</h3>
+					<h3 translate="{{ 'REPERTI_SVELATI' }}">reperti svelati</h3>
+				</div>
+			</a>
+		</div>
+		<div id="il-progetto" class="white">
+			<a ng-href="{{getL10NLink('../il_progetto/')}}">
+				<h3 translate="{{ 'PROJECT-LABEL' }}">Il Progetto</h3>
+				<img src="../imgs/element/il-progetto-line-black.jpg" />
+			</a>
+		</div>
+
+
+		<div flex layout="row" id="scrollArr" class="scroll-arrow" layout-align="center center">
+			<img id="el_scroll" src="images/svg/arrow-bottom.svg" ng-click="mover.toggle()" />
+		</div>
+
+
+		<!-- share and change lang
+
+		<div id="lang" class="iron">
+			<a ng-href="{{changeLanguage('it')}}" translate="{{ 'BUTTON_LANG_IT' }}" ng-class="{'lan-sel': lang== 'it' }">italiano</a> |
+			<a ng-href="{{changeLanguage('en')}}" translate="{{ 'BUTTON_LANG_EN' }}" ng-class="{'lan-sel': lang== 'en' }">inglese</a>
+		</div>
+
+		<div id="share" class="iron">
+		  <p>Share on:</p>
+		  <div ng-if="lang=='it'">
+		    <a twitter  data-lang="it" data-count='none' data-size="medium" data-text='Parte la Spedizione di Egizio 2015! @CSP_live @MuseoEgizio' data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+		  </div>
+		  <div ng-if="lang=='en'">
+		    <a twitter  data-lang="en" data-count='none' data-size="medium" data-text='The Egizio 2015 Expedition has begun! @CSP_live @MuseoEgizio' data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+		  </div>
+		  <br>
+		  <div style="float:right;">
+		    <iframe width="56" height="20" src="//www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fcompagnia.egizio2015.it%2Fla_spedizione_di_egizio_2015&amp;layout=button&locale=en_GB" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+		  </div>
+		</div>
+
+		-->
+
+
+		<script src="../js/jquery-1.9.1.min.js"></script>
+		<script src="../angularjs/jquery.transit/jquery.transit.js"></script>
+<!--		<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script> -->
+		
+
+		<script>
+			$(window).load(function(){
+				var h = $(window).height();
+				$( '#dvLoading' ).height(h);
+				$( '#dvLoading' ).transition({
+					y:(h*-1) * 1.5
+				}, 1000);				
+			});
+		</script>
+
+		<script src="../angularjs/angular/angular.min.js"></script>
+
+
+		<!-- JWPlayer -->
+		<!-- // <script src="http://jwpsrv.com/library/sQD3cMfdEeSCXxJtO5t17w.js"></script> -->
+		<script type="text/javascript" src="https://live.top-ix.org/common/jwplayer60/jwplayer.js"></script>
+		<script type="text/javascript">jwplayer.key="oKgSjupkMu2HAWp780IcrCTwZgxFzJ+kvUc1uA==";</script>
+
+		<!-- translate -->
+		<script src="../angularjs/angular-translate/angular-translate.min.js"></script>
+		<script src="../angularjs/angular-sanitize/angular-sanitize.min.js"></script>
+		<script src="../angularjs/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+		<script src="../angularjs/angular-cookies/angular-cookies.min.js"></script>
+		<script src="../angularjs/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+		<script src="../angularjs/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+		<script src="../angularjs/mobile-detect/mobile-detect.min.js"></script>
+		
+		<!-- gsap
+		<script src="../angularjs/gsap/src/minified/TweenMax.min.js"></script>
+		<script src="../angularjs/gsap/src/minified/jquery.gsap.min.js"></script>
+		<script src="../angularjs/gsap/src/minified/easing/EasePack.min.js"></script>
+		<script src="../angularjs/gsap/src/minified/plugins/AttrPlugin.min.js"></script>
+		<script src="../angularjs/gsap/src/minified/plugins/CSSPlugin.min.js"></script>
+		<script src="../angularjs/gsap/src/minified/plugins/CSSRulePlugin.min.js"></script> -->
+		<script src="../angularjs/momentjs/min/moment.min.js"></script>
+
+		<!-- social -->
+		<style rel='stylesheet' type='text/css' href="../angularjs/angular-socialshare/angular-socialshare.min.css"></style>
+		<script src="../angularjs/angular-socialshare/angular-socialshare.js"></script>
+		<script src="http://platform.twitter.com/widgets.js"></script>
+
+		<!-- underscore -->
+		<script src="../angularjs/underscore/underscore.js"></script>
+   		<script src="../angularjs/angular-underscore-module/angular-underscore-module.js"></script>
+
+   		<!-- sails socket -->
+		<script src="../angularjs/sails.io.js/dist/sails.io.js"></script>
+   		<script src="../angularjs/angular-sails/dist/angular-sails.js"></script>
+
+   		<!-- d3 -->
+		<script src="../angularjs/d3/d3.min.js"></script>
+
+		<!-- ** main app ** -->
+		<script src="angularapp/app.js?t=3"></script>
+		<script src="angularapp/config.js?t=3"></script>
+		<script src="../reperti/angularapp/config.js?t=3"></script>
+		<script src="angularapp/routes.js?t=3"></script>
+		<script src="angularapp/mover.srv.js?t=3"></script>
+		<script src="angularapp/modal.srv.js?t=3"></script>
+		<script src="partials/login.ctrl.js?t=3"></script>
+		<script src="partials/blow.ctrl.js?t=3"></script>
+		<script src="partials/queue.ctrl.js?t=3"></script>
+		<script src="partials/selectIo.ctrl.js?t=3"></script>
+		<script src="partials/modal.ctrl.js?t=3"></script>
+		<script src="partials/home.ctrl.js?t=3"></script>
+		<script src="partials/selectTarget.ctrl.js?t=3"></script>
+		<script src="partials/blowFake.ctrl.js?t=3"></script>
+		<script src="partials/modals/reperto.ctrl.js?t=3"></script>
+
+		<!-- <script src="js/templates.js?t=3"></script> -->
+
+		<script src="js/c4-menu.js"></script>
+
+		<!-- ** modules ** -->
+		<script src="angularapp/modules/c4sails/c4sails.module.js"></script>
+		<script src="angularapp/modules/c4sails/c4sails.srv.js"></script>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-7954920-7', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+
+	</body>
+</html>

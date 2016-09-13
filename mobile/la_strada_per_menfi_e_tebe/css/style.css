@@ -1,0 +1,639 @@
+/*----------------------------------------  fonts */
+
+@font-face {
+  font-family: 'decima-nova';
+  font-style:italic;
+  font-weight:300;
+  src: url('../../css/2C43BC_0_0.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('../../css/2C43BC_0_0.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+  font-family: 'din';
+  font-style:normal;
+  font-weight:300;
+  src: url('../../css/2C43BC_3_0.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('../../css/2C43BC_3_0.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+  font-family: 'din';
+  font-style:italic;
+  font-weight:300;
+  src: url('../../css/2C43BC_2_0.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('../../css/2C43BC_2_0.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+  font-family: 'din';
+  font-style:normal;
+  font-weight:700;
+  src: url('../../css/2C43BC_1_0.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('../../css/2C43BC_1_0.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+  font-family: 'din';
+  font-style:italic;
+  font-weight:700;
+  src: url('../../css/2C43BC_4_0.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('../../css/2C43BC_4_0.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+
+
+
+
+
+/*----------------------------------------------- */
+
+body {
+	font-family: din;
+	overflow-x:hidden;
+}
+
+/*img{
+	opacity:0 !important;
+}
+
+#museo-delle-scienze{
+	opacity:1 !important;
+}
+
+#napoleone{
+	opacity:1 !important;
+}
+
+.statue{
+	opacity:1 !important;
+}
+
+p{
+	opacity:0 !important;
+}*/
+
+
+
+.menu-container p{
+	font-family:"decima-nova", "Arial", sans-serif;
+
+}
+
+.logo-elements{
+	opacity:0;
+}
+
+.shadow{
+	width: 100%;
+	height: 30px;
+	background-color: #262626;
+	
+	position: fixed;
+	z-index: 986;
+}
+
+.top{
+	top:-30px;
+	box-shadow: 0 0 60px 70px #262626;
+}
+
+.bottom{
+	bottom:-30px;
+	box-shadow: 0 0 60px #262626;
+}
+
+/*----------------------------------------  typography */
+
+
+
+h1 {
+font-size: 85px;
+letter-spacing: 8px;
+line-height: 1.5;
+font-weight: 700;
+text-transform: uppercase;
+position: absolute;
+width: 100%;
+text-shadow: 0px 0px 23px rgba(38,38,38,0.7);
+}
+
+
+
+h3{
+	font-weight:300;
+	font-size: 12px;
+    letter-spacing: 1.5px;;
+    text-transform: uppercase;
+}
+
+.year{
+	border: 2px solid;
+    margin-right: 25px;
+    padding: 15px 15px 0 10px;
+}
+
+p{
+	font-family:"decima-nova", "Arial", sans-serif;
+	font-style:italic;
+}
+
+.intro{
+	font-size:20px;
+	font-weight:300;
+	width:540px;
+	margin:auto;
+	letter-spacing:1px;
+}
+
+#block-1 .intro{
+	margin:auto;
+	position:relative;
+	top:200;
+}
+
+#block-5 .intro{
+	margin:auto;
+	position:relative;
+	top:200;
+}
+
+
+.detail{
+	width: 280px;
+	font-family: "DIN";
+	font-style: normal;
+	position: absolute;
+	text-align: left;
+	font-size: 14px;
+	left: 140px;
+	letter-spacing: .5px;
+}
+
+.narr{
+	text-align:left;
+	left:150px;
+	width:540px;
+	position:relative;
+	letter-spacing:1px;
+}
+
+
+
+/*-----------------------------------------  COVER */
+
+
+
+.cover h1{
+	left: -419px;
+    margin-left: 50%;
+    padding-left: 7px;
+    position: absolute;
+    top: 120px;
+    width: 831px;
+}
+
+
+.statue{
+	left: -580px;
+    margin-left: 50%;
+    position: absolute;
+    top: 0px;
+    box-shadow:none !important;
+/*    z-index: 0 !important;*/
+}
+
+#light-off{
+	opacity:1;
+}
+
+#light-on{
+	opacity:0;
+}
+
+#cta-scroll{
+	position: fixed;
+	margin-left: 50%;
+	left: -270px;
+	z-index:10000;
+	bottom:70px
+	/*animation: second 1s linear infinite alternate;
+	-webkit-animation: second 1s ease-in-out infinite alternate;
+	-moz-animation: second 1s ease-in-out infinite alternate;*/
+ }
+ 
+
+
+ 
+ #cta-scroll img{
+ 	box-shadow:none;
+ 	cursor:pointer;
+ }
+ 
+ @keyframes second
+{
+from {bottom: 70px;}
+to {bottom: 80px;}
+}
+
+@-webkit-keyframes second /* Safari and Chrome */
+{
+from {bottom: 70px;}
+to {bottom: 80px;}
+}
+
+@-moz-keyframes second /* Safari and Chrome */
+{
+from {bottom: 70px;}
+to {bottom: 80px;}
+}
+
+#quote{
+	position: absolute;
+	margin-left: 50%;
+	left: -275px;
+	opacity:0;
+	top:440px;
+}
+
+/*----------------------------------------  BLOCKS */
+
+.scrollblock {
+	position: relative;
+	/*margin: 0;
+	width: 100%;
+	height: 600px;*/
+	height: 800px;
+    left: -580px;
+    margin: auto auto auto 50%;
+    position: relative;
+    width: 1160px;
+}
+
+.cover{
+	height:800px !important; 
+	overflow:hidden;
+}
+
+#block-1{
+	height:280px !important;
+}
+
+.scrollblock img{
+	box-shadow: 0px 0px 30px rgba(0,0,0,1);
+	/*z-index: 2000;*/
+}
+
+
+.odd{
+	/*border-bottom: 1px solid #494949;	*/
+}
+
+.even{
+/*	border-bottom: 1px solid white;*/
+}
+
+
+/*#examples-parallax {
+	overflow: hidden;
+}
+*/
+
+/*----------------------------------------  BLOCCO2 - MENSA ISIACA */
+
+
+#block-2{
+	height:300px;
+}
+
+#anno-1630{
+	top:50px;
+}
+
+#mensa_isiaca {
+	left: -480px;
+    margin-left: 50%;
+    position: absolute;
+    top: 260px;
+    width: 476px;
+    z-index: -2;
+}
+
+#mensa_isiaca_foto{
+	margin-left: 50%;
+	width: 476px;
+	left: -480px;
+	position: absolute;
+}
+
+#block-2 .narr{
+	left:253px;
+	width:480px;
+}
+
+#b2-p1{
+	top:210px;
+}
+
+#b2-p2{
+
+	top: 240px;
+}
+
+
+#b2-p4{
+	top: 800px;
+}
+
+#b2-p3{
+	top: 390px;
+	z-index: 100;
+	left:-240px !important;
+}
+
+#block-2 .intro{
+	position: relative;
+}
+
+#c_e_1 {
+	left: -161px;
+	position: absolute;
+	top: 100px;
+	margin-left: 50%;
+}
+
+#anno-1757{
+	left: 242px;
+	width: 245px;
+	top:280px;
+}
+
+#c_e_2 {
+	margin-left: 50%;
+	position: absolute;
+	width: 320px;
+	left: 117px;
+	top:490px;
+}
+
+#donati {
+	position: absolute;
+	right: auto;
+	left: -335px;
+	margin-left: 50%;
+	top: 490px;
+}
+
+/*----------------------------------------  BLOCCO3 - NAPOLEONE */
+
+#block-3{
+	height:400px;
+}
+
+#b3-p1, #b3-p2, #b3-p3, #b3-p4, #b3-p5, #b3-p6, #b3-p9 {
+	position:relative;
+
+}
+
+#b3-p0{
+	position: absolute;
+top: 220px;
+margin-left: 50%;
+left: -270px;
+}
+
+#b3-p1{
+	top:350px;
+}
+
+#b3-p2{
+	top:350px;
+	opacity:0;
+}
+
+#b3-p3{
+	top:410px;
+}
+
+#b3-p4, #b3-p5, #b3-p6{
+	top:200px;
+}
+
+#napoleone{
+	left: -480px;
+    margin-left: 50%;
+    position: absolute;
+    top: 420px;
+    width: 960px;
+    -z-index:-1 !important;
+}
+
+#anno-1798{
+	top: 360px;
+	color: #ceaf82;
+}
+
+#drovetti{
+	position: absolute;
+	margin-left: 50%;
+	left: -410px;
+	width: 230px;
+	top:490px;
+	z-index:1;
+}
+
+#firma-drovetti{
+	position: absolute;
+	margin-left: 50%;
+	left: -45px;
+	top: 660px;
+	z-index: 1;
+	width: 390px;
+}
+
+
+
+#anno-1824{
+	top: 650px;
+	z-index: 2;
+}
+
+#carlo-felice{
+	top: 600px;
+	position: absolute;
+	left: 760px;
+	z-index: -1;
+}
+
+#b3-p7{
+	position:absolute;
+}
+
+
+#b3-p7{
+	top: 250px;
+}
+
+#b3-p8{
+	top: 400px;
+}
+
+
+
+/*----------------------------------------  BLOCCO6 - TRANSIZIONE */
+#block-6{
+	height:280px !important;
+}
+/*----------------------------------------  BLOCCO7 - APERTURA DEL MUSEO */
+
+#block-7{
+	height:250px !important;
+}
+
+#museo-delle-scienze{
+	top: 200px;
+	position: absolute;
+	margin-left: 50%;
+	left: -382px;
+	width: 764px;
+}
+
+#anno-1831{
+	top:150px;
+	opacity:0;
+	text-shadow:none;
+}
+
+#b7-p1, #b7-p2, #b7-p3, #b7-p4{
+	position:relative;
+}
+
+
+#b7-p1{
+	top:60px;
+}
+
+#b7-p2{
+	top:00px;
+}
+
+
+#b7-p3{
+	top:30px;
+}
+
+#b7-p4{
+	top:0px;
+}
+
+/*----------------------------------------  BLOCCO8 - SCHIPARELLI */
+
+#anno-1894{
+	top:90px;
+	z-index:2;
+}
+
+#block-8{
+	height:130px;
+}
+
+#block-8 .intro{
+	position: relative;
+}
+
+#b8-p1{
+	top: 100px;
+	z-index: 110;
+	
+}
+
+#b8-p2{
+	top: 200px;
+}
+
+
+
+#schiaparelli{
+	position: absolute;
+	margin-left: 50%;
+	left: -410px;
+	width: 230px;
+	top: 200px;
+}
+
+
+
+#b8-p3{
+	margin-top:0px;
+}
+
+#b8-p4{
+	margin-top:100px;
+}
+
+#b8-p6{
+ top:0px;
+}
+
+
+#mappa-schiaparelli{
+	position: absolute;
+	top: 200px;
+	left: 45px;
+	width: 370px;
+}
+
+#scavi-1{
+	position:absolute;
+	top:200px;
+	left:530px;
+}
+
+#scavi-2{
+	position:absolute;
+	top:200px;
+	left:530px;
+}
+
+#scavi-3{
+	position:absolute;
+	top:200px;
+	left:530px;
+}
+
+
+/*----------------------------------------  BLOCCO9 - FINALE */
+
+#block-9{
+	height:320px;
+}
+
+#b9-p1{
+	position: absolute;
+	margin-left: 50%;
+	left: -270px;
+	top: -475px;
+}
+
+#b9-p3{
+	position: absolute;
+	margin-left: 50%;
+	left: -270px;
+	top: -450px;
+}
+
+#b9-p2{
+	position: absolute;
+	margin-left: 50%;
+	left: -224px;
+	top: 265px;
+	border: 1px solid;
+	padding: 9px;
+	padding-top: 6px;
+	padding-bottom: 3px;
+	width: 430px;
+	animation: myfirst 1s linear infinite alternate;
+	/* Safari and Chrome: */
+	-webkit-animation: myfirst 1s ease-in-out infinite alternate;
+	-moz-animation: myfirst 1s ease-in-out infinite alternate;
+}
+

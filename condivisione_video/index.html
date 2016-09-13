@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Egizio 2015</title>
+		<meta property="og:url" content="http://test.egizio2015.it/video/57">
+		<meta property="og:title" content="AD UN SOFFIO DALLA SCOPERTA">
+		<meta property="og:description" content="La teca di #egizio2015 si è animata grazie ai soffi di 1.754 persone, che in 5 tappe hanno potuto provare l’emozione di scoprire un reperto nascosto sotto la sabbia.
+	Guarda il video o accedi alle sezioni con il diario di bordo di ogni tappa: dalla Casa del Quartiere di San Salvario a Galleria San Federico abbiamo raccolto battute, sorrisi e tanto entusiasmo per l’inaugurazione del Nuovo Museo Egizio di Torino.">
+		<meta property="og:site_name" content="Egizio2015">
+		<meta property="og:type" content="video">
+		<meta property="og:video:url" content="http://cdn.top-ix.org/todo/video57.mp4">
+		<meta property="og:video:width" content="640">
+		<meta property="og:video:height" content="480">
+		<meta property="og:video:type" content="video/mp4">
+		<meta property="og:image" content="http://cdn.top-ix.org/todo/video.jpg"/>
+		<meta property="fb:app_id" content="343925132460658">
+
+		<!--STYLES-->
+		<link rel="stylesheet" href="/styles/importer.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/landscape-style.css" type="text/css">
+		<!--STYLES END-->
+		
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/scripts.js"></script>
+			<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+	</head>
+
+	<body>
+	
+		<header>
+
+		<a href="http://www.compagnia.egizio2015.it/"><img id="logo" src="imgs/element/compagnia-san-paolo-logo.png" /></a>
+
+		<div class="menu-container" id="menu-vis">
+			<div class="menu-wrapper">
+				<a href="http://compagnia.egizio2015.it/la_strada_per_menfi_e_tebe/">
+					<div class="menu-element-wrapper menu-element-wrapper-top white menu-1 menu-1-pro">
+						<div>
+							<h3 ng-class="eng('menu-e')">La strada per menfi e tebe</h3>
+						</div>
+					</div>
+				</a>
+				<a href="http://compagnia.egizio2015.it/il_valore_della_riscoperta/">
+					<div class="menu-element-wrapper menu-element-wrapper-top white menu-2">
+						<div>
+							<h3 ng-class="eng('menu-e')">Il valore della riscoperta</h3>
+						</div>
+					</div>
+				</a>
+				<a ng-href="http://compagnia.egizio2015.it/la_spedizione_di_egizio_2015/">
+					<div class="menu-element-wrapper menu-element-wrapper-top white menu-3">
+						<div>
+							<h3 ng-class="eng('menu-e')">La spedizione di Egizio 2015</h3>
+						</div>
+					</div>
+				</a>
+				<a ng-href="http://compagnia.egizio2015.it/a_un_soffio_dalla_scoperta/">
+					<div class="menu-element-wrapper menu-element-wrapper-top white menu-4">
+						<div>
+							<h3 ng-class="eng('menu-e')">A un soffio dalla scoperta</h3>
+						</div>
+					</div>
+				</a>
+
+			</div>
+		</div>
+		<div class="menu-container" id="menu-hid">
+			<div class="menu-wrapper">
+				<a href="http://compagnia.egizio2015.it/la_strada_per_menfi_e_tebe/">
+					<div class="menu-element-wrapper menu-element-wrapper-bot white menu-1 menu-1-pro" >
+						<div>
+							<p>
+								Il Museo Egizio più importante d'Europa nasce a Torino, tra storia e avventure.
+							</p>
+							<img class="img-back" src="imgs/menu/c1w.png" />
+							<img class="img-over" src="imgs/menu/c1.png" />
+						</div>
+					</div>
+				</a>
+				<a href="http://compagnia.egizio2015.it/il_valore_della_riscoperta/">
+					 <div class="menu-element-wrapper menu-element-wrapper-bot white menu-2" >
+						 <div>
+							 <p translate="{{ 'MENU-2-TEXT' }}">
+							 	Dietro le quinte: il raddoppio degli spazi espositivi per il Nuovo Museo.
+							 </p>
+							 <img class="img-back" src="imgs/menu/c2w.png" />
+							 <img class="img-over" src="imgs/menu/c2.png" />
+						 </div>
+					 </div>
+				</a>
+				<a href="http://compagnia.egizio2015.it/la_spedizione_di_egizio_2015/">
+					 <div class="menu-element-wrapper menu-element-wrapper-bot white menu-3" >
+						 <div>
+							 <p>
+								 Siamo in tour! Vieni a trovarci e scopri cosa si nasconde sotto la sabbia.
+							 </p>
+							 <img class="img-back" src="imgs/menu/c3w.png" />
+							 <img class="img-over" src="imgs/menu/c3.png" />
+						 </div>
+					 </div>
+				</a>
+				<a ng-href="http://compagnia.egizio2015.it/a_un_soffio_dalla_scoperta/">
+					<div class="menu-element-wrapper menu-element-wrapper-bot white menu-4">
+						<div>
+							<!-- <p>{{ 'MENU-4-TEXT' | translate }}</p> -->
+							<p>
+								Partecipa anche tu,<br/>ovunque nel mondo tu sia.<br/>Che cosa scoprirai oggi?
+							</p>
+							<img class="img-back" src="imgs/menu/c4w.png" />
+							<img class="img-over" src="imgs/menu/c4.png" />
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<a ng-href="">
+			<img class="logo-elements" id="logo-top" src="imgs/element/logo-1.png">
+			<img class="logo-elements" id="logo-bot" src="imgs/element/logo-4.png" ng-if="lang=='it'">
+			<img class="logo-elements" id="logo-bot" src="imgs/element/logo-4-en.png" ng-if="lang=='en'">
+		</a>
+		<div id="shadow-top"></div>
+	</header>
+	
+	
+	
+	
+	
+		<h1>AD UN SOFFIO<br/>DALLA SCOPERTA</h1>
+
+		<video width="640" height="440" controls>
+			<source src="http://cdn.top-ix.org/todo/video57.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+
+		<p class="intro">La teca di #egizio2015 si è animata grazie ai soffi di 1.754 persone, che in 5 tappe hanno potuto provare l’emozione di scoprire un reperto nascosto sotto la sabbia.<br>
+		Guarda il video o accedi alle sezioni con il diario di bordo di ogni tappa: dalla Casa del Quartiere di San Salvario a Galleria San Federico abbiamo raccolto battute, sorrisi e tanto entusiasmo per l’inaugurazione del Nuovo Museo Egizio di Torino.
+		</p>
+		
+		<a href="http://compagnia.egizio2015.it/il_progetto/">
+			<div id="il-progetto" class="white">
+				<h3>Il Progetto</h3>
+				<img src="imgs/element/il-progetto-line.jpg" />
+			</div>
+		</a>
+
+		
+	
+		<div id="share" class="white">
+		   <p>Share on:</p>
+		   <div ng-if="lang=='it'">
+			<a twitter  data-lang="it" data-count='none' data-size="medium" data-text='La strada per Menfi e Tebe passa da Torino @CSP_live @MuseoEgizio' data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+		  </div>
+		  <div ng-if="lang=='en'">
+			<a twitter  data-lang="en" data-count='none' data-size="medium" data-text='The road to Memphis and Thebes passes through Turin @CSP_live @MuseoEgizio' data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+		  </div>
+			<br>
+			<div style="float:right;">
+				<iframe width="56" height="20" src="//www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fcompagnia.egizio2015.it%2Fla_strada_per_menfi_e_tebe%2F&amp;layout=button&locale=en_GB" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+			</div>
+		<!-- 	<a facebook class="fb-share-button" data-url='http://compagnia.egizio2015.it/la_spedizione_di_egizio_2015/' data-layout="button" data-shares='shares'></a> -->
+
+
+		</div>
+		
+		
+		
+	</body>
+</html>

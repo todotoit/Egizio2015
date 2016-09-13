@@ -1,0 +1,80 @@
+#container{
+	width:1280px;
+	margin:auto;
+	position:relative;
+}
+
+.background-lmnt{
+	height: 750px;
+	overflow: hidden;
+	width: 1280px;
+	position: relative;
+	
+}
+
+#img-back{
+	position: relative;
+    right: 32px;
+
+}
+
+.elementResizable {
+    height: 750px;
+    float:right;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    width: 640px;
+/*    -webkit-animation: open2 3s backwards; 
+    animation: open2 3s backwards;   */
+}
+
+@-moz-keyframes open2 {
+    0%   {width:0px;}
+    100% {width:640px;}
+}
+
+@-webkit-keyframes open2 {
+    0%   {width:0px;}
+    100% {width:640px;}
+}
+
+@keyframes open2 {
+    0%   {width:0px;}
+    100% {width:640px;}
+}
+
+
+#img-front{
+    position: absolute;
+    right: -45px;
+    top: 0;
+}	
+
+	
+
+#wgrip {
+	
+    background-color: transparent;
+    height: 750px;
+    position: relative;
+    width: 10px;
+    z-index: 3000;
+}
+
+#egrip {
+	
+    background-color:red;
+    height: 750px;
+    position: relative;
+    width: 10px;
+    z-index: 3000;
+}
+
+#wgrip:hover {
+    border-left:2px solid white;
+}
+
+#wgrip{
+     left:0px;
+}

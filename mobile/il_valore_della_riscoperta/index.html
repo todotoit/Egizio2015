@@ -1,0 +1,174 @@
+<!doctype html>
+
+<html lang="it" ng-app="egizioTranslateApp">
+
+<head>
+  	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width"> 
+  	<title>Egizio2015 - Il valore della riscoperta</title>
+  	<meta name="author" content="parcodiyellowstone.it">
+
+  	<link rel="stylesheet" href="../css/mobile-style.css">
+    <link rel="stylesheet" href="css/mobile-style.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="../js/mobile-script.js"></script>
+	<script src="js/mobile-script.js"></script>
+	<script>
+	  $(window).load(function(){
+		$( '#dvLoading' ).fadeOut( "slow" );
+	  });
+  </script>
+
+	<!-- ** angular translation dependencies ** -->
+	<script src="../angularjs/angular/angular.js"></script>
+	<script src="../angularjs/angular-translate/angular-translate.js"></script>
+	<script src="../angularjs/angular-sanitize/angular-sanitize.js"></script>
+	<script src="../angularjs/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+	<script src="../angularjs/angular-cookies/angular-cookies.js"></script>
+	<script src="../angularjs/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+	<script src="../angularjs/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+	<!-- ** main translate app ** -->
+	<script src="../angularapp/app.js"></script>
+	<script src="../angularapp/config.js"></script>
+	<!-- ************************************** -->
+  </head>
+<body id="c2" ng-controller="AppCtrl">
+	<div id="dvLoading"></div>
+	<header>
+		<div id="menu-but-wrapper">
+			<div id="menu-but">
+				<a ng-href="{{goBack()}}">
+					<div id="back">
+						< back
+					</div>
+				</a>
+				<div id="lang">
+					<a href="" ng-click="changeLanguage('it')" translate="{{ 'BUTTON_LANG_IT' }}" ng-class="{'lan-sel': lang== 'it' }">italiano</a> |
+					<a href="" ng-click="changeLanguage('en')" translate="{{ 'BUTTON_LANG_EN' }}" ng-class="{'lan-sel': lang== 'en' }">inglese</a>
+				</div>
+			</div>
+		</div>
+	</header>
+<div id="cover">
+	<h1 translate="{{ 'REDISCOVER-TITLE' }}">verso il nuovo museo egizio</h1>
+		<p class="intro" translate="{{ 'REDISCOVER-INTRO' }}">Palazzo Accademia delle Scienze si rinnova profondamente per dare spazio al Nuovo Museo Egizio: un’opera imponente di ristrutturazione e restauro, realizzata anche grazie all’impegno straordinario di Compagnia di San Paolo.</p>
+</div>
+<div id="wrapper">
+	<div id="ambiente_4">
+		<div class="title-box" id="title-box-4">
+			<h3 translate="{{ 'REDISCOVER-ROOM1-LABEL' }}">ambiente 1</h3>
+		</div>
+	
+		<div id="new_a4" class="c2_img-ambienti">
+		<h4>2014</h4>
+			<img src="imgs/ambienti/ambiente_4/old.jpg" />
+		</div>
+		
+		<div id="old_a4" class="c2_img-ambienti">
+		<h4>2015</h4>
+			<img src="imgs/ambienti/ambiente_4/new.jpg" />
+		</div>
+	</div>
+	
+	<div id="to_a2"></div>
+	<div id="sala_delle_steli">
+		<div class="title-box" id="title-box-2">
+			<h3 translate="{{ 'REDISCOVER-ROOM2-LABEL' }}">ambiente 2</h3>
+		</div>
+	
+		<div id="new_a2" class="c2_img-ambienti">
+		<h4>2014</h4>
+			<img src="imgs/ambienti/sala_delle_steli/old.jpg" />
+		</div>
+		
+		<div id="old_a2" class="c2_img-ambienti">
+		<h4>2015</h4>
+			<img src="imgs/ambienti/sala_delle_steli/new.jpg" />
+		</div>		
+	</div>
+
+	<div id="to_a3"></div>
+	<div id="sala_schiaparelli">
+		<div class="title-box" id="title-box-3">
+			<h3 translate="{{ 'REDISCOVER-ROOM3-LABEL' }}">ambiente 3</h3>
+		</div>
+	
+		<div id="new_a3" class="c2_img-ambienti">
+		<h4>2014</h4>
+			<img src="imgs/ambienti/sala_schiaparelli/old.jpg" />
+		</div>
+		
+		<div id="old_a3" class="c2_img-ambienti">
+		<h4>2015</h4>
+			<img src="imgs/ambienti/sala_schiaparelli/new.jpg" />
+		</div>		
+	</div>
+	
+	<div id="to_a4"></div>
+	<div id="ex_sala_delle_mummie" >
+	
+		<div class="title-box" id="title-box-1">
+			<h3 translate="{{ 'REDISCOVER-ROOM4-LABEL' }}">ambiente 4</h3>
+		</div>
+	
+		<div id="new_a1" class="c2_img-ambienti">
+			<h4>2014</h4>
+			<img src="imgs/ambienti/ex_sala_delle_mummie/old.jpg" />
+		</div>
+		<div id="old_a1" class="c2_img-ambienti">
+			<h4>2015</h4>
+			<img src="imgs/ambienti/ex_sala_delle_mummie/new.jpg" />
+		</div>
+	</div>
+
+	<div id="to_a5"></div>
+	<div id="ambiente_5">
+		<div class="title-box" id="title-box-5">
+			<h3 translate="{{ 'REDISCOVER-ROOM5-LABEL' }}">ambiente 5</h3>
+		</div>
+	
+		<div id="new_a5" class="c2_img-ambienti">
+		<h4>2014</h4>
+			<img src="imgs/ambienti/ambiente_5/old.jpg" />
+		</div>
+		
+		<div id="old_a5" class="c2_img-ambienti">
+		<h4>2015</h4>
+			<img src="imgs/ambienti/ambiente_5/new.jpg" />
+		</div>
+	</div>
+
+	<div id="to_a6"></div>
+	<div id="ambiente_6">
+		<div class="title-box" id="title-box-6">
+			<h3 translate="{{ 'REDISCOVER-ROOM6-LABEL' }}">ambiente 6</h3>
+		</div>
+	
+		<div id="new_a6" class="c2_img-ambienti">
+		<h4>2014</h4>
+			<img src="imgs/ambienti/ambiente_6/old.jpg" />
+		</div>
+		
+		<div id="old_a6" class="c2_img-ambienti">
+		<h4>2015</h4>
+			<img src="imgs/ambienti/ambiente_6/new.jpg" />
+		</div>
+	</div>
+
+</div>
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-7954920-8', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+
+</html>

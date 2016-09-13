@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en" ng-app="egizioTranslateApp" ng-controller="AppCtrl">
+<head>
+<meta charset="utf-8">
+<title>Egizio2015 - A un soffio dalla scoperta</title>
+
+<meta name="description" content="Una teca interattiva all'interno del Museo Egizio di Torino, una
+serie di reperti da svelare con un soffio, direttamente dal tuo computer." />
+
+<!-- see /sharing.php -->
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<script src="js/jquery.ui.touch-punch.js"></script>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/landscape-style.css" type="text/css">
+<link rel="stylesheet" href="../css/portrait-style.css" type="text/css">
+<link rel="stylesheet" href="../css/lores-style.css" type="text/css">
+<script src="../js/scripts.js"></script>
+<script src="js/script.js"></script>
+
+
+
+<script>
+	$(window).load(function(){
+	  $( '#dvLoading' ).animate({
+			 opacity: .5,
+			 top:"-100%"
+			 }, "slow", function() {
+			 // Animation complete.
+		 });
+	});
+</script>
+</head>
+<body id="c4-reperti">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<div id="dvLoading"></div>
+	<div id="rotate-device" class="white">
+		<div>
+			<img src="../imgs/element/rotate-device.png">
+			<h3 translate="{{ 'ROTATE-DEVICE' }}">per favore ruota il tuo dispositivo<br/>per una visualizzazione corretta</h3></div>
+		</div>
+	</div>
+	<div id="resize-browser" class="white">
+		<div>
+			<img src="../imgs/element/resize-browser.png">
+			<h3 translate="{{ 'RESIZE-BROWSER' }}">allarga la finestra del browser<br/>per visualizzare correttamente questo sito</h3></div>
+		</div>
+	</div>
+
+	<header>
+
+		<a ng-href="{{getL10NLink('../')}}"><img id="logo" src="../imgs/element/compagnia-san-paolo-logo.png" /></a>
+
+		<div class="menu-container" id="menu-vis">
+			<div class="menu-wrapper">
+				<!--<div class="menu-element-wrapper white menu-sel">-->
+				<a ng-href="{{getL10NLink('../la_strada_per_menfi_e_tebe/')}}">
+					 <div class="menu-element-wrapper menu-element-wrapper-top white menu-1 ">
+						 <div>
+							 <h3 translate="{{ 'MENU-1' }}" ng-class="eng('menu-e')">La strada per menfi e tebe</h3>
+						 </div>
+					 </div>
+				</a>
+				<a ng-href="{{getL10NLink('../il_valore_della_riscoperta/')}}">
+					<div class="menu-element-wrapper menu-element-wrapper-top gold menu-2 menu-sel">
+						<div>
+							<h3 translate="{{ 'MENU-2' }}" ng-class="eng('menu-e')">Il valore della riscoperta</h3>
+						</div>
+					</div>
+				</a>
+				<a ng-href="{{getL10NLink('../la_spedizione_di_egizio_2015/')}}">
+					<div class="menu-element-wrapper menu-element-wrapper-top white menu-3">
+						<div>
+							<h3 translate="{{ 'MENU-3' }}" ng-class="eng('menu-e')">La spedizione di Egizio 2015</h3>
+						</div>
+					</div>
+				</a>
+				<div class="menu-element-wrapper menu-element-wrapper-top white  menu-4 unactive">
+					<div>
+						<h3 translate="{{ 'MENU-4' }}" ng-class="eng('menu-e')">A un soffio dalla scoperta</h3>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="menu-container" id="menu-hid">
+			<a ng-href="{{getL10NLink('../')}}">
+				<img class="logo-elements" id="logo-top" src="../imgs/element/logo-1.png">
+				<img class="logo-elements" id="logo-bot" src="../imgs/element/logo-4.png" ng-if="lang=='it'">
+				<img class="logo-elements" id="logo-bot" src="../imgs/element/logo-4-en.png" ng-if="lang=='en'">
+			</a>
+			<div class="menu-wrapper">
+				<!--<div class="menu-element-wrapper menu-sel white" >-->
+				<a ng-href="{{getL10NLink('../la_strada_per_menfi_e_tebe/')}}">
+					 <div class="menu-element-wrapper menu-element-wrapper-bot white  menu-1" >
+						 <div>
+							 <p translate="{{ 'MENU-1-TEXT' }}">Il Museo Egizio più importante d'Europa nasce a Torino, tra storia e avventure.</p>
+							 <img class="img-back" src="../imgs/menu/c1w.png" />
+							 <img class="img-over" src="../imgs/menu/c1.png" />
+						 </div>
+					 </div>
+				</a>
+				<a ng-href="{{getL10NLink('../il_valore_della_riscoperta')}}/">
+					 <div class="menu-element-wrapper menu-element-wrapper-bot gold menu-2 menu-sel" >
+						 <div>
+							 <p translate="{{ 'MENU-2-TEXT' }}">Dietro le quinte: il raddoppio degli spazi espositivi per il Nuovo Museo.</p>
+							 <img class="img-back" src="../imgs/menu/c2w.png" />
+							 <img class="img-over" src="../imgs/menu/c2.png" />
+						 </div>
+					 </div>
+				</a>
+				<a ng-href="{{getL10NLink('../la_spedizione_di_egizio_2015/')}}">
+					 <div class="menu-element-wrapper menu-element-wrapper-bot white menu-3" >
+						 <div>
+							 <p translate="{{ 'MENU-3-TEXT' }}">Siamo in tour! Vieni a trovarci e scopri cosa si nasconde sotto la sabbia.</p>
+							 <img class="img-back" src="../imgs/menu/c3w.png" />
+							 <img class="img-over" src="../imgs/menu/c3.png" />
+							 <!--<img class="img-unactive" src="../imgs/menu/c3g.png" />
+							 <p class="un-over" translate="{{ 'MENU-3-UNACTIVE' }}">Questa sezione si attiverà a dicembre 2014.</p>-->
+						 </div>
+					 </div>
+				</a>
+				<div class="menu-element-wrapper menu-element-wrapper-bot white menu-4 unactive">
+					<div>
+						<p translate="{{ 'MENU-4-TEXT' }}">Partecipa anche tu,<br/>ovunque nel mondo tu sia.<br/>Che cosa scoprirai oggi?</p>
+						<img class="img-back" src="../imgs/menu/c4w.png" />
+						<img class="img-over" src="../imgs/menu/c4.png" />
+						<img class="img-unactive" src="../imgs/menu/c4g.png" />
+						<p class="un-over" translate="{{ 'MENU-4-UNACTIVE' }}">Questa sezione si attiverà a marzo 2015.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<img class="logo-elements" id="logo-top" src="../imgs/element/logo-1.png">
+		<img class="logo-elements" id="logo-bot" src="../imgs/element/logo-4.png">
+
+	</header>
+	<!--<div id="grid"></div>-->
+	<div class="shadow top"></div>
+	<div class="container">	
+		<div id="back-link" class="torna reperti"><img src="imgs/element/arrow.png"/><p>torna ai reperti</p></div>
+		<div id="container2">
+			<div class="reperto-img">
+				<img src="imgs/reperto1-b.png" />
+			</div>	
+			
+			
+			<div class="reperto-desc white">
+				<h2>
+					Tra il 10 Marzo ed il 15 Marzo 2015, 54 persone hanno contribuito a svelare la Stele di Pendua!
+				</h2>
+				<p>
+					La stele di Pendua è una stele calcarea idealmente divisa in due parti:
+				</p>
+				<p>
+nella parte superiore troviamo la dea Mertseger dalle sembianze di un-cobra porta sulla testa un diadema con il disco solare fra due piume. Di fronte a lei è collocato un altare con brocca sovrastata da un fiore di loto. 
+				</p>
+				<p>
+Sia in alto che al centro due linee di geroglifici dividono le scene e riporta il nome della dea proprio sopra la sua rappresentazione sottoforma di serpente.
+				</p>
+				<p>
+Nella parte inferiore ci sono due uomini, rivolti verso sinistra, inginocchiati in atto di adorazione, il "servitore nella Sede della Verità" Pendua ed suo figlio Shedsuani. I due uomini portano parrucche lunghe che ricadono sulle spalle e due lunghe vesti pieghettate che dalla vita scendono sino alle caviglie.
+				</p>
+			</div>
+			<div id="user-container" style="clear:both">
+				<h2 class="white">
+					Ecco gli utenti che hanno partecipato</br> 
+alla riscoperta della Stele di Pendua:
+				</h2>
+				<div class="wrapper-user">
+					<a href="">
+						<img src="imgs/profile.png" />
+					</a>
+					<div class="user-info">
+						<a href="" >
+						<b>MATTIA MANCINI</b><br/>
+						@DJEDMEDU<br/>
+						JAN 21, 2015</a>
+					</div>
+				</div>
+				
+				
+				
+				<div style="clear:both">
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<a ng-href="{{getL10NLink('../il_progetto/')}}">
+		<div id="il-progetto" class="white">
+			<h3 translate="{{ 'PROJECT-LABEL' }}">Il progetto</h3>
+			<img src="../imgs/element/il-progetto-line.jpg" />
+		</div>
+	</a>
+	
+	<div id="lang">
+		<a ng-href="{{changeLanguage('it')}}" translate="{{ 'BUTTON_LANG_IT' }}" ng-class="{'lan-sel': lang== 'it' }">italiano</a> |
+		<a ng-href="{{changeLanguage('en')}}" translate="{{ 'BUTTON_LANG_EN' }}" ng-class="{'lan-sel': lang== 'en' }">inglese</a>
+	</div>
+
+	<div id="share" class="iron">
+	   <p>Share on:</p>
+	   <div ng-if="lang=='it'">
+	    <a twitter  data-lang="it" data-count='none' data-size="medium" data-text='Verso il Nuovo Museo Egizio @CSP_live @MuseoEgizio' data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+	  </div>
+	  <div ng-if="lang=='en'">
+	    <a twitter  data-lang="en" data-count='none' data-size="medium" data-text='Towards the New Egyptian Museum @CSP_live @MuseoEgizio' data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+	  </div>
+		<br>
+		<div style="float:right;">
+			<iframe width="56" height="20" src="//www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fcompagnia.egizio2015.it%2Fil_valore_della_riscoperta%2F&amp;layout=button&locale=en_GB" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+		</div>
+	<!-- 	<a facebook class="fb-share-button" data-url='http://compagnia.egizio2015.it/la_spedizione_di_egizio_2015/' data-layout="button" data-shares='shares'></a> -->
+
+
+	</div>
+
+	
+
+	<!-- ** angular translation dependencies ** -->
+	<script src="../angularjs/angular/angular.min.js"></script>
+	<script src="../angularjs/angular-translate/angular-translate.min.js"></script>
+	<script src="../angularjs/angular-sanitize/angular-sanitize.min.js"></script>
+	<script src="../angularjs/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+	<script src="../angularjs/angular-cookies/angular-cookies.min.js"></script>
+	<script src="../angularjs/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+	<script src="../angularjs/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+
+	<!-- social -->
+	<style rel='stylesheet' type='text/css' href="../angularjs/angular-socialshare/angular-socialshare.min.css"></style>
+	<script src="../angularjs/angular-socialshare/angular-socialshare.js"></script>
+	<script src="http://platform.twitter.com/widgets.js"></script>
+
+	<!-- ** main translate app ** -->
+	<script src="angularapp/app.js"></script>
+	<!-- ************************************** -->
+
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-7954920-7', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>

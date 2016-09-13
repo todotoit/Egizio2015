@@ -1,0 +1,17 @@
+{
+  "name": "angular",
+  "version": "1.3.4-build.3580+sha.2b41a58",
+  "main": "./angular.js",
+  "ignore": [],
+  "dependencies": {},
+  "homepage": "https://github.com/angular/bower-angular",
+  "_release": "1.3.4-build.3580+sha.2b41a58",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.3.4-build.3580+sha.2b41a58",
+    "commit": "755fe00467f271ea26c1ae447422300447f126f5"
+  },
+  "_source": "git://github.com/angular/bower-angular.git",
+  "_target": "~=1.3.4",
+  "_originalSource": "angular"
+}

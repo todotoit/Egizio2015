@@ -1,0 +1,159 @@
+<!-- translate="{{ 'KEY' }}" -> attribute to perform translation based on languages/*.json -->
+<!--<h1 translate="{{ 'HOME_TITLE' }}">CASA DOLCE CASA!!!</h1>-->
+
+<div id="wrapper">
+	<div class="two-col col">
+		<div id="video">
+			<h2 translate="{{ 'HOME-IN-VIDEO-TITOLO' }}" ng-class="eng('titolo-video-intour-c3-e')"></h1>
+			<p translate="{{ 'HOME-IN-VIDEO-INTRO' }}" ng-class="eng('titolo-par-intour-c3-e')"></p>
+			
+			
+			<div id="video-player" ng-if="lang=='it'">
+				
+				<iframe id="videoDiv" src="http://www.youtube.com/embed/mOdq3sq0SK4?modestbranding=1&showinfo=0&controls=0&enablejsapi=1&playerapiid=player1" frameborder="0" height="410" width="100%" allowfullscreen></iframe>
+				<script>
+
+				  //Using https://developers.google.com/youtube/iframe_api_reference
+
+				  var tag = document.createElement('script');
+
+				  tag.src = "https://www.youtube.com/iframe_api";
+				  var firstScriptTag = document.getElementsByTagName('script')[0];
+				  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+				  var player;
+				  function onYouTubeIframeAPIReady() {
+					  player = new YT.Player('videoDiv', {
+						  videoId: 'mOdq3sq0SK4',
+						events: {
+						  'onStateChange': onPlayerStateChange
+						}
+					  });
+				  }
+
+				  function onPlayerStateChange(event) {
+					if (event.data == YT.PlayerState.PLAYING) {
+					  $( "#video h2" ).stop().animate({
+						  opacity: 0
+						  }, "medium", function() {
+						  // Animation complete.
+					  });
+					  $( "#video p" ).stop().animate({
+						  opacity: 0
+						  }, "medium", function() {
+						  // Animation complete.
+					  });
+					}
+				  }
+				</script> 
+				
+				
+			</div>
+			<div id="video-player" width="100%" height="410" ng-if="lang=='en'">				
+				<iframe id="videoDiv" src="http://www.youtube.com/embed/43t_UCqdNg0?modestbranding=1&showinfo=0&controls=0&enablejsapi=1&playerapiid=player1" frameborder="0" height="410" width="100%" allowfullscreen></iframe>
+				<script>
+
+				  //Using https://developers.google.com/youtube/iframe_api_reference
+
+				  var tag = document.createElement('script');
+
+				  tag.src = "https://www.youtube.com/iframe_api";
+				  var firstScriptTag = document.getElementsByTagName('script')[0];
+				  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+				  var player;
+				  function onYouTubeIframeAPIReady() {
+					  player = new YT.Player('videoDiv', {
+						  videoId: 'mOdq3sq0SK4',
+						events: {
+						  'onStateChange': onPlayerStateChange
+						}
+					  });
+				  }
+
+				  function onPlayerStateChange(event) {
+					if (event.data == YT.PlayerState.PLAYING) {
+					  $( "#video h2" ).stop().animate({
+						  opacity: 0
+						  }, "medium", function() {
+						  // Animation complete.
+					  });
+					  $( "#video p" ).stop().animate({
+						  opacity: 0
+						  }, "slow", function() {
+						  // Animation complete.
+					  });
+					}
+				  }
+				</script> 
+				
+				
+			</div>
+		</div>
+		
+		
+		
+
+		
+		
+		
+	</div>
+	<div class="one-col col">
+		<a ui-sref="tappa4" class="tappa home-endtour">
+			<div>
+				<p class="data" translate="{{ 'TAPPA-4-DATA' }}"></p>
+				<h2 translate="{{ 'MENU-TAPPA4-NOME' }}"></h1>
+				<!-- <p class="desc" translate="{{ 'TAPPA-3-IN-TEXT-1' }}"></p> -->
+				<p class="desc" translate="{{ 'TAPPA-4-IN-TEXT-1' }}"></p>
+				<p class="desc" translate="{{ 'TAPPA-4-PRE-TEXT-2' }}"></p>
+			</div>
+		</a>
+	</div>
+	<div class="one-col col">
+		<a ui-sref="tappa5" class="tappa home-endtour">
+			<div>
+				<p class="data" translate="{{ 'TAPPA-5-DATA' }}"></p>
+				<h2 translate="{{ 'TAPPA-5-TITOLO' }}"></h1>
+				<p class="desc"  translate="{{ 'TAPPA-5-IN-TEXT-1' }}"></p>
+
+				<p class="desc" translate="{{ 'TAPPA-5-PRE-TEXT-2' }}"></p>
+			</div>
+		</a>
+	</div>
+</div>
+
+<a href="../il_progetto">
+	<div id="il-progetto" class="iron">
+		<h3 translate="{{ 'PROJECT-LABEL' }}">Il Progetto</h3>
+		<img src="../imgs/element/il-progetto-line-black.jpg" />
+	</div>
+</a>
+
+<!-- translator test -->
+<!--  ng-click="changeLanguage('it')" -> call to change language function -->
+
+<div id="lang" class="iron">
+	<a ng-href="{{changeLanguage('it')}}" translate="{{ 'BUTTON_LANG_IT' }}" ng-class="{'lan-sel': lang== 'it' }">italiano</a> |
+	<a ng-href="{{changeLanguage('en')}}" translate="{{ 'BUTTON_LANG_EN' }}" ng-class="{'lan-sel': lang== 'en' }">inglese</a>
+</div>
+<!-- <div id="share" class="iron">
+    <p>Share on:<p>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-hashtags="Egizio2015">Tweet</a><br/>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	<div class="fb-share-button" data-href="http://compagnia.egizio2015.it/la_spedizione_di_egizio_2015/#/" data-layout="button"></div>  
+</div> -->
+<div id="share" class="iron">
+  <p>Share on:</p>
+  <div ng-if="lang=='it'">
+    <a twitter  data-lang="it" data-count='none' data-size="medium" data-text='Parte la Spedizione di Egizio 2015! @CSP_live @MuseoEgizio' data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+  </div>
+  <div ng-if="lang=='en'">
+    <a twitter  data-lang="en" data-count='none' data-size="medium" data-text='The Egizio 2015 Expedition has begun! @CSP_live @MuseoEgizio' data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+  </div>
+  <br>
+  <div style="float:right;">
+    <iframe width="56" height="20" src="//www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fcompagnia.egizio2015.it%2Fla_spedizione_di_egizio_2015&amp;layout=button&locale=en_GB" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+  </div>
+</div>
+
+

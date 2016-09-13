@@ -1,0 +1,22 @@
+@media only screen and (max-width: 1024px) and (orientation : portrait){
+
+
+	 #rotate-device{
+		 display:block;
+		 -webkit-animation: fadeInRotate .5s  1 both; /* Chrome, Safari, Opera */
+    	animation: fadeInRotate .5s  1 both;
+	  }
+	
+	/* Chrome, Safari, Opera */
+@-webkit-keyframes fadeInRotate {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeInRotate {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+	 
+
+}

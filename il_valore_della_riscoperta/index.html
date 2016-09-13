@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en" ng-app="egizioTranslateApp" ng-controller="AppCtrl">
+<head>
+<meta charset="utf-8">
+<title>Egizio2015 - Il valore della riscoperta</title>
+
+<meta name="description" content="Palazzo Accademia delle Scienze si rinnova profondamente per dare spazio al Nuovo Museo Egizio: un’opera imponente di ristrutturazione e restauro, realizzata anche grazie all’impegno straordinario di Compagnia di San Paolo." />
+
+<!-- see /sharing.php -->
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+		<!-- Twitter Card data -->
+	    <meta name="twitter:card"        content="summary_large_image">
+	    <meta name="twitter:creator"     content="@CSP_live">
+	    <meta name="twitter:title"       content="Verso il Nuovo Museo Egizio">
+	    <meta name="twitter:description" content="Esplora quattro degli ambienti rinnovati.">
+	    <meta name="twitter:image:src"   content="http://compagnia.egizio2015.it/imgs/social/twitter/egizio2015_il_valore_della_riscoperta.jpg">
+
+	    <!-- Open Graph data -->
+	    <meta property="og:title"       content="Verso il Nuovo Museo Egizio" />
+	    <meta property="og:type"        content="website" />
+	    <meta property="og:url"         content="http://compagnia.egizio2015.it" />
+	    <meta property="og:image"       content="http://compagnia.egizio2015.it/imgs/social/facebook/egizio2015_il_valore_della_riscoperta.jpg" />
+	    <meta property="og:description" content="Esplora quattro degli ambienti rinnovati." /> 
+	    <meta property="og:site_name"   content="egizio2015.it" />
+
+
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<script src="js/jquery.ui.touch-punch.js"></script>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/landscape-style.css" type="text/css">
+<link rel="stylesheet" href="../css/portrait-style.css" type="text/css">
+<link rel="stylesheet" href="../css/lores-style.css" type="text/css">
+<script src="../js/scripts.js"></script>
+<script src="js/script.js"></script>
+
+
+<script>
+
+
+$(function() {
+   // $('.resizable').resizable({'handles': 'w'});
+
+
+     $('#sala_delle_steli .resizable').resizable({
+            handles       : 'e,w'
+          , resize        : function (event,ui){
+                               ui.position.left = ui.originalPosition.left;
+                               ui.size.width    = ( ui.size.width
+                                                  - ui.originalSize.width )
+                                                  + ui.originalSize.width;
+                               $( "#hint" ).fadeOut( "slow", function() {
+							   // Animation complete
+							   });
+
+							    $('#sds-year-2015').css({
+									 "right": $('#sala_delle_steli .resizable').width()-90,
+									 "margin-right": "0"
+								   });
+							   $('#sds-year-2014').css({
+									 "right": $('#sala_delle_steli .resizable').width()+20,
+									 "margin-right": "0"
+								   });
+							   console.log("resizeing");
+
+
+
+                            }
+     });
+
+     $('#ex_sala_delle_mummie .resizable').resizable({
+            handles       : 'e,w'
+          , resize        : function (event,ui){
+                               ui.position.left = ui.originalPosition.left;
+                               ui.size.width    = ( ui.size.width
+                                                  - ui.originalSize.width )
+                                                  + ui.originalSize.width;
+                               $( "#hint" ).fadeOut( "slow", function() {
+							   // Animation complete
+							   });
+
+							    $('#sdm-year-2015').css({
+									 "right": $('#ex_sala_delle_mummie .resizable').width()-90,
+									 "margin-right": "0"
+								   });
+							   $('#sdm-year-2014').css({
+									 "right": $('#ex_sala_delle_mummie .resizable').width()+20,
+									 "margin-right": "0"
+								   });
+							   console.log("resizeing");
+
+
+
+                            }
+     });
+
+     $('#sala_schiaparelli .resizable').resizable({
+            handles       : 'e,w'
+          , resize        : function (event,ui){
+                               ui.position.left = ui.originalPosition.left;
+                               ui.size.width    = ( ui.size.width
+                                                  - ui.originalSize.width )
+                                                  + ui.originalSize.width;
+                               $( "#hint" ).fadeOut( "slow", function() {
+							   // Animation complete
+							   });
+
+							    $('#ss-year-2015').css({
+									 "right": $('#sala_schiaparelli .resizable').width()-90,
+									 "margin-right": "0"
+								   });
+							   $('#ss-year-2014').css({
+									 "right": $('#sala_schiaparelli .resizable').width()+20,
+									 "margin-right": "0"
+								   });
+							   console.log("resizeing sala-schiaparelli");
+
+
+
+                            }
+     });
+
+     $('#ambiente_4 .resizable').resizable({
+            handles       : 'e,w'
+          , resize        : function (event,ui){
+                               ui.position.left = ui.originalPosition.left;
+                               ui.size.width    = ( ui.size.width
+                                                  - ui.originalSize.width )
+                                                  + ui.originalSize.width;
+                               $( "#hint" ).fadeOut( "slow", function() {
+							   // Animation complete
+							   });
+
+							    $('#gs-year-2015').css({
+									 "right": $('#ambiente_4 .resizable').width()-90,
+									 "margin-right": "0"
+								   });
+							   $('#gs-year-2014').css({
+									 "right": $('#ambiente_4 .resizable').width()+20,
+									 "margin-right": "0"
+								   });
+							   console.log("resizeing");
+
+
+
+                            }
+     });
+
+     $('#ambiente_5 .resizable').resizable({
+            handles       : 'e,w'
+          , resize        : function (event,ui){
+                               ui.position.left = ui.originalPosition.left;
+                               ui.size.width    = ( ui.size.width
+                                                  - ui.originalSize.width )
+                                                  + ui.originalSize.width;
+                               $( "#hint" ).fadeOut( "slow", function() {
+							   // Animation complete
+							   });
+
+							    $('#a5-year-2015').css({
+									 "right": $('#ambiente_5 .resizable').width()-90,
+									 "margin-right": "0"
+								   });
+							   $('#a5-year-2014').css({
+									 "right": $('#ambiente_5 .resizable').width()+20,
+									 "margin-right": "0"
+								   });
+							   console.log("resizeing");
+
+
+
+                            }
+     });
+
+     $('#ambiente_6 .resizable').resizable({
+            handles       : 'e,w'
+          , resize        : function (event,ui){
+                               ui.position.left = ui.originalPosition.left;
+                               ui.size.width    = ( ui.size.width
+                                                  - ui.originalSize.width )
+                                                  + ui.originalSize.width;
+                               $( "#hint" ).fadeOut( "slow", function() {
+							   // Animation complete
+							   });
+
+							    $('#a6-year-2015').css({
+									 "right": $('#ambiente_6 .resizable').width()-90,
+									 "margin-right": "0"
+								   });
+							   $('#a6-year-2014').css({
+									 "right": $('#ambiente_6 .resizable').width()+20,
+									 "margin-right": "0"
+								   });
+							   console.log("resizeing");
+
+
+
+                            }
+     });
+});
+
+
+</script>
+<script>
+	$(document).ready(function(){
+	  $( '#dvLoading' ).animate({
+			 opacity: .5,
+			 top:"-100%"
+			 }, "slow", function() {
+			 // Animation complete.
+		 });
+	});
+</script>
+</head>
+<body id="c2">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<div id="dvLoading"></div>
+	<div id="rotate-device" class="white">
+		<div>
+			<img src="../imgs/element/rotate-device.png">
+			<h3 translate="{{ 'ROTATE-DEVICE' }}">per favore ruota il tuo dispositivo<br/>per una visualizzazione corretta</h3></div>
+		</div>
+	</div>
+	<div id="resize-browser" class="white">
+		<div>
+			<img src="../imgs/element/resize-browser.png">
+			<h3 translate="{{ 'RESIZE-BROWSER' }}">allarga la finestra del browser<br/>per visualizzare correttamente questo sito</h3></div>
+		</div>
+	</div>
+
+	<header>
+		<a ng-href="{{goBack()}}" id="logo-wrap">
+			<svg version="1.1" id="Layer_1" x="0px" y="0px"
+				 width="100px" height="41.5px" viewBox="0 0 100 41.5"
+				 style="position:fixed; top:10px; left:10px; z-index:9000;"
+				 shape-rendering="geometricPrecision">
+			<g id="box" opacity="0.25">
+				<rect x="0" y="0" fill="none" width="100" height="22" stroke="#FFFFFF" stroke-width="2"/>
+			</g>
+			<g id="arrow" opacity="0">
+				<polygon fill="#FFFFFF" points="12.695,15.557 8.369,11.231 12.948,6.652 13.95,7.654 10.373,11.231 13.697,14.555 	"/>
+			</g>
+			<g id="back">
+				<path fill="#FFFFFF" d="M41.769,12.879c0,0.392-0.064,0.738-0.192,1.038s-0.306,0.552-0.534,0.756
+					c-0.228,0.204-0.5,0.358-0.815,0.462c-0.316,0.104-0.662,0.156-1.038,0.156h-3.456V6.747h3.324c0.8,0,1.43,0.208,1.89,0.624
+					s0.689,0.988,0.689,1.716c0,0.232-0.031,0.446-0.096,0.642c-0.063,0.196-0.149,0.372-0.258,0.528
+					c-0.108,0.156-0.232,0.288-0.372,0.396c-0.14,0.108-0.282,0.19-0.426,0.246c0.168,0.064,0.328,0.154,0.479,0.27
+					c0.152,0.116,0.288,0.254,0.408,0.414s0.216,0.348,0.288,0.564S41.769,12.607,41.769,12.879z M40.34,9.135
+					c0-0.4-0.128-0.704-0.384-0.912s-0.592-0.312-1.008-0.312h-1.92v2.448h1.92c0.416,0,0.752-0.104,1.008-0.312
+					C40.212,9.839,40.34,9.535,40.34,9.135z M40.473,12.819c0-0.384-0.12-0.696-0.36-0.936c-0.24-0.24-0.588-0.36-1.044-0.36h-2.04
+					v2.604h2.04c0.456,0,0.804-0.122,1.044-0.366S40.473,13.203,40.473,12.819z"/>
+				<path fill="#FFFFFF" d="M48.597,15.291l-0.589-1.716h-3.371l-0.589,1.716h-1.38L45.8,6.747h1.045l3.132,8.544H48.597z
+					 M46.353,8.691l-1.332,3.792h2.628L46.353,8.691z"/>
+				<path fill="#FFFFFF" d="M56.877,12.735c-0.072,0.424-0.199,0.8-0.379,1.128c-0.18,0.328-0.404,0.602-0.672,0.822
+					s-0.572,0.388-0.912,0.504s-0.701,0.174-1.086,0.174c-0.447,0-0.859-0.078-1.236-0.234c-0.375-0.156-0.711-0.382-1.008-0.678
+					c-0.207-0.208-0.367-0.428-0.479-0.66c-0.113-0.232-0.195-0.484-0.246-0.756c-0.053-0.272-0.082-0.574-0.09-0.906
+					c-0.01-0.332-0.014-0.702-0.014-1.11s0.004-0.778,0.014-1.11c0.008-0.332,0.037-0.634,0.09-0.906
+					c0.051-0.272,0.133-0.524,0.246-0.756c0.111-0.232,0.271-0.452,0.479-0.66c0.297-0.296,0.633-0.522,1.008-0.678
+					c0.377-0.156,0.789-0.234,1.236-0.234c0.793,0,1.461,0.224,2.004,0.672c0.545,0.448,0.893,1.1,1.045,1.956h-1.32
+					c-0.104-0.432-0.299-0.784-0.582-1.056s-0.666-0.408-1.146-0.408c-0.256,0-0.492,0.046-0.707,0.138
+					c-0.217,0.092-0.4,0.218-0.553,0.378c-0.104,0.112-0.189,0.234-0.258,0.366c-0.068,0.132-0.119,0.296-0.156,0.492
+					c-0.035,0.196-0.062,0.438-0.078,0.726s-0.023,0.648-0.023,1.08s0.008,0.792,0.023,1.08s0.043,0.53,0.078,0.726
+					c0.037,0.196,0.088,0.36,0.156,0.492c0.068,0.132,0.154,0.254,0.258,0.366c0.152,0.16,0.336,0.286,0.553,0.378
+					c0.215,0.092,0.451,0.138,0.707,0.138c0.48,0,0.865-0.136,1.152-0.408c0.289-0.272,0.484-0.624,0.588-1.056H56.877z"/>
+				<path fill="#FFFFFF" d="M63.74,15.291l-2.4-4.212L59.9,12.807v2.484h-1.295V6.747H59.9v4.296l3.492-4.296h1.584l-2.771,3.348
+					l3.061,5.196H63.74z"/>
+			</g>
+			</svg>
+			<img id="logo" src="../imgs/element/compagnia-san-paolo-logo.png" />
+		</a>
+		<a ng-href="{{goBack()}}">
+			<img class="logo-elements" id="logo-top" src="../imgs/element/logo-1.png">
+			<img class="logo-elements" id="logo-bot" src="../imgs/element/logo-4.png" ng-if="lang=='it'">
+			<img class="logo-elements" id="logo-bot" src="../imgs/element/logo-4-en.png" ng-if="lang=='en'">
+		</a>
+	</header>
+
+	<!--<div id="grid"></div>-->
+	<div class="shadow top"></div>
+	<div class="container" id>
+		<div id="cover"></div>
+		<div id="hint" class="cta white" translate="{{ 'REDISCOVER-HINT' }}">
+			TRASCINA QUI PER SCOPRIRE LA TRASFORMAZIONE IN CORSO
+		</div>
+
+		<div id="ambiente_4" class="ambiente-wrapper">
+			<div class="background-lmnt">
+				<div class="year-img" id="gs-year-2014">2014</div>
+			</div>
+			<div class="resizable">
+				<div class="img-front" />
+					<div class="year-img" id="gs-year-2015">2015</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="ex_sala_delle_mummie"  class="ambiente-wrapper current">
+			<div class="background-lmnt">
+				<div class="year-img" id="sdm-year-2014">2014</div>
+			</div>
+			<div class="resizable">
+				<div class="img-front" />
+					<div class="year-img" id="sdm-year-2015">2015</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="sala_delle_steli" class="ambiente-wrapper">
+			<div class="background-lmnt">
+				<div class="year-img" id="sds-year-2014">2014</div>
+			</div>
+			<div class="resizable">
+				<div class="img-front" />
+					<div class="year-img" id="sds-year-2015">2015</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="sala_schiaparelli" class="ambiente-wrapper">
+			<div class="background-lmnt">
+				<div class="year-img" id="ss-year-2014">2014</div>
+			</div>
+			<div class="resizable">
+				<div class="img-front" />
+					<div class="year-img" id="ss-year-2015">2015</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="ambiente_5" class="ambiente-wrapper">
+			<div class="background-lmnt">
+				<div class="year-img" id="a5-year-2014">2014</div>
+			</div>
+			<div class="resizable">
+				<div class="img-front" />
+					<div class="year-img" id="a5-year-2015">2015</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="ambiente_6" class="ambiente-wrapper">
+			<div class="background-lmnt">
+				<div class="year-img" id="a6-year-2014">2014</div>
+			</div>
+			<div class="resizable">
+				<div class="img-front" />
+					<div class="year-img" id="a6-year-2015">2015</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="menu-stanze">
+			<div>
+				<h3 id="ambiente-4" class="stanza-sel" translate="{{ 'REDISCOVER-ROOM1-LABEL' }}">ambiente 1</h3>
+			</div>
+			<div>
+				<h3 id="ambiente-1" translate="{{ 'REDISCOVER-ROOM2-LABEL' }}">ambiente 2</h3>
+			</div>
+			<div>
+				<h3 id="ambiente-2" translate="{{ 'REDISCOVER-ROOM3-LABEL' }}">ambiente 3</h3>
+			</div>
+			<div>
+				<h3 id="ambiente-3" translate="{{ 'REDISCOVER-ROOM4-LABEL' }}">ambiente 4</h3>
+			</div>
+			<div>
+				<h3 id="ambiente-5" translate="{{ 'REDISCOVER-ROOM5-LABEL' }}">ambiente 5</h3>
+			</div>
+			<div>
+				<h3 id="ambiente-6" translate="{{ 'REDISCOVER-ROOM6-LABEL' }}">ambiente 6</h3>
+			</div>
+		</div>
+	</div>
+
+	
+	<div id="lang">
+		<a ng-href="{{changeLanguage('it')}}" translate="{{ 'BUTTON_LANG_IT' }}" ng-class="{'lan-sel': lang== 'it' }">ita</a> |
+		<a ng-href="{{changeLanguage('en')}}" translate="{{ 'BUTTON_LANG_EN' }}" ng-class="{'lan-sel': lang== 'en' }">eng</a>
+	</div>
+
+	<div id="share" class="iron">
+	   <p>Share on:</p>
+	   <div ng-if="lang=='it'">
+	    <a twitter  data-lang="it" data-count='none' data-size="medium" data-text="Dal cantiere al Nuovo @MuseoEgizio! @CSP_live" data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+	  </div>
+	  <div ng-if="lang=='en'">
+	    <a twitter  data-lang="en" data-count='none' data-size="medium" data-text="Amazing before&after @MuseoEgizio! @CSP_live" data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+	  </div>
+		<br>
+		<div style="float:right;">
+			<iframe width="56" height="20" src="//www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fcompagnia.egizio2015.it%2Fil_valore_della_riscoperta%2F&amp;layout=button&locale=en_GB" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+		</div>
+	<!-- 	<a facebook class="fb-share-button" data-url='http://compagnia.egizio2015.it/la_spedizione_di_egizio_2015/' data-layout="button" data-shares='shares'></a> -->
+
+
+	</div>
+
+	<script>
+
+		$(document).ready(function() {
+
+			/* APERTURA DETTAGLI AMBIENTE 1 */
+
+			$( "#r1o1a" ).click(function() {
+				 $( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				 $( "#r1o1d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+			$( "#r1o2a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r1o2d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+			$( "#r1o3a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r1o3d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+			$( "#r1n1a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r1n1d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+			$( "#r1n2a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r1n2d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+			/* APERTURA DETTAGLI AMBIENTE 2 */
+
+			$( "#r2o1a" ).click(function() {
+				 $( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				 $( "#r2o1d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+			$( "#r2o2a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r2o2d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+
+			$( "#r2n1a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r2n1d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+			$( "#r2n2a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r2n2d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+			/* APERTURA DETTAGLI AMBIENTE 3 */
+
+			$( "#r3o1a" ).click(function() {
+				 $( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				 $( "#r3o1d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+			$( "#r3o2a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r3o2d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+
+			$( "#r3n1a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r3n1d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+			$( "#r3n2a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r3n2d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+			$( "#r3n3a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r3n3d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+			/* APERTURA DETTAGLI AMBIENTE 4 */
+
+			$( "#r4o1a" ).click(function() {
+				 $( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				 $( "#r4o1d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+			$( "#r4o2a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r4o2d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+
+			$( "#r4n1a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r4n1d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+			$( "#r4n2a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r4n2d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+
+
+
+		});
+
+	</script>
+
+	<!-- ** angular translation dependencies ** -->
+	<script src="../angularjs/angular/angular.min.js"></script>
+	<script src="../angularjs/angular-translate/angular-translate.min.js"></script>
+	<script src="../angularjs/angular-sanitize/angular-sanitize.min.js"></script>
+	<script src="../angularjs/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+	<script src="../angularjs/angular-cookies/angular-cookies.min.js"></script>
+	<script src="../angularjs/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+	<script src="../angularjs/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+
+	<!-- social -->
+	<style rel='stylesheet' type='text/css' href="../angularjs/angular-socialshare/angular-socialshare.min.css"></style>
+	<script src="../angularjs/angular-socialshare/angular-socialshare.js"></script>
+	<script src="http://platform.twitter.com/widgets.js"></script>
+
+	<!-- c4 widget -->
+	<!-- underscore -->
+	<script src="../angularjs/underscore/underscore.js"></script>
+	<script src="../angularjs/angular-underscore-module/angular-underscore-module.js"></script>
+	<!-- sails socket -->
+	<script src="../angularjs/sails.io.js/dist/sails.io.js"></script>
+   <script src="../angularjs/angular-sails/dist/angular-sails.js"></script>
+   <!-- ** main widget app ** -->
+	<script src="../c4widget/user.widget.js"></script>
+	<c4-user-widget></c4-user-widget>
+
+	<!-- ** main translate app ** -->
+	<script src="angularapp/app.js"></script>
+	<!-- ************************************** -->
+
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-7954920-7', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>

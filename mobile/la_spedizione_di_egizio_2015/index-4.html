@@ -1,0 +1,132 @@
+<!doctype html>
+
+<html lang="it" ng-app="egizioTranslateApp">
+
+<head>
+  	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width"> 
+  	<title>Egizio2015 - La spedizione di egizio 2015</title>
+  	<meta name="author" content="parcodiyellowstone.it">
+
+  	<link rel="stylesheet" href="../css/mobile-style.css">
+    <link rel="stylesheet" href="css/mobile-style.css">
+    
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	
+	<script src="js/idangerous.swiper-2.0.min.js"></script>
+	<script src="js/gallery-app.js"></script>
+    
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="../js/jquery.animate-shadow-min.js"></script>
+	<script src="js/mobile-script.js"></script>
+	<script src="../js/mobile-script.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+	  $(window).load(function(){
+		$( '#dvLoading' ).fadeOut( "slow" );
+	  });
+  </script>
+
+	<!-- ** angular translation dependencies ** -->
+	<script src="../angularjs/angular/angular.js"></script>
+	<script src="../angularjs/angular-translate/angular-translate.js"></script>
+	<script src="../angularjs/angular-sanitize/angular-sanitize.js"></script>
+	<script src="../angularjs/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+	<script src="../angularjs/angular-cookies/angular-cookies.js"></script>
+	<script src="../angularjs/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+	<script src="../angularjs/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+	<!-- ** main translate app ** -->
+	<script src="../angularapp/app.js"></script>
+	<script src="../angularapp/config.js"></script>
+	
+	<!-- ************************************** -->
+	
+  
+    <style>    
+	.swiper-container {
+		height: 400px;
+		color: #fff;
+		text-align: center;
+	  }
+	 .swiper-slide {
+	   height: 100%;
+	   
+	 }
+	 
+	 .swiper-slide img{
+	   float: left;
+    height: auto;
+    width: 95%;
+	 }
+	  
+    </style>
+    
+
+  </head>
+<body id="c3" ng-controller="AppCtrl">
+	<div id="dvLoading"></div>
+	<header>
+		<div id="menu-but-wrapper">
+			<div id="menu-but"><img class="left" src="../imgs/element/mobile-logo.png" />
+				<img class="right" src="../imgs/element/menu.png" /></div>
+			</div>
+			<nav>
+				<div><a href="../la_strada_per_menfi_e_tebe/" translate="{{ 'MENU-1' }}">la strada per menfi e tebe</a></div>
+				<div><a href="../il_valore_della_riscoperta/" translate="{{ 'MENU-2' }}">verso il nuovo museo egizio</a></div>
+				<div class="menu-selected"><a href="../la_spedizione_di_egizio_2015/" translate="{{ 'MENU-3' }}">la spedizione di egizio 2015</a></div>
+				<div><a href="../a_un_soffio_dalla_scoperta/" translate="{{ 'MENU-4' }}">a un soffio dalla scoperta</a></div>
+				<div id="il-progetto-but"><a href="../il_progetto/index.html" translate="{{ 'PROJECT-LABEL' }}">il progetto</a></div>
+			
+				<div id="lang">
+					<a href="" ng-click="changeLanguage('it')" translate="{{ 'BUTTON_LANG_IT' }}" ng-class="{'lan-sel': lang== 'it' }">italiano</a>
+					<a href="" ng-click="changeLanguage('en')" translate="{{ 'BUTTON_LANG_EN' }}" ng-class="{'lan-sel': lang== 'en' }">inglese</a>
+				</div>
+			</nav>
+	</header>
+	<div id="cover" style='background-position: center center; height: 388.5px; background-image: url("imgs/bgs/map3.jpg");'>			
+		<h1 translate="{{ 'C3-TITLE' }}" style="color:#262626"></h1>
+		<p translate="{{ 'C3-INTRO' }}" class="intro" id="quote" style="color:#262626"></p>
+		<!--<img src="imgs/bgs/braccio-meccanico.png" />-->
+	</div>
+
+		<div id="align-box-1"></div>
+		<!-- snippet tappa1 -->
+		<div ng-include="snippet" ng-controller="Tappa1Ctrl"></div>
+		<!-- fine snippet tappa1 -->
+
+		<div id="align-box-2"></div>
+		<!-- snippet tappa2 -->
+		<div ng-include="snippet" ng-controller="Tappa2Ctrl"></div>
+		<!-- fine snippet tappa2 -->
+
+		<div id="align-box-3"></div>
+		<!-- snippet tappa3 -->
+		<div ng-include="snippet" ng-controller="Tappa3Ctrl"></div>
+		<!-- fine snippet tappa3 -->
+
+		<div id="align-box-4"></div>
+		<!-- snippet tappa4 -->
+		<div ng-include="snippet" ng-controller="Tappa4Ctrl"></div>
+		<!-- fine snippet tappa4 -->
+
+		<div id="align-box-5"></div>
+		<!-- snippet tappa5 -->
+		<div ng-include="snippet" ng-controller="Tappa5Ctrl"></div>
+		<!-- fine snippet tappa5 -->
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-7954920-8', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+
+</html>

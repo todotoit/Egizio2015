@@ -1,0 +1,103 @@
+<div id="dvLoading"></div>
+<div id="rotate-device" class="white">
+	<div>
+		<img src="../imgs/element/rotate-device.png">
+		<h3 translate="{{ 'ROTATE-DEVICE' }}">per favore ruota il tuo dispositivo<br/>per una visualizzazione corretta</h3>
+	</div>
+</div>
+<div id="resize-browser" class="white">
+	<div>
+		<img src="../imgs/element/resize-browser.png">
+		<h3 translate="{{ 'RESIZE-BROWSER' }}">allarga la finestra del browser<br/>per visualizzare correttamente questo sito</h3>
+	</div>
+</div>
+
+<header>
+
+	<a id="wrapper-logo" ng-href="{{getL10NLink('../')}}">
+		<img id="logo" src="../imgs/element/compagnia-san-paolo-logo.png" /><img id="logo-black" src="../imgs/element/compagnia-san-paolo-logo-black.png" />
+	</a>
+
+	<div class="menu-container" id="menu-vis">
+		<div class="menu-wrapper">
+			<a ng-href="{{getL10NLink('../la_strada_per_menfi_e_tebe/')}}">
+				<div class="menu-element-wrapper menu-element-wrapper-top white menu-1 ">
+					<div>
+						<h3 translate="{{ 'MENU-1' }}" ng-class="eng('menu-e')">La strada per menfi e tebe</h3>
+					</div>
+				</div>
+			</a>
+			<a ng-href="{{getL10NLink('../il_valore_della_riscoperta/')}}">
+				<div class="menu-element-wrapper menu-element-wrapper-top white menu-2">
+					<div>
+						<h3 translate="{{ 'MENU-2' }}" ng-class="eng('menu-e')">Il valore della riscoperta</h3>
+					</div>
+				</div>
+			</a>
+			<a ng-href="{{getL10NLink('../la_spedizione_di_egizio_2015/')}}">
+				 <div class="menu-element-wrapper menu-element-wrapper-top white menu-3">
+					 <div>
+						 <h3 translate="{{ 'MENU-3' }}" ng-class="eng('menu-e')">La spedizione di Egizio 2015</h3>
+					 </div>
+				 </div>
+			</a>
+			<a ng-href="{{getL10NLink('../a_un_soffio_dalla_scoperta/')}}">
+				<div class="menu-element-wrapper menu-element-wrapper-top menu-4 menu-sel">
+					<div>
+						<h3 translate="{{ 'MENU-4' }}" ng-class="eng('menu-e')">A un soffio dalla scoperta</h3>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="menu-container" id="menu-hid">
+		<div class="menu-wrapper">
+			<a ng-href="{{getL10NLink('../la_strada_per_menfi_e_tebe/')}}">
+				<div class="menu-element-wrapper menu-element-wrapper-bot white menu-1" >
+					<div>
+						<p translate="{{ 'MENU-1-TEXT' }}">Il Museo Egizio più importante d'Europa nasce a Torino, tra storia e avventure.</p>
+						<img class="img-back" src="../imgs/menu/c1w.png" />
+						<img class="img-over" src="../imgs/menu/c1.png" />
+					</div>
+				</div>
+			</a>
+			<a ng-href="{{getL10NLink('../il_valore_della_riscoperta/')}}">
+				<div class="menu-element-wrapper menu-element-wrapper-bot white menu-2" >
+					<div>
+						<p translate="{{ 'MENU-2-TEXT' }}">Dietro le quinte: il raddoppio degli spazi espositivi per il Nuovo Museo.</p>
+						<img class="img-back" src="../imgs/menu/c2w.png" />
+						<img class="img-over" src="../imgs/menu/c2.png" />
+					</div>
+				</div>
+			</a>
+			<a ng-href="{{getL10NLink('../la_spedizione_di_egizio_2015/')}}">
+				<div class="menu-element-wrapper menu-element-wrapper-bot white menu-3" >				
+					<div>
+						<p translate="{{ 'MENU-3-TEXT' }}">Siamo in tour! Vieni a trovarci e scopri cosa si nasconde sotto la sabbia.</p>
+						<img class="img-back" src="../imgs/menu/c3w.png" />
+						<img class="img-over" src="../imgs/menu/c3.png" />
+					</div>
+				</div>
+			</a>
+			<a ng-href="{{getL10NLink('../a_un_soffio_dalla_scoperta/')}}">
+				<div class="menu-element-wrapper menu-element-wrapper-bot menu-4 menu-sel">
+					<div>
+						<p translate="{{ 'MENU-4-TEXT' }}">Partecipa anche tu,<br/>ovunque nel mondo tu sia.<br/>Che cosa scoprirai oggi?</p>
+						<img class="img-back" src="../imgs/menu/c4w.png" />
+						<img class="img-over" src="../imgs/menu/c4.png" />
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<a ng-href="{{getL10NLink('../')}}">
+		<img class="logo-elements" id="logo-top" src="../imgs/element/logo-1.png">
+		<img class="logo-elements" id="logo-bot" src="../imgs/element/logo-4.png" ng-if="lang=='it'">
+		<img class="logo-elements" id="logo-bot-2" src="../imgs/element/logo-4-black.png" ng-if="lang=='it'">
+		<img class="logo-elements" id="logo-bot" src="../imgs/element/logo-4-en.png" ng-if="lang=='en'">
+		<img class="logo-elements" id="logo-bot-2" src="../imgs/element/logo-4-en-black.png" ng-if="lang=='en'">
+	</a>
+
+</header>
+<div class="shadow top"></div>
+<div class="shadow bottom"></div>

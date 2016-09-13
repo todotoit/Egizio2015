@@ -1,0 +1,43 @@
+#cover{
+	margin-top: 52px;
+	padding-top: 1px;
+	position: relative;
+	background-image: url(../imgs/a_un_soffio_dalla_riscoperta.jpg);
+	background-size: cover;
+	background-position: 50% 0%;
+}
+
+#cover img{
+	width:100px;
+	height:100px;
+	border:1px solid white;
+	margin-bottom: 30px;
+}
+
+
+#cover h1{
+	max-width: 300px;
+	margin: auto;
+	margin-bottom: 25px;
+	margin-top:50px;
+}
+
+
+#cover p{
+	text-align:center;
+}
+
+#cover p{
+	text-transform:uppercase;
+	letter-spacing:1px;
+	max-width: 350px;
+	text-shadow: 0 0 10px black;
+}
+
+#utente, #numero_utenti{
+	font-weight:bold;
+}
+
+#cover .intro{
+	text-transform:initial;
+}

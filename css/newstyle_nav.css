@@ -1,0 +1,334 @@
+/*fixed elements*/
+.nav{
+  z-index: 30000;
+  position: fixed;
+  margin-top:16%;
+  height: 100%;
+  width: 7rem;
+/*  background-color: rgba(0,0,0,0.23);
+  transition: all 0.4s ease-out;
+  overflow: hidden;
+*/}
+
+
+#bgdNav{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0,0,0,.6);
+  z-index:29999;
+  opacity: 0;
+  display: none;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0.8+0,0+100 */
+background: -moz-linear-gradient(left,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.8)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+background: linear-gradient(to right,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+
+}
+
+.nav.open {
+  width: 20rem;
+}
+
+.nav-container{
+  width: 100%;
+  height: 100%;
+  padding-left: 42px;
+  padding-bottom: 50px;
+  width: 20rem;
+}
+.nav.open .nav-container {
+  width: 50rem;
+}
+
+.nav-content{
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.dot{
+  width: 9px;
+  height: 9px;
+  background: white;
+  z-index: 100;
+  border: 2px solid white;
+  transition: all 0.4s ease 0.4s;
+
+}
+
+.dot_wrap{
+  min-width: 30px;
+  min-height: 14px;
+  margin: 8px 0px;
+}
+
+.nav-list{
+  position: relative;
+}
+
+.nav-list li{
+  height: 32px; /* this avoid layout trashing on dot change */
+}
+
+.nav-list li:not(:first-child){
+  opacity: 0;
+}
+
+.nav-list li:not(.active) span{
+  opacity: 0;
+}
+
+.nav-list li.active{
+  opacity: 1;
+}
+
+.nav-list li span.tempActive{
+  opacity: 1;
+}
+
+.nav-list::before{
+  display: block;
+  content: "";
+  position: absolute;
+  left: 14.5px;
+  width: 1px;
+  top: 1em;
+  bottom: 1em;
+  background-color: white;
+/*  background: rgba(255,255,255,1);
+*/}
+
+.nav-label{
+  cursor: pointer;
+  color: rgba(255,255,255,0.8);
+  font-weight: thin;
+  font-size:.9rem;
+  padding-top: 5px;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+
+.nav-item.active{
+  font-weight: normal;
+}
+
+.active .dot{
+  background-color: green;
+  width: 16px;
+  height: 16px;
+}
+
+.active_green{
+/*  background-color: rgba(1,104,54,0.7);
+*/}
+
+.active_green .nav-label{
+color: white;
+font-weight: normal;
+}
+
+#logo{
+  position: fixed;
+  top: 22px;
+  left: 34px;
+  z-index: 32000;
+}
+
+.back #logo{
+  top: 42px;
+}
+
+.back img, .back:visited img{
+  border: none;
+  text-decoration: none;
+}
+
+.logo-elements{
+  position: fixed;
+  top: 7px;
+  left: 10px;
+  z-index: 8500;
+}
+
+.back .logo-elements{
+  top:29px;
+}
+
+.logo-elements{
+  opacity:0;
+}
+
+#spacer{
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0,0,0,.5);
+}
+
+#lang{
+  color: white;
+  border: 1px solid;
+  font-size: 12px;
+  padding-bottom: 1px;
+  padding-top: 3px;
+  padding-left: 4px;
+  padding-right: 4px;
+  z-index: 10000;
+  text-transform:uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0;
+  background-color: rgb(157, 142, 131);
+}
+
+#lang .language-change {
+  cursor: pointer;
+}
+
+#lang span{
+  font-size: 13px;
+  color:white;
+  text-decoration:none;
+  margin: 0rem 0.15rem;
+}
+
+#lang span.lan-sel{
+  color: #3c3c3c;
+}
+
+#right_footer{
+  position: fixed;
+  bottom:21px;
+  right: 10px;
+  z-index: 32000;
+}
+#right_footer .share-margins{
+  margin: 0.35rem 0rem; 
+}
+#left_footer{
+  position: fixed;
+  bottom:21px;
+  left: 10px;
+  z-index: 32000;
+}
+.social {
+  z-index: 32000;
+  position: fixed;
+  bottom: 1rem;
+  width: 6rem;
+  overflow: hidden;
+  display: block;
+  left: 1rem;
+  color: white;
+  opacity: 0;
+}
+.social span{
+  font-size: .7rem;
+}
+
+
+
+
+#menu-but-wrapper{
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 1000;
+  display: none;
+}
+
+#menu-but{
+  top:1px;
+  background-color: rgba(60,60,60,0.9);
+  height: 50px;
+  /*border: 1px solid white;*/
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 52px;
+  letter-spacing: 1px;
+  color:white;
+}
+
+#menu-but img{
+  position: absolute;
+  width: 20px;
+  margin-left:23px;
+  margin-right:23px;
+  top:11px;
+}
+
+#menu-but .right{
+  right:0px;
+  top:13px;
+}
+  
+#menu-but .left{
+  left:0px;
+}
+#menu-but #lang{
+  background-color: rgba(157, 142, 131,0.9);
+  box-shadow:0px -60px 60px 0px #000;
+  z-index:1;
+  float: right;
+  margin: auto;
+  text-align: center;
+  color: white;
+  border: 1px solid;
+  font-size: 12px;
+  padding-bottom: 1px;
+  padding-top: 3px;
+  padding-left: 4px;
+  padding-right: 4px;
+  text-transform:uppercase;
+  font-family: 'Din', sans-serif; 
+  font-size: 14px;
+  line-height: 1.5rem;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  opacity: 1;
+  display: none;
+}
+
+#menu-but #back {
+  float: left;
+  position: relative;
+  top: 10px;
+  left: 10px;
+
+  box-shadow:0px -60px 60px 0px #000;
+  z-index:1;
+  text-align: center;
+  color: white;
+  border: 1px solid;
+  font-size: 12px;
+  padding-bottom: 1px;
+  padding-top: 3px;
+  padding-left: 4px;
+  padding-right: 4px;
+  text-transform:uppercase;
+  font-family: 'Din', sans-serif; 
+  font-size: 14px;
+  line-height: 1.5rem;
+  /*height: 24px;*/
+  width: 94px;
+}
+
+@media screen and (max-device-width: 768px) {
+  .nav, #logo, #lang, #header {
+    display: none;
+  }
+  .social {
+    display: none;
+  } 
+  #menu-but-wrapper,  #menu-but-wrapper #lang{
+    display: block;
+  }
+    #head{
+    padding-top: 50px;
+  }
+}
+

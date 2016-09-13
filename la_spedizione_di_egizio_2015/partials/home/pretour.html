@@ -1,0 +1,45 @@
+<!-- translate="{{ 'KEY' }}" -> attribute to perform translation based on languages/*.json -->
+<!--<h1 translate="{{ 'HOME_TITLE' }}">CASA DOLCE CASA!!!</h1>-->
+
+<div id="wrapper">
+	<div class="three-col col">
+		<div id="video">
+			<div id="video-player" ng-if="lang=='it'">
+				<iframe width="100%" height="545" src="http://www.youtube.com/embed/mOdq3sq0SK4?rel=0" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div id="video-player" width="100%" height="545" ng-if="lang=='en'">
+				<iframe width="100%" height="545" src="//www.youtube.com/embed/43t_UCqdNg0?rel=0" frameborder="0" allowfullscreen></iframe>
+			</div>
+		<!-- 
+	<h2 translate="{{ 'HOME-PRE-VIDEO-TITOLO' }}"></h1>
+			<p translate="{{ 'HOME-PRE-VIDEO-INTRO' }}"></p>
+ -->
+		</div>
+	</div>
+	<div class="one-col col">
+		<a ui-sref="tappa1" class="tappa home-pretour">
+		   <p class="data" translate="{{ 'HOME-PRE-TAPPA-DATA' }}"></p>
+		   <h2 translate="{{ 'HOME-PRE-TAPPA-TITOLO' }}"></h1>
+		   <p class="desc" translate="{{ 'HOME-PRE-TAPPA-TEXT-1' }}"></p>
+
+		   <p class="desc" translate="{{ 'HOME-PRE-TAPPA-TEXT-2' }}"></p>
+
+		</a>
+	</div>
+</div>
+
+
+<a href="../il_progetto">
+	<div id="il-progetto" class="iron">
+		<h3 translate="{{ 'PROJECT-LABEL' }}">Il Progetto</h3>
+		<img src="../imgs/element/il-progetto-line-black.jpg" />
+	</div>
+</a>
+
+<!-- translator test -->
+<!--  ng-click="changeLanguage('it')" -> call to change language function -->
+
+<div id="lang" class="iron">
+	<a ng-href="{{changeLanguage('it')}}" translate="{{ 'BUTTON_LANG_IT' }}" ng-class="{'lan-sel': lang== 'it' }">italiano</a> |
+	<a ng-href="{{changeLanguage('en')}}" translate="{{ 'BUTTON_LANG_EN' }}" ng-class="{'lan-sel': lang== 'en' }">inglese</a>
+</div>

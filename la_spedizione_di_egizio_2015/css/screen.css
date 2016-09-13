@@ -1,0 +1,105 @@
+body {
+	margin:0;
+	padding: 0;
+	/*font-family:'Arial', sans-serif;*/
+	color: white;
+}
+
+.container{
+	/*width: 1024px;*/
+	width:100%;
+	margin: auto;
+	min-height: 1170px;
+}
+
+.map img{
+	width: 100%;
+	height: auto;
+}
+
+.menu ul{
+	list-style: outside none none;
+    margin: -1px auto auto;
+    max-width: 1010px;
+    padding: 0;
+    width: 100%;
+}
+
+.menu ul li{
+	float: left;
+	color: white;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	display: inline;
+	width: 20%;
+}
+
+.menu ul li a{
+	color: white;
+	text-decoration: none;
+	height: 47px;
+	padding-top: 13px;
+	border-bottom: 1px solid;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	display: block;
+	-webkit-transition: .2s; 
+	-moz-transition: .2s;
+    transition: .2s;
+}
+
+.pretour a{
+	background: #3677BB;
+}
+
+
+
+.intour a{
+	background: #016836;
+}
+
+.endtour a{
+	/*background: #262626;*/
+	background-color: #016836;
+}
+
+
+
+/*.prima-tappa{
+	border-left: none!important;
+}*/
+
+.menu ul li a.last{
+	border-right: 1px solid;
+}
+
+
+.pretour a:hover{
+	background: #1766ad;
+}
+
+.intour a:hover{
+	background: #07562d;
+}
+
+.endtour a:hover{
+	background: #000;
+}
+
+.pretour.active > a{
+	background: #1766ad;
+}
+
+.intour.active > a{
+	background: #07562d;
+}
+
+.endtour.active > a{
+	background: #2b2b2b;
+}
+.gallery span img{
+	width: 30%;
+}
+
+

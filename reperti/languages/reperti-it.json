@@ -1,0 +1,120 @@
+{
+	"ROTATE-DEVICE": "per favore ruota il tuo dispositivo<br/>per una visualizzazione corretta",
+	"RESIZE-BROWSER": "allarga la finestra del browser<br/>per visualizzare correttamente questo sito",
+	"BUTTON_LANG_IT": "ITA",
+	"BUTTON_LANG_EN": "ENG",
+	"MENU-1": "La strada per menfi e tebe",
+	"MENU-2": "Il valore della riscoperta",
+	"MENU-3": "La spedizione di Egizio 2015",
+	"MENU-4": "A un soffio dalla scoperta",
+	"MENU-1-TEXT": "Il Museo Egizio più importante d'Europa nasce a Torino, tra storia e avventure.",
+	"MENU-2-TEXT": "Dietro le quinte: il raddoppio degli spazi espositivi per il Nuovo Museo.",
+	"MENU-3-TEXT": "Siamo in tour! Vieni a trovarci e scopri cosa si nasconde sotto la sabbia.",
+	"MENU-3-UNACTIVE":"Questa sezione si attiverà a dicembre 2014.",
+	"MENU-4-TEXT": "Partecipa anche tu,<br/>ovunque nel mondo tu sia.<br/>Che cosa scoprirai oggi?",
+	"MENU-4-UNACTIVE":"Questa sezione si attiverà a marzo 2015.",
+	"PROJECT-LABEL": "Il Progetto",
+
+	"YOUR-TURN-LBL": "TOCCA A TE",
+
+	"TORNA_STREAMING": "Torna allo Streaming",
+	"TORNA_LISTA": "torna alla lista reperti",
+	"NO_SVELATO": "Questo reperto <br />non è ancora stato svelato",
+	"ECCO_GLI_UTENTI": "ECCO GLI UTENTI CHE HANNO PARTECIPATO E RISCOPERTO",
+	"REPERTO": "Reperto",
+	"PERSONE_CONTRIBUITO":"{{num}} persone hanno contribuito",
+
+	"stele_qen": {
+		"data": "1 Aprile 2015",
+		"name": "Stele di Qen",
+		"art": "La",
+
+		"body": "<p>Nella parte centrale dell&rsquo;architrave le dee Iside e Neft in ginocchio adorano il sole che sorge all&rsquo;orizzonte: dietro alle divinit&agrave; il defunto Qen &ndash; scultore &ldquo;nella Sede della Verit&agrave;&rdquo; (ovvero il villaggio di Deir el-Medina) &ndash; &egrave; prostrato in adorazione.</p><p>Nella parte superiore della stele il dio Ra-Harakhte, dalla testa di sparviero con un disco solare sul capo, &egrave; seduto  sulla barca solare, ornata con il segno shemes, simbolo dei seguaci di Horus, che unisce un arpione,  un coltello, una gamba umana legati insieme con una corda; la prua dell'imbarcazione &egrave; ricoperta da un drappo di  perle e foglie mentre a poppa vi sono i due remi-timoni.</p><p>Nella parte inferiore, sulla sinistra &egrave; raffigurata una cappella a tetto piramidale, tipica di Deir el-Medina,  accanto alla quale sono disposte in piedi quattro mummie. Il figlio e il fratello di Qen celebrano riti funebri mentre una donna mostra il suo dolore, inginocchiata.</p><p>Nella parte inferiore, a sinistra, &egrave; raffigurato un uomo con il braccio destro levato in segno di adorazione, mentre  &egrave; solo parzialmente visibile un altro braccio nella parte inferiore dello stipite. Ai lati del frontone sono stati incisi due occhi di Ra, simbolo di prosperit&agrave;.</p>",
+		"subhead": "Ecco gli utenti che hanno partecipato</br> alla riscoperta della Stele di Pendua:"
+		
+	},
+
+	"stele_benbu": {
+		"data": "3 Aprile 2015",
+		"name": "Stele di Djehutynefer e Benbu",
+		"art": "La",
+
+		"head": "",
+		"body": "<p>Lo &ldquo;scriba del bestiame nella casa di Amon&rdquo; Djehutynefer e la moglie Benbu, &ldquo;signora della casa&rdquo;, sono raffigurati  insieme alla figlioletta Nefertari di fronte a una tavola, imbandita con diverse offerte alimentari.</p><p>Sopra di essa vi &egrave; una lista con l'elenco delle offerte presentate, mentre i restanti geroglifici, colorati in  blu, riportano una formula da recitare per godere di particolari privilegi dopo la morte. </p><p>La dedica &egrave; rivolta in particolare al ka di Djehutynefer, ovvero il suo &ldquo;spirito vitale&rdquo;, la parte dell'anima destinata a godere delle offerte funerarie.</p><p>La stele &egrave; in calcare e proviene da Dra' Abu el Naga, una delle pi&ugrave; importanti e pi&ugrave; antiche necropoli egizie poco  distante da Tebe. Risale al Nuovo Regno, XVIII dinastia, intorno al 1550-1425 a.C. </p>",
+		"subhead": ""
+	},
+
+	"stele_pamermesha": {
+		"data": "5 Aprile 2015",
+		"name": "Stele di Pamermesha",
+		"art": "La",
+
+		"body": "<p>Questa stele di provenienza ignota, risalente alla XIX-XX dinastia (Nuovo Regno), ha una particolare forma  cuspidata.</p><p>Porta il nome del suo committente Pamermesha, ritratto insieme alla moglie nell'atto di adorare il dio Osiride accompagnato dalla moglie Iside; nel registro inferiore, una processione di familiari, chiaramente identificabili grazie ai geroglifici iscritti sopra le loro teste, partecipa a quest'atto di omaggio.</p><p>Sulla cuspide sono raffigurati due babbuini che, su una barca, adorano il disco solare. </p><p>Il babbuino era tradizionalmente associato a Thot, protettore degli scribi e dio della saggezza. Gli antichi Egizi credevano che all&rsquo;alba i babbuini tenessero la testa verso Est, agitando le zampe per celebrare il sorgere del sole. </p>",
+		"subhead": ""
+	},
+
+	"architrave": {
+		"data": "7 Aprile 2015",
+		"name": "Un’architrave di falsa porta (spezzata)",
+		"art": "",
+
+		"body": "<p>Stele in calcare per un sacerdote del re Cheope, faraone della IV dinastia. L&rsquo;architrave &egrave; incisa con un testo funerario composto di tre linee di geroglifici, che raccontano le ricorrenze funerarie e i vari titoli del defunto.</p><p>Il frammento contiene una dedica da parte di un &ldquo;sacerdote-puro del re&rdquo;, &ldquo;addetto al culto di Cheope&rdquo; e &ldquo;Soprastante ai segreti del Palazzo&rdquo;, di cui per&ograve; purtroppo non si conserva il nome.</p><p>L'iscrizione geroglifica riporta anche una &ldquo;formula d'offerta&rdquo; che quando recitata, grazie all'intercessione del sovrano, consentiva al defunto di beneficiare delle offerte &ndash; pani e birra &ndash; dedicati alle divinit&agrave; invocate (solitamente Osiride o, come in questo caso, Anubi).</p><p>La rappresentazione artistica e non funzionale di una porta, per simboleggiare la soglia tra il mondo dei vivi e l'Aldil&agrave;, era un elemento architettonico tipico delle tombe dell'Antico Egitto. </p>",
+		"subhead": ""
+	},
+
+	"stele_usertatet": {
+		"data": "10 Aprile 2015",
+		"name": "Stele di Usertatet",
+		"art": "La",
+
+		"body": "<p>Usertatet dedica questa particolare stele alla dea Nebethetep, &ldquo;che ascolta la preghiera, signora del cielo&rdquo;.</p><p>La dedica &egrave; impressa al centro delle stele tra le due fila di orecchie umane incise. Il nome di Usertatet &egrave; invece  riportato nella parte bassa della stele, insieme ad altri geroglifici.</p><p>Nebethetep, il cui nome significa &ldquo;la Signora delle Offerte&rdquo;, era un&rsquo;importante divinit&agrave; venerata a Heliopolis,  associata ad Hathor e soprattutto ad Atum, di cui rappresentava il corrispettivo femminile: la forza creatrice.</p><p>Stele come questa, proveniente dal villaggio operaio di Deir el-Medina, sono una chiara testimonianza della devozione e religiosit&agrave; popolare.</p>",
+		"subhead": ""
+	},
+
+	"bes": {
+		"data": "12 Aprile 2015",
+		"name": "Piastrella di Bes",
+		"art": "La",
+
+		"body": "<p>Frammento di tavoletta in arenaria con quattro figure in bassorilievo. Potrebbe trattarsi di un modello per la scultura, ossia di un piccolo repertorio di figure da copiare a disposizione degli scultori.</p><p>Nella parte superiore &egrave; raffigurata una testa umana accanto al volto del dio Bes &ndash; una divinit&agrave; minore molto  diffusa in ambito familiare e popolare, solitamente rappresentata su oggetti quotidiani nell&rsquo;atto di compiere  smorfie e linguacce &ndash; che aveva il compito di allontanare le sciagure.  Accanto si vede anche un volto umano visto di fronte, che rappresenta anche il segno geroglifico che  significa &ldquo;testa, capo, volto&rdquo;.</p><p>Nella parte inferiore vi sono una civetta e un pulcino.</p><p>Bes, qui rappresentato solo parzialmente, era solitamente raffigurato come un nano tozzo, dalle gambe storte e  con delle piume di struzzo. Il suo ruolo protettivo si estendeva dalle danzatrici alle partorienti, dai neonati ai matrimoni. L&rsquo;atteggiamento aggressivo con la lingua fuori, con una spada alzata sulla testa e con i tratti  del volto quasi animaleschi serviva proprio a respingere gli spiriti malvagi dalla casa e dalla famiglia.</p>",
+		"subhead": ""
+	},
+
+	"due_piastrelle": {
+		"data": "15 Aprile 2015",
+		"name": "Due piastrelle calcaree",
+		"art": "",
+
+		"body": "<p>Due piccole piastrelle in calcare, di cui la prima raffigura in altorilievo una testa di ariete di profilo con i dettagli leggermente incisi. </p><p>Il dio a testa di ariete con le corna a tortiglione &egrave; Khnum, protettore dell&rsquo;isola di Elefantina ad Assuan e  considerato il creatore degli esseri umani, che avrebbe plasmato su una ruota da vasaio. Anche il dio Amon di Tebe (Luxor) &egrave; raffigurato spesso nella forma del medesimo animale. La seconda piastrella rappresenta un falco in altorilievo. Il listello alla base &egrave; suddiviso in dieci quadretti.  Il falco rappresenta in Egitto l&rsquo;uccello che volava pi&ugrave; in alto di tutti ed &egrave; associato a Horo, Ra e altre divinit&agrave;  solari.</p><p>Come per la piastrella di Bes, &egrave; possibile che anche questi fossero modelli per scultura, con segni di quadrettatura che rappresenta la griglia per le proporzioni usata dagli artisti egiziani. </p>",
+		"subhead": ""
+	},
+
+	"sfinge": {
+		"data": "16 Aprile 2015",
+		"name": "piastrella con sfinge",
+		"art": "La",
+
+		"body": "<p>Frammento rettangolare di rilievo, che raffigura una sfinge dalla testa umana. La sfinge porta sul capo un particolare nemes &ndash; il copricapo dei sovrani egizi &ndash; con ureo sulla fronte, corna con altri urei, disco solare e piume. Dalla nuca esce una testa di ariete. Davanti alla sfinge vi &egrave; una tavola d'offerta con pani tondi, un vaso e un'oca. In alto a sinistra &egrave; parzialmente visibile Horus-falco con ali spiegate.</p><p>Questo tipo di divinit&agrave; ibrida era venerata in Egitto soprattutto nel periodo greco-romano, e forse potrebbe provenire dalla regione a sud dell&rsquo;Egitto. La sfinge si associava con altre divinit&agrave; prendendone le caratteristiche, come la testa di ariete o la coda in forma di serpente. Godeva di un culto molto popolare e si pensava che proteggesse i suoi fedeli durante il sonno.</p><p>Ormai diventata icona universale della mitologia egizia, la sfinge pi&ugrave; famosa &egrave; quella con il corpo di leone e la testa di uomo, ma in antichit&agrave; poteva avere anche la testa di falco, di capra o di ariete.</p><p>Come simbolo del sole, veniva rappresentata in corrispondenza delle tombe per indicare la rinascita del defunto dopo la morte, come il risorgere del sole dopo la notte. </p>",
+		"subhead": ""
+	},
+
+	"talatat": {
+		"data": "18 Aprile 2015",
+		"name": "Talatat con profilo di sovrana amarniana",
+		"art": "Il",
+
+		"body": "<p>Questo frammento di bassorilievo ci mostra una figura con ureo, la tipica decorazione a forma di serpente  posta sui capi dei sovrani egizi. La donna raffigurata &egrave; molto probabilmente Nefertiti, leggendaria regina della XVIII dinastia, che tiene nella mano sinistra un sistro, strumento a vibrazione sacro alla dea Iside, mentre alza la destra in segno di venerazione.</p><p>Bassorilievi come questo ornavano i templi dedicati al dio unico Aton costruiti dal faraone Akhenaton, che dopo la sua morte furono oggetto di una massiccia damnatio memoriae.</p><p>Nefertiti &egrave; una delle figure pi&ugrave; enigmatiche della cultura egizia. Non si &egrave; certi n&eacute; della sua origine n&eacute; della sua fine, ma l&rsquo;iconografia amarniana ci racconta la storia di una figura femminile estremamente rilevante, dal punto di vista sia politico sia sociale.</p><p>Viene spesso raffigurata con suo marito, il faraone Akhenaton, anche in atteggiamenti intimi e affettuosi, spesso accompagnata anche dalle figlie. </p>",
+		"subhead": ""
+	},
+	
+
+	"stele_pendua": {
+		"data": "19 Aprile 2015",
+		"name": "Stele di Pendua",
+		"art": "La",
+
+		"body": "<p>La stele di Pendua &egrave; una stele calcarea dedicata da Pendua &ndash; il &quot;servitore nella Sede della Verit&agrave;&quot;, ovvero il villaggio di operai Deir el-Medina &ndash; alla dea Mertseger, rappresentata in alto sotto le sembianze di un cobra, con sulla testa un diadema con il disco solare fra due piume. Di fronte a lei &egrave; collocato un altare con una brocca sovrastata da un fiore di loto. </p><p>In alto e al centro due linee di geroglifici dividono le scene. Quello in alto riporta il nome della dea proprio sopra la sua rappresentazione in forma di serpente.</p><p>Nella parte inferiore ci sono due uomini rivolti verso sinistra, inginocchiati in atto di adorazione: sono Pendua e suo figlio Shedsuani. Portano parrucche lunghe che ricadono sulle spalle e lunghe vesti pieghettate che dalla vita scendono sino alle caviglie. </p>",
+		"subhead": ""
+	}
+
+}

@@ -1,0 +1,113 @@
+<script>
+	$( document ).ready(function() {
+		
+		var altezzaRimanente = $( window ).height() - 275;
+	
+		if ($( window ).height() >430){
+			 $( ".arrow" ).fadeIn( "fast" );
+			 $( ".arrow" ).css({
+			   "top": (altezzaRimanente/2)+230,
+			 });
+		}else{
+			$( ".arrow" ).fadeOut( "fast" );
+		}	
+		
+		if ($(window).scrollTop()>436){
+				$( ".menu" ).css({
+				  "position": "fixed",
+				  "top": "124px"
+				});
+				$( ".tappa-aperta" ).css({
+				  "position": "fixed",
+				  "top": "186px"
+				});
+				$( "#cover" ).css({
+				  "position": "fixed",
+				  "top": "-436px"
+				});
+				$( ".body-tappa" ).css({
+				  "top": "710px"
+				});
+			}
+			else{
+				$( ".menu" ).css({
+				  "position": "relative",
+				  "top": "auto"
+				});
+				$( ".tappa-aperta" ).css({
+				  "position": "relative",
+				  "top": "auto"
+				});
+				$( "#cover" ).css({
+				  "position": "relative",
+				  "top": "auto"
+				});
+				$( ".body-tappa" ).css({
+				  "top": "auto"
+				});
+			}
+		
+	// todo: remove this or fix it
+		
+	// $('#map_canvas').gmap();
+	// map.panTo(new google.maps.LatLng(45.078746, 6.667587));
+
+	});
+</script>
+<div class="tappa-aperta endtour">
+	<div class="header-tappa ">
+		<div class="inner-header">
+			<p class="data" translate="{{ 'TAPPA-3-DATA' }}">12-14 Dicembre</p>	
+			<h1 translate="{{ 'TAPPA-3-TITOLO' }}">Ospedale Infantile Regina Margherita</h1>
+		</div>
+	</div>
+</div>
+<div class="body-tappa">
+	
+	<div class="inner-body">
+		<div class="inner-body-left">
+			 <p translate="{{ 'TAPPA-3-IN-TEXT-2' }}"></p>
+			 <p class="follow" translate="{{ 'TAPPA-3-IN-TEXT-3' }}"></p>
+			 <div class="wrapper-social" ng-class="eng('wrapper-social-e')">
+			 	<a href="https://www.facebook.com/CompagniaDiSanPaolo" target="blank"><img src="img/social/facebook-df.png" /></a>
+			 	<a href="https://twitter.com/CSP_live" target="blank"><img src="img/social/twitter-df.png" /></a>
+			 	<a href="https://www.youtube.com/user/compagniadisanpaolo" target="blank"><img src="img/social/youtube-df.png" /></a>
+			 </div>
+		</div>
+		<div class="inner-body-right">
+			 <div class="wrapper-img">
+			 	<img src="img/teca.jpg"/>
+			 </div>
+		</div>		
+	</div>
+	<!--<a ui-sref="tappa1" id="tappa-1" class="arrow left"></a>
+	<a ui-sref="tappa3" id="tappa-3" class="arrow right"></a>-->
+</div>
+
+<a href="../il_progetto">
+	<div id="il-progetto" class="white">
+		<h3 translate="{{ 'PROJECT-LABEL' }}">Il Progetto</h3>
+		<img src="../imgs/element/il-progetto-line.jpg" />
+	</div>
+</a>
+
+<!-- translator test -->
+<!--  ng-click="changeLanguage('it')" -> call to change language function -->
+
+<div id="lang" class="white">
+	<a ng-href="{{changeLanguage('it')}}" translate="{{ 'BUTTON_LANG_IT' }}" ng-class="{'lan-sel': lang== 'it' }">italiano</a> |
+	<a ng-href="{{changeLanguage('en')}}" translate="{{ 'BUTTON_LANG_EN' }}" ng-class="{'lan-sel': lang== 'en' }">inglese</a>
+</div>
+<div id="share">
+  <p>Share on:</p>
+  <div ng-if="lang=='it'">
+    <a twitter  data-lang="it" data-count='none' data-size="medium" data-text="Guarda i selfie di #egizio2015 @CSP_live @MuseoEgizio" data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+  </div>
+  <div ng-if="lang=='en'">
+    <a twitter  data-lang="en" data-count='none' data-size="medium" data-text="Check out the selfies from #egizio2015 @CSP_live @MuseoEgizio" data-hashtags="egizio2015" style="float:right;width:55px;"></a>
+  </div>
+  <br>
+  <div style="float:right;">
+    <iframe width="56" height="20" src="//www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fcompagnia.egizio2015.it%2Fla_spedizione_di_egizio_2015%2F%23%2Ftappa1&amp;layout=button&locale=en_GB" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+  </div>
+</div>

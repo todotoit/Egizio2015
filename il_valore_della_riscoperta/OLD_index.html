@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Il valore della riscoperta</title>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<script src="../js/scripts.js"></script>
+
+<script>
+
+
+$(function() {
+   // $('.resizable').resizable({'handles': 'w'});
+  $('.resizable').resizable({
+            handles       : 'e,w'
+          , resize        : function (event,ui){
+                               ui.position.left = ui.originalPosition.left;
+                               ui.size.width    = ( ui.size.width
+                                                  - ui.originalSize.width )
+                                                  + ui.originalSize.width;
+                            }
+     });
+});
+
+
+</script>
+
+</head>
+<body>
+
+	<header>
+		
+		<img id="logo" src="../imgs/element/compagnia-san-paolo-logo.png" />
+	
+		<div class="menu-container" id="menu-vis">
+			<div class="menu-wrapper">
+				<div class="menu-element-wrapper white" id="select-c1">
+					<div>
+						<h3>La strada per menfi e tebe</h3>
+					</div>
+				</div>
+				<div class="menu-element-wrapper white menu-sel" id="select-c2">
+					<div>
+						<h3>Il valore della riscoperta</h3>
+						
+					</div>
+				</div>
+				<div class="menu-element-wrapper white" id="select-c3">
+					<div>
+						<h3>La spedizione di Egizio 2015</h3>
+						
+					</div>
+				</div>
+				<div class="menu-element-wrapper white" id="select-c4">
+					<div>
+						<h3>A un soffio dalla scoperta</h3>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-container" id="menu-hid">
+			<img id="logo-verde" src="../imgs/element/compagnia-san-paolo-logo-verde.png">
+			<div class="menu-wrapper">
+				<div class="menu-element-wrapper white" >
+					<div>
+						<p>Il Museo Egizio più importante d'Europa nasce a Torino, tra storia e avventure.</p>
+						<img class="img-back" src="../imgs/menu/c1w.png" />
+						<img class="img-over" src="../imgs/menu/c1.png" />	
+					</div>
+				</div>
+				<div class="menu-element-wrapper white menu-sel" >
+					<div>
+						<p>Dietro le quinte: il raddoppio degli spazi espositivi per il Nuovo Museo.</p>
+						<img class="img-back" src="../imgs/menu/c2w.png" />
+						<img class="img-over" src="../imgs/menu/c2.png" />
+					</div>
+				</div>
+				<div class="menu-element-wrapper white" >
+					<div>
+						<p>Siamo in tour! Vieni a trovarci e scopri cosa si nasconde sotto la sabbia.</p>
+						<img class="img-back" src="../imgs/menu/c3w.png" />
+						<img class="img-over" src="../imgs/menu/c3.png" />
+					</div>
+				</div>
+				<div class="menu-element-wrapper white">
+					<div>
+						<p>Soffia sul reperto, da qualsiasi parte del mondo tu sia. Che cosa scoprirai oggi?</p>
+						<img class="img-back" src="../imgs/menu/c4w.png" />
+						<img class="img-over" src="../imgs/menu/c4.png" />
+					</div>
+				</div>
+			</div>
+		</div>	
+	</header>
+
+	<div class="container">
+		<div class="background-lmnt">
+			<img id="img-back" src="imgs/old.jpg" />
+			<div class="detail detail-off detail-new-room" id="r1n1u"></div>
+			<div class="detail detail-off detail-new-room" id="r1n2u"></div>
+			<div class="detail detail-on detail-old-room" id="r1o1a"></div>
+			<div class="detail detail-on detail-old-room" id="r1o2a"></div>
+			<div class="detail detail-on detail-old-room" id="r1o3a"></div>
+		</div>
+		<div class="resizable">
+			<img id="img-front" src="imgs/new.jpg" />
+			<div class="detail detail-on detail-new-room" id="r1n1a"></div>
+			<div class="detail detail-on detail-new-room" id="r1n2a"></div>
+			<div class="detail detail-off detail-old-room" id="r1o1u"></div>
+			<div class="detail detail-off detail-old-room" id="r1o2u"></div>
+			<div class="detail detail-off detail-old-room" id="r1o3u"></div>
+		</div>
+		<div class="detail-open double-detail" id="r1o1d">
+			<div class="close-detail"><img src="imgs/element/close-detail.png"></div>
+			<img src="imgs/sarcofago.png" />
+			<p>La sala si apriva con un’esposizione di grandi sarcofagi in legno, ritrovati dalla Missione Archeologica Italiana diretta da Ernesto Schiaparelli nella Valle delle Regine nel 1903. Si tratta di sarcofagi antropoidi appartenenti ad alcune famiglie di sacerdoti vissuti a Tebe tra l'XI e il VII secolo a.C. Una vetrina conteneva vari oggetti che accompagnavano la mummia: reticelle magiche fatte di perline, amuleti e coperture di cartonnage (bende e pezzi di papiro gessati) dipinto o persino dorato.</p>	
+		</div>
+		<div class="detail-open double-detail" id="r1o2d">
+			<div class="close-detail"><img src="imgs/element/close-detail.png"></div>
+			<img src="imgs/libro_dei_morti.png" />
+			<p>Tra i numerosi papiri funerari esposti, si trovavano vari esempi di Libro dei Morti: raccolte di preghiere e formule da recitare di fronte agli dei dell’Oltretomba per giungere indenni nel regno dell’Aldilà. Quello di Iuefankh, in particolare, è un unico papiro lungo ben 18 metri. Fu il documento che permise allo studioso Lepsius di suddividere in “capitoli” il lungo elenco di invocazioni magiche.</p>
+			<p>Nel Nuovo Museo Egizio questi papiri verranno esposti nella Papiroteca Funeraria o nelle sezioni cronologiche di appartenenza.</p>
+		</div>
+		<div class="detail-open single-detail" id="r1o3d">
+			<div class="close-detail"><img src="imgs/element/close-detail.png"></div>
+			<p>Nel nuovo allestimento, la sala conterrà gli oggetti provenienti dal sito di Deir el-Medina, il villaggio dove vivevano gli operai incaricati della realizzazione delle tombe nella Valle dei Re e nella Valle delle Regine a Tebe. I reperti risalgono principalmente al periodo del Nuovo Regno (circa 1550-1070 a.C.), e nella maggior parte dei casi sono stati ritrovati durante gli scavi della Missione Archeologica Italiana diretta da Ernesto Schiaparelli all’inizio del Novecento.</p>
+		</div>
+		<div class="detail-open single-detail" id="r1n1d">
+			<div class="close-detail"><img src="imgs/element/close-detail.png"></div>
+			<p>Le nuove pavimentazioni saranno in grés, un materiale particolarmente resistente al passaggio del pubblico, e avranno colori coordinati al resto del Nuovo Museo Egizio. Nasconderanno gli impianti e le predisposizioni elettriche per le nuove teche in vetro previste per la sala.</p>
+		</div>
+		<div class="detail-open double-detail" id="r1n2d">
+			<div class="close-detail"><img src="imgs/element/close-detail.png"></div>
+			<img src="imgs/dettaglio-soffitto.jpg" />
+			<p>In questa sala, eliminando gli strati di tinteggiature aggiunti nel tempo, sono stati recuperati i medaglioni ottocenteschi in corrispondenza delle lunette, che ritraevano effigie di luminari delle scienze e personaggi illustri, in volta è riemersa la stesura originaria a marmorino di tono rosato, nei vani finestra le decorazioni a finto marmo di tonalità rosa-aranciato. Sulle pareti è stata riproposta con velatura a calce la coloritura originale in sottotono.</p>
+		</div>
+		<div id="suggestion">Trascina il cursore per vedere l’immagine nascosta</div>
+		
+		<div id="menu-stanze">
+			<div>
+				<h3 class="stanza-sel">ex sala delle mummie</h3>
+			</div>
+			<div>
+				<h3>sala delle steli</h3>
+			</div>
+			<div>
+				<h3>sala schiaparelli</h3>
+			</div>
+			<div>
+				<h3>ex galleria sabauda</h3>
+			</div>
+		</div>
+	</div>
+	
+	<div id="il-progetto" class="white">
+		<h3>Il progetto</h3>
+		<img src="../imgs/element/il-progetto-line.jpg" />
+	</div>
+	
+	<script>
+	
+		$(document).ready(function() {
+			
+			$( "#r1o1a" ).click(function() {
+				 $( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				 $( "#r1o1d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+			
+			$( "#r1o2a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r1o2d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+			
+			$( "#r1o3a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r1o3d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+			
+			$( "#r1n1a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r1n1d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+			
+			$( "#r1n2a" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+				$( "#r1n2d" ).fadeIn( "slow", function() {
+				 // Animation complete
+				 });
+			});
+			
+			$( ".close-detail" ).click(function() {
+				$( ".detail-open" ).fadeOut( "slow", function() {
+				 // Animation complete
+				 });
+			});
+			
+		});
+	
+	</script>
+	
+</body>
+</html>

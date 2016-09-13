@@ -1,0 +1,397 @@
+
+
+
+/*-------------------------------------------------- */
+
+
+#dvLoading
+{
+   background: #262626 url('data:image/gif;base64,R0lGODlhOwBGAIABAP///////yH/C05FVFNDQVBFMi4wAwEAAAAh/wtYTVAgRGF0YVhNUDw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGMjAxMzRCODY3MzExMUU0QTZCN0MzNDkzRjM2MkVGRCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCNTRCN0MyNDY3MzQxMUU0QTZCN0MzNDkzRjM2MkVGRCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkYyMDEzNEI2NjczMTExRTRBNkI3QzM0OTNGMzYyRUZEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkYyMDEzNEI3NjczMTExRTRBNkI3QzM0OTNGMzYyRUZEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEBRQAAQAsAAAAADsARgAAAkWMj6nL7Q+jnLTai7PevPsPhuJIluaJpurKtu4Lx/JM1/aN5/rO9/4PDAqHxKLxiEwql8ym8wmNSqfUqvWKzWq33K73VAAAIfkEBRQAAQAsCAAzAA0ADQAAAguEj6nL7Q+jnLTSAgAh+QQFFAABACwmADMADQANAAACC4SPqcvtD6OctNICACH5BAUUAAEALBcAJAANAA0AAAILhI+py+0Po5y00gIAIfkEBRQAAQAsCAAVAA0ADQAAAguEj6nL7Q+jnLTSAgAh+QQFFAABACwmABUADQANAAACC4SPqcvtD6OctNICACH5BAkUAAEALAgABgAcADoAAAJEjI8Jy80JkZsrWjptxE5D3ngKWIkHWZoBCqgG665oDLu1esf6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yuswAAIfkECRQAAQAsAAAAADsARgAAAoOMj6nL7Q+jnLTai7PevHsPhOIofheJhqaVomvVki8Vj/NUl3eUqzvUA/yAveEjaHQgk4wlU+F8SqegIvUQpWanW2n3+WWGk2NjeXj+pXfrW/sKj7ut8PfLvsKb9B9+NSfn1yHIQbhhqIGYoSjX6PgIGSk5SVlpeYmZqbnJ2en5CapZAAAh+QQJFAABACwAAAAAOwBGAAACnYyPqcvtD6OctNqLs968ew+E4ih+F4mGppWia9WSLxWP81SXd5SrO9QD/IC94SNodCCTjCVT4XxKp6AizSqJ8rDbHIxL9F7FWXC4NkanY+vWl9xV48xKeh1+ZrdTe1dfNoeX5xYoVyZIlah4aEilNfUoFfk0yVSZdGmUObT507nzeRM6M7poeoqaqrrK2ur6ChsrO0tba3uLm6vbUQAAIfkECRQAAQAsAAAAADsARgAAAo2Mj6nL7Q+jnLTai7PevHsPhOIofheJhqaVomvVki8Vj/NUl3eUqzvUA/yAveEjaHQgk4wlU+F8SqegIs0qifKw2xyMS/RexVlwuDZGp2Pr1pfcVePMSnodfma3U3tXXzaHl+cWKFcmSJWouMjY6PgIGSk5SVlpeYmZqbnJ2en5CRoqOkpaanqKmqq6WQAAIfkECRQAAQAsAAAAADsARgAAAnSMj6nL7Q+jnLTai7PevHsPhOIofheJhqaVomvVki8Vj/NUl3eUqzvUA/yAveEjaHQgk4wlU+F8SqdUSZR6nWal22eX+U2GjeNh+XfepW/rWbsKj8vn9Lr9js/r9/y+/w8YKDhIWGh4iJiouMjY6PgIGUlRAAAh+QQFFAABACwAAAAAOwBGAAACY4yPqcvtD6OctNqLs968ew+E4ih+F4mGppWia9WSLxWP81SXd5SrO9QD/IC94SNodCCTjCVT4XxKp9Sq9YrNarfcrvcLDovH5LL5jE6r1+y2+w2Py+f0uv2Oz+v3/L7/D7hSAAA7') no-repeat center center;
+   height: 800px;
+   width: 100%;
+   position: fixed;
+   z-index: 11010;
+   margin: 0px;
+   top:0px;
+}
+
+#rotate-device, #resize-browser{
+   background: #262626;
+   height: 100px;
+   width: 100%;
+   position: fixed;
+   z-index: 11000;
+   margin: 0px;
+   top:0px;
+   display:none;
+}
+
+#rotate-device div, #resize-browser div{
+   height: 123px;
+   top: 50%;
+   position: relative;
+   margin-top: -50px;
+}
+
+
+
+body {
+	background-color:#262626;
+	margin: 0;
+	text-align:center;
+	font-family: "din";
+}
+
+
+
+
+.clear{
+	clear:both;
+}
+
+#logo{
+	position: fixed;
+top: 42px;
+left: 34px;
+z-index: 9000;
+}
+
+#logo, .logo-elements{
+  border: none;
+  text-decoration: none;
+}
+
+#logo-black{
+	position: fixed;
+top: 42px;
+left: 34px;
+z-index: 9000;
+}
+
+#logo-verde{
+	left: -5px;
+    position: absolute;
+    top: 2px;
+    z-index: 6000;
+}
+
+.logo-elements{
+	left: 10px;
+	position: fixed;
+	top: 29px;
+	z-index: 8500;
+	margin-top: 14px;
+}
+
+#logo-top{
+	top:14px;
+}
+
+#logo-bot{
+	top:10px;
+}
+
+
+#logo-bot-2{
+	top:10px;
+}
+
+ .cta{
+ 	font-family: "Din";
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: 14px !important;
+ }
+ 
+  .cta a{
+text-decoration:none; }
+
+/*----------------------------------------  colors */
+
+.gold{
+	color:#b08d64;
+}
+
+.iron{
+	color:#434343;
+}
+
+.white{
+	color:#fff;
+}
+
+.green{
+	color:#016836;
+}
+
+/*----------------------------------------  menu */
+
+h3 {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 0px;
+}
+
+h4{
+	text-transform:uppercase;
+	letter-spacing: 1.5px;
+}
+
+.menu-container{
+	position:fixed;
+	width: 100%;
+	z-index: 5000;
+	top: 0px;
+}
+
+.menu-wrapper{
+	max-width:1055px;
+	margin:auto;
+}
+
+.menu-wrapper h3{
+	/*cursor:pointer;*/
+}
+
+
+#menu-vis{
+	z-index:9000;
+}
+
+.menu-e{
+	font-weight: 300;
+	font-size: 12px;
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+}
+
+#menu-hid{
+	z-index: 8000;
+	box-shadow: 0px 0px 20px rgba(0,0,0,.75);
+	background-color:#262626;
+	height:360px;
+	position:fixed;
+	top: -380px;
+	/*top: 0px;*/
+	opacity:1;
+}
+
+#menu-hid .menu-wrapper{
+	opacity:1;
+}
+
+.menu-element-wrapper{
+	float:left;
+	width:25%;
+	position: relative;
+	height:45px;
+	cursor:pointer;
+}
+
+.menu-element-wrapper-bot{
+	height:360px;
+} 
+
+.menu-element-wrapper div{
+	margin:15px;
+	padding-top: 10px;
+}
+
+#menu-hid .menu-element-wrapper div img{
+	left: -100px;
+    margin-left: 50%;
+    position: absolute;
+    top: 62px;
+}
+
+.menu-container p{
+	margin-top: 130px;
+	font-style: italic;
+	background-color: #262626;
+	z-index: 4000;
+	position: relative;
+}
+
+.img-over{
+	opacity:0;
+}
+
+.menu-sel{
+
+    color: #b08d64!important;
+	margin-top: -4px;
+}
+
+
+
+
+.menu-sel div {
+	margin-top: 15px;
+}
+
+.menu-sel div p{
+	margin-top: 134px;
+}
+
+.menu-sel h3{
+	border-bottom: 1px solid;
+    display: inline-block;
+}
+
+.menu-sel .img-back{
+	opacity:0!important;
+}
+
+.menu-sel .img-over{
+	opacity:1!important;
+}
+
+.menu-sel .img-unactive{
+	opacity:0!important;
+}
+
+.unactive{
+	color:#555!important;
+	cursor:auto;
+}
+
+.unactive .img-back{
+	opacity:0!important;
+}
+
+.unactive .img-over{
+	opacity:0!important;
+}
+
+.unactive .img-unactive{
+	opacity:1!important;
+}
+
+.un-over{
+	border: 1px solid;
+	position: absolute !important;
+	top: 23px;
+	padding-top: 9px;
+	padding-bottom: 10px;
+	opacity: 0;
+}
+
+#il-progetto{
+	position: fixed;
+	bottom: -35px;
+	margin-top: 9px;
+	cursor: pointer;
+	z-index: 9000;
+	left: 10px;
+	cursor:pointer;
+	-webkit-transition: .2s; /* For Safari 3.1 to 6.0 */
+    -moz-transition: .2s;
+    transition: .2s;
+}
+
+#il-progetto:hover{
+	bottom: -15px;
+}
+
+#il-progetto h3{
+	margin:0;
+	border: 1px solid;
+	padding: 4px 3px 1px 5px;
+}
+
+#lang{
+	text-align: center;
+	color: white;
+	border: 1px solid;
+	position: fixed;
+	bottom: 21px;
+	right: 10px;
+	font-size: 12px;
+	padding-bottom: 1px;
+	z-index: 10000;
+	padding-top: 3px;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-transform:uppercase;
+	font-family: 'Din', sans-serif; 
+	font-size: 14px;
+	line-height: 1.5rem;
+	background-color: rgb(157, 142, 131);
+}
+
+#lang a{
+	color: white;
+	text-decoration:none;
+	letter-spacing: 0.1rem;
+	margin: 0rem 0.15rem;
+}
+
+#lang a.lan-sel{
+	color: #3c3c3c;
+}
+
+#share {
+    position: fixed;
+    color: #FFF;
+    bottom: 65px;
+    right: 9px;
+}
+
+#share p {
+	font-style: normal;
+	font-family: 'din';
+	margin-bottom: 2px;
+	margin-top: 4px;
+	text-align: right;
+}
+
+.fb_iframe_widget {
+display: inline-block;
+position: relative;
+right: -3px;
+}
+
+.c4Widget{
+	position: fixed;
+	top: 11%;
+	right: 9px;
+	z-index: 9999;
+	/*width: 120px;*/
+}
+
+.c4Widget .loggedUser .thumb{
+  overflow: hidden;
+  border: 2px solid #ffffff;
+  width: 120px;
+  height: 120px;
+}
+
+.c4Widget .loggedUser .thumb img{
+  width: 120px;
+  max-width: 120px;
+}
+
+.c4Widget .loggedUser .counter{
+  font-size: 18px;
+}
+
+.c4Widget .loggedUser .info,.c4Widget .loggedUser .counter{
+  border: 2px solid #ffffff;
+  border-top-width: 0;
+  background: rgba(38,38,38,0.65);
+  color: #ffffff;
+  height: 25px;
+  width: 120px;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 6px;
+}
+
+.c4Widget .loggedUser .info a{
+	color: #ffffff;
+	text-decoration: none;
+}

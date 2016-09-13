@@ -1,0 +1,11 @@
+<% if (errors) {%>
+  <% errors.forEach(function (error) { %>
+    <%= __(error) %>
+  <% }) %>
+<% } %>
+
+<% if (providers) {%>
+  <% Object.keys(providers).forEach(function (key) { %>
+    <a href="/auth/<%= providers[key].slug %>?redirect=http%3A%2F%2Fcompagnia.egizio2015.it%2Fa_un_soffio_dalla_scoperta%2F" role="button"><%= providers[key].name %></a>
+  <% }) %>
+<% } %>

@@ -1,0 +1,42 @@
+<div class="container scrl" id="stp0" flex layout="column" layout-align="start center" 
+	scroll-y
+	flex-content=preserve>
+	
+	<div style="width:570px; padding-top:15px;" class="center" ng-controller="LoginCtrl">
+		
+		<div layout="row" layout-align="center center">
+			<div layout="column">
+				<img src="images/svg/01_login_accedi.svg" />
+				<div translate="{{'ACCEDI'}}"></div>
+			</div>
+			<div layout="column">
+				<div translate="{{'ACCEDI_SOCIAL_TITLE'}}"></div>
+				<div layout="row">
+					<a ng-href="http://test.egizio2015.it/auth/facebook?redirect=http%3A%2F%2Fcompagnia.egizio2015.it%2Fa_un_soffio_dalla_scoperta%2F">
+						<img src="images/svg/01_login_fb_btn.svg" />
+					</a>
+					<a ng-href="http://test.egizio2015.it/auth/twitter?redirect=http%3A%2F%2Fcompagnia.egizio2015.it%2Fa_un_soffio_dalla_scoperta%2F">
+						<img src="images/svg/01_login_tw_btn.svg" />
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div layout="column">
+			<img src="images/svg/01_login_steps_all.svg" />
+			<div layout="row">
+				<div flex translate="{{'SOFFIA'}}"></div>
+				<div flex translate="{{'SCOPRI'}}"></div>
+				<div flex translate="{{'CONDIVIDI'}}"></div>
+			</div>
+		</div>
+
+		<p class="p1" translate="{{ 'LOGIN_ISTRUCTION' }}"></p>
+
+		
+
+	</div>
+
+	<div ng-include="'partials/users.html'" style="width:615px;"></div>
+
+</div>

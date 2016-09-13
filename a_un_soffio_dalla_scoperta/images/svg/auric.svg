@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="190px" height="120px" viewBox="0 35 190 120" enable-background="new 0 35 190 120" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<rect x="36" y="47" fill="none" stroke="#3D3D3D" stroke-width="2" stroke-miterlimit="10" width="118" height="96"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path fill="#3D3D3D" d="M107.549,82c0,19-8.181,19.977-19.505,21.561C74.674,105.43,58.053,108,51.116,140h3.899
+				c6.465-29,20.844-30.896,33.556-32.675C100.286,105.688,111.352,104,111.352,82H107.549z"/>
+		</g>
+		<g>
+			<path fill="#EAE0D6" stroke="#3D3D3D" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" d="M110.268,64.003
+				c-0.119,0-0.268,0.014-0.268,0.018v18.42c0,0.005,0.146,0.019,0.268,0.019c5.1,0,9.229-4.132,9.229-9.229
+				C119.495,68.135,115.363,64.003,110.268,64.003z"/>
+			<path fill="#EAE0D6" stroke="#3D3D3D" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" d="M110,64.051
+				c-1,0.215-6,0-6,3.03V79.38c0,3.03,5,2.816,6,3.03V64.051z"/>
+		</g>
+		<path fill="#EAE0D6" stroke="#3D3D3D" stroke-width="3.8026" stroke-linejoin="round" stroke-miterlimit="10" d="M87.585,82.275
+			c0.068,17.584-5.682,24-12.085,25.975"/>
+		<g>
+			<path fill="#EAE0D6" stroke="#3D3D3D" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" d="M87.663,64.003
+				c0.12,0,0.337,0.014,0.337,0.018v18.42c0,0.005-0.218,0.019-0.337,0.019c-5.097,0-9.228-4.132-9.228-9.229
+				C78.435,68.135,82.566,64.003,87.663,64.003z"/>
+			<path fill="#EAE0D6" stroke="#3D3D3D" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" d="M88,64.051
+				c1,0.215,6,0,6,3.03V79.38c0,3.03-5,2.816-6,3.03V64.051z"/>
+		</g>
+		<path fill="#EAE0D6" stroke="#3D3D3D" stroke-width="3.654" stroke-miterlimit="10" d="M62.998,123.752
+			c-0.993,1.744-3.21,2.354-4.954,1.359l-0.071-0.039c-1.744-0.993-2.353-3.211-1.36-4.955l3.675-6.456
+			c0.993-1.744,3.21-2.353,4.954-1.36l0.071,0.041c1.744,0.992,2.353,3.211,1.36,4.954L62.998,123.752z"/>
+	</g>
+</g>
+</svg>

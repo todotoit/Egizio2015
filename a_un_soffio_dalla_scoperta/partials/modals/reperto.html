@@ -1,0 +1,30 @@
+<div  ng-controller="RepertoCtrl">
+
+	<h2>{{'TITLE_MODALE_REPERTO' | translate:rep}}</h2>
+
+	<div layout="row" class="body_reperto_modal">
+
+
+		<div class="img_cont">
+			<img ng-src="{{'../reperti/' + rep.thumb}}" />
+		</div>
+
+		<div class="stuff_cont" layout="column" flex>
+
+			<div class="txt" scroll-y>{{rep.id + '.body' | translate}}</div>
+
+			<div class="users" flex>
+				<ul layout="row" scroll-x>
+					<li ng-repeat="usr in users"><img ng-src="{{usr.img}}" /></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+	<a class="btn"  ng-href="{{getL10NLink('../reperti')}}">
+		<div  style="width:500px;" translate="{{'VEDI_REPERTI_BUTTON'}}"></div>
+	</a>
+
+</div>
